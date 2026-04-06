@@ -11,20 +11,20 @@ export default function AboutUs() {
       <main className="flex-1 overflow-x-hidden">
         {/* Banner */}
         <div 
-          className="relative w-full h-[50vh] min-h-[380px] lg:h-[60vh] flex flex-col justify-center items-center bg-cover bg-center"
+          className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-end md:justify-center items-center bg-cover bg-center pb-12 md:pb-0 pt-32 md:pt-0"
           style={{ backgroundImage: "url('/images/case_study_banner.png')" }}
         >
           {/* Overlay to ensure text readability matching career style */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-[#0f172a]/70 to-[#0f172a]/20"></div>
           
           {/* Content */}
-          <div className="relative z-10 text-center text-white px-6 w-full max-w-5xl mx-auto space-y-6">
-            <span className="text-sm md:text-base tracking-wider block font-medium mb-1 drop-shadow-sm uppercase">About the Mission</span>
-            <h1 className="text-5xl md:text-6xl font-normal tracking-wide drop-shadow-md">
+          <div className="relative z-10 text-center text-white px-6 w-full max-w-5xl mx-auto space-y-6 md:space-y-8">
+            <span className="text-xs md:text-base tracking-[0.3em] block font-bold mb-1 drop-shadow-sm uppercase text-blue-400">About the Mission</span>
+            <h1 className="text-4xl md:text-6xl font-normal tracking-tight md:tracking-wide drop-shadow-md leading-tight">
               Centum RCM. <br className="md:hidden" />
               <span className="italic">Pure Efficiency.</span>
             </h1>
-            <p className="max-w-3xl mx-auto text-sm leading-relaxed font-normal text-white/90">
+            <p className="max-w-2xl mx-auto text-sm md:text-base leading-relaxed font-normal text-white/90">
               Centum RCM is your end-to-end partner in administering the Revenue Cycle Management process effectively. 
               We strive to help healthcare providers surmount the complexities of medical billing. 
               Doing so will help us amplify the focus healthcare providers have on patient care.

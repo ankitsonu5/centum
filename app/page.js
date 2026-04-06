@@ -74,12 +74,12 @@ export default function Home() {
         </section>
 
         {/* Integrated Excellence: Core Solutions Grid */}
-        <section className="py-24 bg-white">
+        <section className="py-20 lg:py-24 bg-white">
           <div className="container mx-auto px-6 max-w-7xl">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 lg:mb-16 gap-6">
               <div className="text-left">
                 <span className="text-accent uppercase tracking-widest text-xs font-bold block mb-4">Core Solutions</span>
-                <h2 className="text-4xl lg:text-5xl text-[#1e293b]">Integrated Excellence</h2>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#1e293b]">Integrated Excellence</h2>
               </div>
               <Link href="#" className="text-accent font-bold text-sm tracking-wide flex items-center gap-2 group transition-all">
                 View All Solutions <span className="group-hover:translate-x-1 transition-transform">→</span>
@@ -87,51 +87,51 @@ export default function Home() {
             </div>
 
             {/* Staggered Grid Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
               {/* Card 1: Smart RCM (Col 1-2, Row 1) */}
-              <div className="lg:col-span-2 bg-[#f8fafc] p-12 rounded-[3rem] border border-slate-100 flex flex-col justify-between group transition-all duration-700 hover:shadow-2xl hover:bg-white hover:-translate-y-2">
-                <div className="space-y-8">
-                  <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center text-accent">
-                    <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 11V7h4"/><path d="M11 17h6v-4"/></svg>
+              <div className="lg:col-span-2 bg-[#f8fafc] p-8 md:p-12 rounded-[2.5rem] md:rounded-[3rem] border border-slate-100 flex flex-col justify-between group transition-all duration-700 hover:shadow-2xl hover:bg-white hover:-translate-y-2">
+                <div className="space-y-6 md:space-y-8">
+                  <div className="w-12 h-12 md:w-14 md:h-14 bg-accent/10 rounded-2xl flex items-center justify-center text-accent">
+                    <svg className="w-6 h-6 md:w-7 md:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 11V7h4"/><path d="M11 17h6v-4"/></svg>
                   </div>
                   <div className="space-y-4">
-                    <h3 className="text-3xl text-[#1e293b]">Smart RCM</h3>
+                    <h3 className="text-2xl md:text-3xl text-[#1e293b]">Smart RCM</h3>
                     <p className="text-zinc-500 text-sm leading-relaxed max-w-md">
                       Full-cycle revenue management powered by neural networks to predict denials before they happen.
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-4 mt-12">
-                  <span className="px-5 py-2 bg-accent/5 text-accent text-xs font-bold rounded-full uppercase tracking-widest">Predictive Coding</span>
-                  <span className="px-5 py-2 bg-accent/5 text-accent text-xs font-bold rounded-full uppercase tracking-widest">Claim Integrity</span>
+                <div className="flex flex-wrap gap-3 mt-10 md:mt-12">
+                  <span className="px-4 py-1.5 md:px-5 md:py-2 bg-accent/5 text-accent text-[10px] md:text-xs font-bold rounded-full uppercase tracking-widest">Predictive Coding</span>
+                  <span className="px-4 py-1.5 md:px-5 md:py-2 bg-accent/5 text-accent text-[10px] md:text-xs font-bold rounded-full uppercase tracking-widest">Claim Integrity</span>
                 </div>
               </div>
 
               {/* Card 2: Patient Experience (Col 3, Row 1-2) */}
-              <div className="lg:col-span-1 bg-[#072746] p-12 rounded-[3rem] flex flex-col justify-between text-white group transition-all duration-700 hover:shadow-[0_40px_100px_-20px_rgba(7,39,70,0.3)] hover:-translate-y-2">
-                <div className="space-y-12">
-                  <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center">
-                    <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></svg>
+              <div className="lg:col-span-1 bg-[#072746] p-8 md:p-12 rounded-[2.5rem] md:rounded-[3rem] flex flex-col justify-between text-white group transition-all duration-700 hover:shadow-[0_40px_100px_-20px_rgba(7,39,70,0.3)] hover:-translate-y-2">
+                <div className="space-y-8 md:space-y-12">
+                  <div className="w-12 h-12 md:w-14 md:h-14 bg-white/20 rounded-2xl flex items-center justify-center">
+                    <svg className="w-6 h-6 md:w-7 md:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></svg>
                   </div>
                   <div className="space-y-4">
-                    <h3 className="text-3xl tracking-tight">Patient Experience</h3>
+                    <h3 className="text-2xl md:text-3xl tracking-tight">Patient Experience</h3>
                     <p className="text-white/80 text-sm leading-relaxed">
                       Seamless financial journeys for patients from pre-op to final payment.
                     </p>
                   </div>
                 </div>
-                <Link href="#" className="flex items-center gap-2 font-bold tracking-wide mt-12 group/link">
+                <Link href="#" className="flex items-center gap-2 font-bold tracking-wide mt-10 md:mt-12 group/link">
                   Learn more <span className="group-hover/link:translate-x-1 transition-transform">→</span>
                 </Link>
               </div>
 
               {/* Card 3: Automation & AI (Col 1, Row 2) */}
-              <div className="lg:col-span-1 bg-[#f8fafc] p-12 rounded-[3rem] border border-slate-100 flex flex-col space-y-8 group transition-all duration-700 hover:shadow-2xl hover:bg-white hover:-translate-y-2">
-                <div className="w-14 h-14 bg-[#072746] text-white rounded-2xl flex items-center justify-center">
-                  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+              <div className="lg:col-span-1 bg-[#f8fafc] p-8 md:p-12 rounded-[2.5rem] md:rounded-[3rem] border border-slate-100 flex flex-col space-y-6 md:space-y-8 group transition-all duration-700 hover:shadow-2xl hover:bg-white hover:-translate-y-2">
+                <div className="w-12 h-12 md:w-14 md:h-14 bg-[#072746] text-white rounded-2xl flex items-center justify-center">
+                  <svg className="w-6 h-6 md:w-7 md:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-3xl text-[#1e293b]">Automation & AI</h3>
+                  <h3 className="text-2xl md:text-3xl text-[#1e293b]">Automation & AI</h3>
                   <p className="text-zinc-500 text-sm leading-relaxed">
                     Automate 90% of routine billing tasks with high-precision surgical AI models.
                   </p>
@@ -139,13 +139,13 @@ export default function Home() {
               </div>
 
               {/* Card 4: Financial Performance (Col 2, Row 2) */}
-              <div className="lg:col-span-2 bg-[#f8fafc] p-12 rounded-[3rem] border border-slate-100 flex flex-col md:flex-row justify-between items-center group transition-all duration-700 hover:shadow-2xl hover:bg-white hover:-translate-y-2">
-                <div className="space-y-8 w-full md:w-1/2">
-                  <div className="w-14 h-14 bg-[#072746]/10 text-[#072746] rounded-2xl flex items-center justify-center">
-                    <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+              <div className="lg:col-span-2 bg-[#f8fafc] p-8 md:p-12 rounded-[2.5rem] md:rounded-[3rem] border border-slate-100 flex flex-col md:flex-row justify-between items-center group transition-all duration-700 hover:shadow-2xl hover:bg-white hover:-translate-y-2">
+                <div className="space-y-6 md:space-y-8 w-full md:w-1/2">
+                  <div className="w-12 h-12 md:w-14 md:h-14 bg-[#072746]/10 text-[#072746] rounded-2xl flex items-center justify-center">
+                    <svg className="w-6 h-6 md:w-7 md:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
                   </div>
                   <div className="space-y-4">
-                    <h3 className="text-3xl text-[#1e293b]">Financial Performance</h3>
+                    <h3 className="text-2xl md:text-3xl text-[#1e293b]">Financial Performance</h3>
                     <p className="text-zinc-500 text-sm leading-relaxed">
                       Real-time visibility into your health system's financial pulse with executive-ready reporting.
                     </p>
