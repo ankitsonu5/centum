@@ -213,17 +213,17 @@ export default function AboutUs() {
           <div className="relative z-10 container mx-auto px-6 max-w-7xl">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
               <div className="lg:col-span-12">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-12 text-left">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20 gap-12 text-left">
                   <div className="max-w-2xl space-y-6">
                     <div className="w-12 h-1 bg-white rounded-full"></div>
                     <span className="text-blue-400 font-bold tracking-[0.3em] text-xs uppercase block">Pillar Three</span>
-                    <h2 className="text-4xl lg:text-5xl font-normal text-white tracking-tight">
+                    <h2 className="text-3xl md:text-5xl font-normal text-white tracking-tight">
                       Back-End: Velocity
                     </h2>
                   </div>
                 </div>
               </div>
-              <div className="lg:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+              <div className="lg:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 text-left">
                 {[
                   { q: "Using Technology for Claims", a: "We use Claim Scrubber Software to identify and correct errors in medical claims before submission. This ensures faster arrival of payments." },
                   { q: "Denial Management", a: "We work with extra focus on identifying root causes. We resubmit or appeal within strict payer timelines to reduce denial rates to less than 5%." },
@@ -232,7 +232,7 @@ export default function AboutUs() {
                   <div key={i} className="space-y-6">
                     <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center font-bold text-white text-lg">0{i+1}</div>
                     <h3 className="text-2xl font-normal text-white">{item.q}</h3>
-                    <p className="text-sm text-white/70 leading-relaxed font-normal">{item.a}</p>
+                    <p className="text-base text-white/70 leading-relaxed font-normal">{item.a}</p>
                   </div>
                 ))}
               </div>
@@ -243,16 +243,16 @@ export default function AboutUs() {
         {/* Pillar 4: Clean Layout Theme */}
         <section className="py-20 lg:py-28 bg-white overflow-hidden">
           <div className="container mx-auto px-6 max-w-7xl">
-            <div className="flex flex-col md:flex-row items-start mb-20 gap-16 text-left">
-              <div className="md:w-1/2 space-y-6">
+            <div className="flex flex-col md:flex-row items-start mb-12 md:mb-20 gap-10 md:gap-16 text-left">
+              <div className="md:w-[40%] space-y-6">
                 <div className="w-12 h-1 bg-[#1e293b] rounded-full"></div>
                 <span className="text-blue-500 font-bold tracking-[0.3em] text-xs uppercase block">Final Pillar</span>
-                <h2 className="text-4xl lg:text-5xl font-normal text-[#1e293b] tracking-tight">
+                <h2 className="text-3xl md:text-5xl font-normal text-[#1e293b] tracking-tight">
                   Ongoing Optimization
                 </h2>
               </div>
-              <div className="md:w-1/2 space-y-4">
-                <p className="text-sm text-zinc-500 font-normal leading-relaxed">
+              <div className="md:w-[60%] space-y-4">
+                <p className="text-lg text-zinc-500 font-normal leading-relaxed">
                   We refine billing, coding and administrative workflows on a continuous basis. 
                   This helps you maximise cash flows, reduce denials as well as ensure regulatory compliance. 
                   Optimization aligns your efforts to ongoing changes in payer rules and technology.
