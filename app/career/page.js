@@ -48,7 +48,7 @@ export default function Career() {
             <h3 className="text-3xl lg:text-5xl font-serif font-normal text-[#1a1a1a] leading-snug mb-6">
               Our doors are always open to talent that wants to help co-create a robust and win-win RCM Ecosystem.
             </h3>
-            <p className="text-sm lg:text-base text-[#555555] leading-relaxed max-w-2xl">
+            <p className="text-lg lg:text-xl text-[#555555] leading-relaxed max-w-4xl">
               Join us on the next big ride and become important stakeholders. Key in your career goals and career path in a simple five liner and we would sure get in touch with you at{" "}
               <a href="mailto:nithya@centumrcm.in" className="text-[#1a1a1a] underline hover:text-accent transition-colors">
                 nithya@centumrcm.in

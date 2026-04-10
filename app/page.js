@@ -14,7 +14,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[100vh] flex items-end justify-center overflow-hidden bg-hero-bg pb-12 sm:pb-24">
+        <section className="relative h-[100vh] flex items-end justify-center overflow-hidden bg-hero-bg pb-6 sm:pb-12">
           {/* Video Background */}
           <video
             ref={videoRef}
@@ -23,55 +23,22 @@ export default function Home() {
             loop
             playsInline
             poster="/images/hero_main.png"
-            className="absolute inset-0 w-full h-full object-cover opacity-60 z-0"
+            className="absolute inset-0 w-full h-full object-cover opacity-75 z-0"
           >
             <source src="/videos/centumrcm_video.mp4" type="video/mp4" />
           </video>
           
-          {/* Gradient Overlay for Text Visibility (Bottom-weighted) */}
-          <div className="absolute inset-0 bg-gradient-to-t from-hero-bg via-hero-bg/40 to-transparent z-10"></div>
-          <div className="relative container mx-auto px-6 text-center max-w-6xl z-20">
-            <h1 className="text-3xl sm:text-5xl lg:text-7xl text-white mb-8 leading-[1.2] lg:leading-[1.1] tracking-tight font-bold">
-              Precision <span className="italic">billing</span> <br className="lg:hidden" /> 
-              Proven <span className="italic">Results</span>
+          {/* Clear View Video Overlays - Top/Bottom only */}
+          <div className="absolute top-0 left-0 w-full h-1/4 bg-gradient-to-b from-hero-bg/60 to-transparent z-10"></div>
+          <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-hero-bg/80 via-hero-bg/40 to-transparent z-10"></div>
+          <div className="relative container mx-auto px-6 text-center max-w-6xl z-20 pt-40 md:pt-60">
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl text-white mb-8 leading-[1.2] lg:leading-[1.1] tracking-tight font-bold drop-shadow-lg uppercase">
+              Precision billing <br /> Proven Results
             </h1>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="w-full sm:w-auto bg-white text-slate-900 px-6 sm:px-14 py-3 sm:py-4 rounded-full font-bold text-xs sm:text-lg hover:bg-slate-100 transition-all">
-                BOOK A DEMO
-              </button>
-              <button className="w-full sm:w-auto bg-transparent border-2 border-white/30 text-white px-6 sm:px-14 py-3 sm:py-4 rounded-full font-bold text-xs sm:text-lg hover:bg-white/10 transition-all backdrop-blur-sm">
-                CONTACT US
-              </button>
-            </div>
           </div>
         </section>
 
-        {/* Efficiency Section / Value Prop Grid */}
-        <section className="py-24 bg-background border-t border-border-subtle">
-          <div className="container mx-auto px-6 max-w-[1366px]">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <h2 className="text-3xl lg:text-4xl text-[#1e293b] leading-snug mb-6">
-                  We leverage advanced automation to drive organizational efficiency at scale.
-                </h2>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="p-8 bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] rounded-2xl border border-slate-50 hover:shadow-lg transition-all text-left">
-                  <h3 className="text-xl text-[#1e293b] mb-3 text-left">Pay Anywhere, Faster</h3>
-                  <p className="text-zinc-500 text-sm leading-relaxed text-left">
-                    Reduce friction in the payment cycle and accelerate cash flow with our unified billing engine.
-                  </p>
-                </div>
-                <div className="p-8 bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] rounded-2xl border border-slate-50 border-l-[3px] border-l-[#3b82f6] hover:shadow-lg transition-all text-left">
-                  <h3 className="text-xl text-[#1e293b] mb-3 text-left">Enterprise Scalability</h3>
-                  <p className="text-zinc-500 text-sm leading-relaxed text-left">
-                    Designed to handle millions of transactions with 99.9% uptime and enterprise-grade security.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
 
         {/* Integrated Excellence: Core Solutions Grid */}
         <section className="py-20 lg:py-24 bg-white">
@@ -202,19 +169,19 @@ export default function Home() {
               {[
                 { 
                   title: "Front End Revenue Cycle", 
-                  image: "/images/front_end.png",
+                  image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVkaWNhbCUyMGJpbGxpbmd8ZW58MHx8MHx8fDA%3D",
                 },
                 { 
                   title: "Mid Revenue Cycle", 
-                  image: "/images/mid_revenue.png",
+                  image: "https://plus.unsplash.com/premium_photo-1726862767644-4b0f03d0fdf4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGluc3VyYW5jZSUyMGNsYWltc3xlbnwwfHwwfHx8MA%3D%3D",
                 },
                 { 
                   title: "Back End Revenue Cycle", 
-                  image: "/images/back_end.png",
+                  image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGF0YSUyMGFuYWx5dGljc3xlbnwwfHwwfHx8MA%3D%3D",
                 },
                 { 
                   title: "Consultative Support", 
-                  image: "/images/consultative_support.png",
+                  image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uc3VsdGluZ3xlbnwwfHwwfHx8MA%3D%3D",
                 }
               ].map((item, i) => (
                 <div key={i} className="flex flex-col h-full bg-white rounded-lg overflow-hidden group cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300">
