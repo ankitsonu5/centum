@@ -10,15 +10,15 @@ export default function Career() {
       <main className="flex-1 w-full flex flex-col items-center pb-20">
         {/* Banner */}
         <div 
-          className="relative w-full h-[50vh] min-h-[380px] lg:h-[60vh] flex flex-col justify-center items-center bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/career_banner_bg.png')" }}
+          className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/career_centum_banner.jpg')" }}
         >
           {/* Overlay to ensure text readability and mimic uploaded image styling */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-[#0f172a]/70 to-[#0f172a]/20"></div>
           
           {/* Content */}
           <div className="relative z-10 text-center text-white">
-            <span className="text-sm md:text-base tracking-wider block font-medium mb-1 drop-shadow-sm">Careers</span>
+            <span className="text-[#B98C29] text-sm md:text-base tracking-[0.2em] block font-bold mb-4 uppercase">Careers</span>
             <h1 className="text-5xl md:text-6xl font-semibold tracking-wide drop-shadow-md">Overview</h1>
           </div>
         </div>
@@ -50,7 +50,7 @@ export default function Career() {
             </h3>
             <p className="text-lg lg:text-xl text-[#555555] leading-relaxed max-w-4xl">
               Join us on the next big ride and become important stakeholders. Key in your career goals and career path in a simple five liner and we would sure get in touch with you at{" "}
-              <a href="mailto:nithya@centumrcm.in" className="text-[#1a1a1a] underline hover:text-accent transition-colors">
+              <a href="mailto:nithya@centumrcm.in" className="text-[#B98C29] font-bold underline hover:text-accent transition-colors">
                 nithya@centumrcm.in
               </a>
             </p>

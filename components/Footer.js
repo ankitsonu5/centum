@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -25,7 +26,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="flex flex-col gap-12">
             <div className="flex flex-col gap-8">
-              <Link href="/" className="flex items-center bg-white px-8 py-2 rounded-md shadow-sm self-start">
+              <Link href="/" className="flex items-center bg-white px-8 py-2 rounded-full shadow-sm self-start">
                 <Image 
                   src="/images/centum_cm_logo.png" 
                   alt="Centum Logo" 
@@ -41,18 +42,18 @@ export default function Footer() {
             </div>
             
             <div className="flex flex-col gap-8 mt-2">
-              <h4 className="text-white text-[11px] font-bold tracking-[0.3em] uppercase opacity-50">Follow Us</h4>
+              <h4 className="text-white text-[13px] font-bold tracking-[0.3em] uppercase opacity-100">Follow Us</h4>
               <ul className="flex flex-col gap-4 text-[13px] font-medium tracking-wider uppercase">
-                <li><Link href="#" className="hover:text-white transition-colors">LinkedIn</Link></li>
-                <li><Link href="#" className="hover:text-white transition-colors">Facebook</Link></li>
-                <li><Link href="#" className="hover:text-white transition-colors">Instagram</Link></li>
+                <li><Link href="#" className="hover:text-white transition-colors flex items-center gap-2"><FaLinkedin size={16} /> LinkedIn</Link></li>
+                <li><Link href="#" className="hover:text-white transition-colors flex items-center gap-2"><FaFacebook size={16} /> Facebook</Link></li>
+                <li><Link href="#" className="hover:text-white transition-colors flex items-center gap-2"><FaInstagram size={16} /> Instagram</Link></li>
               </ul>
             </div>
           </div>
 
           {/* Solutions Column */}
           <div className="flex flex-col gap-8">
-            <h4 className="text-white text-[11px] font-bold tracking-[0.3em] uppercase opacity-50">Solutions</h4>
+            <h4 className="text-white text-[13px] font-bold tracking-[0.3em] uppercase opacity-100">Solutions</h4>
             <ul className="flex flex-col gap-4 text-[13px] font-medium tracking-wider uppercase">
               <li><Link href="#" className="hover:text-white transition-colors">Hospital Revenue</Link></li>
               <li><Link href="#" className="hover:text-white transition-colors">Provider Billing</Link></li>
@@ -63,7 +64,7 @@ export default function Footer() {
 
           {/* Resources Column */}
           <div className="flex flex-col gap-8">
-            <h4 className="text-white text-[11px] font-bold tracking-[0.3em] uppercase opacity-50">Resources</h4>
+            <h4 className="text-white text-[13px] font-bold tracking-[0.3em] uppercase opacity-100">Resources</h4>
             <ul className="flex flex-col gap-4 text-[13px] font-medium tracking-wider uppercase">
               <li><Link href="#" className="hover:text-white transition-colors">Whitepapers</Link></li>
               <li><Link href="#" className="hover:text-white transition-colors">Case Studies</Link></li>
@@ -74,12 +75,12 @@ export default function Footer() {
 
           {/* Company Column */}
           <div className="flex flex-col gap-8">
-            <h4 className="text-white text-[11px] font-bold tracking-[0.3em] uppercase opacity-50">Company</h4>
+            <h4 className="text-white text-[13px] font-bold tracking-[0.3em] uppercase opacity-100">Company</h4>
             <ul className="flex flex-col gap-4 text-[13px] font-medium tracking-wider uppercase">
               <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/career" className="hover:text-white transition-colors">Careers</Link></li>
               <li><Link href="#" className="hover:text-white transition-colors">Newsroom</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Contact</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
         </div>

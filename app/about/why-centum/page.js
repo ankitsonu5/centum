@@ -37,6 +37,7 @@ export default function WhyCentumPage() {
 
           {/* Banner Content */}
           <div className="relative z-10 text-center text-white px-6 w-full max-w-5xl mx-auto">
+            <span className="text-[#B98C29] text-sm md:text-base tracking-[0.2em] block font-bold mb-4 uppercase">Why Centum</span>
             <h1 className="text-5xl md:text-6xl font-semibold tracking-wide drop-shadow-md">
               About Us
             </h1>

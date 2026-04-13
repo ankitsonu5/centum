@@ -31,12 +31,12 @@ export default function BackEndPage() {
         {/* Banner - Matching Solutions Style */}
         <div
           className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center overflow-hidden"
-          style={{ backgroundImage: "url('/images/hero_bg.png')" }}
+          style={{ backgroundImage: "url('/images/solutions_centum_banner.jpg')" }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 to-transparent md:bg-blue-900/40"></div>
           <div className="relative z-10 text-center text-white px-6 w-full max-w-5xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-semibold tracking-tight md:tracking-wide drop-shadow-md">
-              Back-End: Claim Submission & Denial Management
+              <span className="text-[#B98C29]">Back-End:</span> Claim Submission & Denial Management
             </h1>
           </div>
         </div>
@@ -59,11 +59,11 @@ export default function BackEndPage() {
               <div className="lg:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 text-left">
                 {steps.map((item, i) => (
                   <div key={i} className="space-y-8 group bg-slate-50 p-10 rounded-[3rem] border border-slate-100 transition-all duration-500 hover:bg-white hover:shadow-[0_30px_60px_rgba(0,0,0,0.05)] hover:-translate-y-2">
-                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center font-bold text-slate-400 text-xl border border-slate-200 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-500 transition-all duration-500 shadow-sm">
+                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center font-bold text-slate-400 text-xl border border-slate-200 group-hover:bg-[#243B71] group-hover:text-white group-hover:border-[#243B71] transition-all duration-500 shadow-sm">
                       {item.step}
                     </div>
                     <div className="space-y-4">
-                      <h3 className="text-2xl md:text-3xl font-normal text-slate-900 group-hover:text-blue-600 transition-colors duration-500">{item.q}</h3>
+                      <h3 className="text-2xl md:text-3xl font-normal text-slate-900 group-hover:text-[#243B71] transition-colors duration-500">{item.q}</h3>
                       <p className="text-lg text-slate-600 leading-relaxed font-normal">{item.a}</p>
                     </div>
                   </div>

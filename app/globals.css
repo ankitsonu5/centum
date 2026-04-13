@@ -16,6 +16,7 @@
   --color-border-subtle: var(--border);
   
   --font-primary: var(--font-spartan), sans-serif;
+  --font-sans: var(--font-spartan), sans-serif;
 }
 
 body {

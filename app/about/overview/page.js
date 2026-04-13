@@ -20,6 +20,7 @@ export default function OverviewPage() {
 
           {/* Banner Content matched to About page text */}
           <div className="relative z-10 text-center text-white px-6 w-full max-w-5xl mx-auto">
+            <span className="text-[#B98C29] text-sm md:text-base tracking-[0.2em] block font-bold mb-4 uppercase">Overview</span>
             <h1 className="text-5xl md:text-6xl font-semibold tracking-wide drop-shadow-md">
               About Us
             </h1>
@@ -32,9 +33,9 @@ export default function OverviewPage() {
             <div className="flex flex-col items-center text-center space-y-6 md:space-y-8">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight md:tracking-wide leading-tight text-slate-900 max-w-4xl">
                 Centum RCM. <br className="md:hidden" />
-                <span className="italic text-blue-900">Pure Efficiency.</span>
+                <span className="italic text-[#B98C29]">Pure Efficiency.</span>
               </h2>
-              <div className="w-20 h-1 bg-blue-600 rounded-full mx-auto my-2"></div>
+              <div className="w-20 h-1 bg-[#B98C29] rounded-full mx-auto my-2"></div>
               <div className="space-y-6">
                 <p className="max-w-3xl mx-auto text-base md:text-lg leading-relaxed font-normal text-slate-600">
                   Centum RCM is your end-to-end partner in administering the Revenue Cycle Management process effectively.

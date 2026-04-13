@@ -25,14 +25,14 @@ export default function CredentialingPage() {
         {/* Banner - Matching project style */}
         <div
           className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center overflow-hidden"
-          style={{ backgroundImage: "url('/images/hero_bg.png')" }}
+          style={{ backgroundImage: "url('/images/solutions_centum_banner.jpg')" }}
         >
           {/* Overlay to ensure text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 to-transparent md:bg-blue-900/40"></div>
 
           <div className="relative z-10 text-center text-white px-6 w-full max-w-5xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-semibold tracking-tight md:tracking-wide drop-shadow-md">
-              Credentialing Services: Provider Enrolment & CAQH Management
+              <span className="text-[#B98C29]">Credentialing Services:</span> Provider Enrolment & CAQH Management
             </h1>
           </div>
         </div>
@@ -47,8 +47,8 @@ export default function CredentialingPage() {
                   Provider Credentialing
                 </h2>
               </div>
-              <div className="md:w-[60%] space-y-4 text-left">
-                <p className="text-lg text-zinc-500 font-normal leading-relaxed">
+              <div className="md:flex-1 space-y-4 text-left md:pt-4">
+                <p className="text-lg lg:text-xl text-zinc-500 font-normal leading-relaxed">
                   Credentialing is the foundation for a practice’s ability to collect revenue. Centum removes the administrative burden of enrolment and re-credentialing so your providers are payer-ready, claims are payable, and revenue is not delayed.
                 </p>
               </div>
@@ -57,9 +57,23 @@ export default function CredentialingPage() {
             {/* Services Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left mt-16">
               {services.map((service, i) => (
-                <div key={i} className="group flex items-center gap-4 bg-white p-8 rounded-3xl border border-slate-100 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-blue-100">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full shadow-[0_0_12px_rgba(59,130,246,0.4)] group-hover:scale-125 transition-transform duration-300"></div>
-                  <span className="text-base lg:text-lg font-semibold tracking-tight text-[#1e293b] group-hover:text-blue-600 transition-colors duration-300">{service}</span>
+                <div key={i} className="group relative flex flex-col justify-between bg-white p-6 lg:p-8 rounded-3xl border border-slate-100 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] overflow-hidden">
+                  {/* Subtle Gradient Hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-slate-50/80 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Top: Indicator */}
+                  <div className="relative z-10 flex items-center justify-between mb-8">
+                    <span className="text-4xl font-light text-slate-200 group-hover:text-[#B98C29] transition-colors duration-500">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                  </div>
+                  
+                  {/* Bottom: Text */}
+                  <div className="relative z-10">
+                    <h3 className="text-lg lg:text-xl font-normal tracking-tight text-[#1e293b] group-hover:text-[#0a192f] transition-colors duration-300">
+                      {service}
+                    </h3>
+                  </div>
                 </div>
               ))}
             </div>

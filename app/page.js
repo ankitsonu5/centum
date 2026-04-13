@@ -1,13 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function Home() {
   const videoRef = useRef(null);
+  const ctaVideoRef = useRef(null);
+  const [isPlayingCTA, setIsPlayingCTA] = useState(false);
 
   return (
     <div className="flex flex-col min-h-screen bg-background selection:bg-accent/30 font-primary">
@@ -28,12 +30,13 @@ export default function Home() {
             <source src="/videos/centumrcm_video.mp4" type="video/mp4" />
           </video>
           
-          {/* Clear View Video Overlays - Top/Bottom only */}
-          <div className="absolute top-0 left-0 w-full h-1/4 bg-gradient-to-b from-hero-bg/60 to-transparent z-10"></div>
-          <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-hero-bg/80 via-hero-bg/40 to-transparent z-10"></div>
-          <div className="relative container mx-auto px-6 text-center max-w-6xl z-20 pt-40 md:pt-60">
-            <h1 className="text-3xl sm:text-5xl lg:text-7xl text-white mb-8 leading-[1.2] lg:leading-[1.1] tracking-tight font-bold drop-shadow-lg uppercase">
-              Precision billing <br /> Proven Results
+          {/* Solid Color Filter Overlay */}
+          <div className="absolute inset-0 bg-[#243B72]/40 z-10"></div>
+          <div className="relative container mx-auto px-6 text-center max-w-6xl z-20 pt-40 md:pt-60 flex flex-col items-center">
+            {/* Main Header */}
+            <h1 className="text-4xl sm:text-6xl lg:text-[5.5rem] text-white mb-6 leading-[1.1] tracking-tight drop-shadow-2xl uppercase">
+              <span className="font-light">Precision Billing.</span> <br />
+              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#f0da9b] via-[#e5ca78] to-[#B98C29]">Proven Results.</span>
             </h1>
           </div>
         </section>
@@ -41,14 +44,14 @@ export default function Home() {
 
 
         {/* Integrated Excellence: Core Solutions Grid */}
-        <section className="py-20 lg:py-24 bg-white">
+        <section className="py-20 lg:py-24 bg-[#f0ede8]">
           <div className="container mx-auto px-6 max-w-7xl">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 lg:mb-16 gap-6">
               <div className="text-left">
-                <span className="text-accent uppercase tracking-widest text-xs font-bold block mb-4">Core Solutions</span>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#1e293b]">Integrated Excellence</h2>
+                <span className="text-[#B98C29] uppercase tracking-widest text-xs font-bold block mb-4">Core Solutions</span>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#243B71]">Integrated Excellence</h2>
               </div>
-              <Link href="#" className="text-accent font-bold text-sm tracking-wide flex items-center gap-2 group transition-all">
+              <Link href="#" className="text-[#243B71] font-bold text-sm tracking-wide flex items-center gap-2 group transition-all">
                 View All Solutions <span className="group-hover:translate-x-1 transition-transform">→</span>
               </Link>
             </div>
@@ -58,48 +61,64 @@ export default function Home() {
               {/* Card 1: Smart RCM (Col 1-2, Row 1) */}
               <div className="lg:col-span-2 bg-[#f8fafc] p-8 md:p-12 rounded-[2.5rem] md:rounded-[3rem] border border-slate-100 flex flex-col justify-between group transition-all duration-700 hover:shadow-2xl hover:bg-white hover:-translate-y-2">
                 <div className="space-y-6 md:space-y-8">
-                  <div className="w-12 h-12 md:w-14 md:h-14 bg-accent/10 rounded-2xl flex items-center justify-center text-accent">
+                  <div className="w-12 h-12 md:w-14 md:h-14 bg-[#B98C29]/10 rounded-2xl flex items-center justify-center text-[#B98C29]">
                     <svg className="w-6 h-6 md:w-7 md:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 11V7h4"/><path d="M11 17h6v-4"/></svg>
                   </div>
                   <div className="space-y-4">
-                    <h3 className="text-2xl md:text-3xl text-[#1e293b]">Smart RCM</h3>
-                    <p className="text-zinc-500 text-sm leading-relaxed max-w-md">
+                    <h3 className="text-2xl md:text-3xl text-[#243B71]">Smart RCM</h3>
+                    <p className="text-zinc-500 text-lg leading-relaxed max-w-md">
                       Full-cycle revenue management powered by neural networks to predict denials before they happen.
                     </p>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-3 mt-10 md:mt-12">
-                  <span className="px-4 py-1.5 md:px-5 md:py-2 bg-accent/5 text-accent text-[10px] md:text-xs font-bold rounded-full uppercase tracking-widest">Predictive Coding</span>
-                  <span className="px-4 py-1.5 md:px-5 md:py-2 bg-accent/5 text-accent text-[10px] md:text-xs font-bold rounded-full uppercase tracking-widest">Claim Integrity</span>
+                  <span className="px-4 py-1.5 md:px-5 md:py-2 bg-[#B98C29]/5 text-[#B98C29] text-[10px] md:text-xs font-bold rounded-full uppercase tracking-widest">Predictive Coding</span>
+                  <span className="px-4 py-1.5 md:px-5 md:py-2 bg-[#B98C29]/5 text-[#B98C29] text-[10px] md:text-xs font-bold rounded-full uppercase tracking-widest">Claim Integrity</span>
                 </div>
               </div>
 
               {/* Card 2: Patient Experience (Col 3, Row 1-2) */}
-              <div className="lg:col-span-1 bg-[#072746] p-8 md:p-12 rounded-[2.5rem] md:rounded-[3rem] flex flex-col justify-between text-white group transition-all duration-700 hover:shadow-[0_40px_100px_-20px_rgba(7,39,70,0.3)] hover:-translate-y-2">
-                <div className="space-y-8 md:space-y-12">
+              <div className="lg:col-span-1 relative overflow-hidden bg-slate-900 p-8 md:p-12 rounded-[2.5rem] md:rounded-[3rem] flex flex-col justify-between text-white group transition-all duration-700 hover:shadow-[0_40px_100px_-20px_rgba(185,140,41,0.3)] hover:-translate-y-2">
+                {/* Background Image - High Visibility */}
+                <div 
+                  className="absolute inset-0 z-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" 
+                  style={{ backgroundImage: "url('/images/patient_experience_centum.jpg')" }}
+                ></div>
+                {/* Subtle golden tint overlay */}
+                <div className="absolute inset-0 bg-[#B98C29]/30 mix-blend-multiply z-0"></div>
+                
+                <div className="relative z-10 space-y-8 md:space-y-12">
                   <div className="w-12 h-12 md:w-14 md:h-14 bg-white/20 rounded-2xl flex items-center justify-center">
                     <svg className="w-6 h-6 md:w-7 md:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></svg>
                   </div>
                   <div className="space-y-4">
                     <h3 className="text-2xl md:text-3xl tracking-tight">Patient Experience</h3>
-                    <p className="text-white/80 text-sm leading-relaxed">
+                    <p className="text-white/80 text-lg leading-relaxed">
                       Seamless financial journeys for patients from pre-op to final payment.
                     </p>
                   </div>
                 </div>
-                <Link href="#" className="flex items-center gap-2 font-bold tracking-wide mt-10 md:mt-12 group/link">
+                <Link href="#" className="relative z-10 flex items-center gap-2 font-bold tracking-wide mt-10 md:mt-12 group/link">
                   Learn more <span className="group-hover/link:translate-x-1 transition-transform">→</span>
                 </Link>
               </div>
 
               {/* Card 3: Automation & AI (Col 1, Row 2) */}
-              <div className="lg:col-span-1 bg-[#f8fafc] p-8 md:p-12 rounded-[2.5rem] md:rounded-[3rem] border border-slate-100 flex flex-col space-y-6 md:space-y-8 group transition-all duration-700 hover:shadow-2xl hover:bg-white hover:-translate-y-2">
-                <div className="w-12 h-12 md:w-14 md:h-14 bg-[#072746] text-white rounded-2xl flex items-center justify-center">
+              <div className="lg:col-span-1 relative overflow-hidden bg-slate-900 p-8 md:p-12 rounded-[2.5rem] md:rounded-[3rem] flex flex-col space-y-6 md:space-y-8 group transition-all duration-700 hover:shadow-[0_40px_100px_-20px_rgba(185,140,41,0.3)] hover:-translate-y-2">
+                {/* Background Image - High Visibility */}
+                <div 
+                  className="absolute inset-0 z-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" 
+                  style={{ backgroundImage: "url('/images/automation_ai_centum.jpg')" }}
+                ></div>
+                {/* Golden Overlay matching Patient Experience style */}
+                <div className="absolute inset-0 bg-[#B98C29]/30 mix-blend-multiply z-0"></div>
+
+                <div className="relative z-10 w-12 h-12 md:w-14 md:h-14 bg-white/20 text-white rounded-2xl flex items-center justify-center">
                   <svg className="w-6 h-6 md:w-7 md:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
                 </div>
-                <div className="space-y-4">
-                  <h3 className="text-2xl md:text-3xl text-[#1e293b]">Automation & AI</h3>
-                  <p className="text-zinc-500 text-sm leading-relaxed">
+                <div className="relative z-10 space-y-4">
+                  <h3 className="text-2xl md:text-3xl text-white">Automation & AI</h3>
+                  <p className="text-white/80 text-lg leading-relaxed">
                     Automate 90% of routine billing tasks with high-precision surgical AI models.
                   </p>
                 </div>
@@ -108,12 +127,12 @@ export default function Home() {
               {/* Card 4: Financial Performance (Col 2, Row 2) */}
               <div className="lg:col-span-2 bg-[#f8fafc] p-8 md:p-12 rounded-[2.5rem] md:rounded-[3rem] border border-slate-100 flex flex-col md:flex-row justify-between items-center group transition-all duration-700 hover:shadow-2xl hover:bg-white hover:-translate-y-2">
                 <div className="space-y-6 md:space-y-8 w-full md:w-1/2">
-                  <div className="w-12 h-12 md:w-14 md:h-14 bg-[#072746]/10 text-[#072746] rounded-2xl flex items-center justify-center">
+                  <div className="w-12 h-12 md:w-14 md:h-14 bg-[#B98C29]/10 text-[#B98C29] rounded-2xl flex items-center justify-center">
                     <svg className="w-6 h-6 md:w-7 md:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
                   </div>
                   <div className="space-y-4">
-                    <h3 className="text-2xl md:text-3xl text-[#1e293b]">Financial Performance</h3>
-                    <p className="text-zinc-500 text-sm leading-relaxed">
+                    <h3 className="text-2xl md:text-3xl text-[#243B71]">Financial Performance</h3>
+                    <p className="text-zinc-500 text-lg leading-relaxed">
                       Real-time visibility into your health system's financial pulse with executive-ready reporting.
                     </p>
                   </div>
@@ -123,11 +142,11 @@ export default function Home() {
                   <div className="space-y-4">
                     <div className="h-2 w-1/2 bg-slate-100 rounded-full"></div>
                     <div className="space-y-2">
-                      <div className="h-4 w-full bg-[#072746]/20 rounded-full overflow-hidden">
-                        <div className="h-full w-4/5 bg-[#072746] rounded-full animate-in slide-in-from-left duration-1000"></div>
+                      <div className="h-4 w-full bg-[#B98C29]/20 rounded-full overflow-hidden">
+                        <div className="h-full w-4/5 bg-[#B98C29] rounded-full animate-in slide-in-from-left duration-1000"></div>
                       </div>
-                      <div className="h-4 w-full bg-[#072746]/10 rounded-full overflow-hidden">
-                        <div className="h-full w-2/5 bg-[#072746]/60 rounded-full animate-in slide-in-from-left duration-700"></div>
+                      <div className="h-4 w-full bg-[#B98C29]/10 rounded-full overflow-hidden">
+                        <div className="h-full w-2/5 bg-[#B98C29]/60 rounded-full animate-in slide-in-from-left duration-700"></div>
                       </div>
                     </div>
                   </div>
@@ -205,30 +224,58 @@ export default function Home() {
         </section>
 
         {/* Architecture Section */}
-        <section className="py-24 bg-zinc-50 overflow-hidden">
-          <div className="container mx-auto px-6 text-center">
-            <span className="text-accent uppercase tracking-widest text-sm font-bold block mb-4">Core Technology</span>
-            <h2 className="text-4xl lg:text-5xl mb-16">Three-Cell Revenue OS Architecture</h2>
-            
-            <div className="relative max-w-[1366px] mx-auto py-12">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-                {[
-                  { title: "Intelligent Ingest", desc: "Automated data normalization across every channel.", step: "01" },
-                  { title: "Real-time Adjudication", desc: "Instant policy verification and claim processing.", step: "02" },
-                  { title: "Smart Settlement", desc: "Optimized payment routing and reconciliation.", step: "03" }
-                ].map((item, i) => (
-                  <div key={i} className="bg-white p-10 rounded-2xl shadow-xl shadow-zinc-200/50 border border-zinc-100 flex flex-col items-center group hover:-translate-y-2 transition-all duration-500">
-                    <div className="w-12 h-12 rounded-full bg-accent/5 flex items-center justify-center text-accent font-bold mb-6 group-hover:bg-[#0a192f] group-hover:text-white transition-all">
-                      {item.step}
-                    </div>
-                    <h3 className="text-2xl font-semibold mb-4 group-hover:text-[#0a192f] transition-colors">{item.title}</h3>
-                    <p className="text-zinc-500 text-sm leading-relaxed text-center">{item.desc}</p>
+        <section className="py-24 bg-white overflow-hidden relative">
+          {/* Subtle grid pattern */}
+          <div className="absolute inset-0 z-0 opacity-30 pointer-events-none" style={{
+            backgroundImage: 'linear-gradient(rgba(36,59,113,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(36,59,113,0.06) 1px, transparent 1px)',
+            backgroundSize: '60px 60px'
+          }}></div>
+
+          {/* Glow orbs */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#243B71]/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#B98C29]/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
+
+          <div className="relative z-10 container mx-auto px-6 text-center max-w-7xl">
+            {/* Label */}
+            <span className="inline-block bg-[#243B71]/10 border border-[#243B71]/30 text-[#243B71] uppercase tracking-[0.25em] text-xs font-bold px-5 py-2 rounded-full mb-6">
+              Core Technology
+            </span>
+            <h2 className="text-4xl lg:text-6xl font-bold text-[#243B71] mb-6 leading-tight">
+              Three-Cell Revenue OS<br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B98C29] to-[#f0c96a]">Architecture</span>
+            </h2>
+            <p className="text-slate-500 text-lg max-w-2xl mx-auto mb-12">
+              A unified pipeline engineered for precision — from intelligent data ingestion to seamless settlement.
+            </p>
+
+            {/* Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 relative max-w-6xl mx-auto mt-4">
+              {[
+                { title: "Intelligent Ingest", desc: "Automated data normalization across every channel with AI-powered validation.", step: "01", image: "/images/intelligent_ingest_centuma.jpg" },
+                { title: "Real-time Adjudication", desc: "Instant policy verification and claim processing with zero-lag decision engines.", step: "02", image: "/images/real-time_adjudication_centum.jpg" },
+                { title: "Smart Settlement", desc: "Optimized payment routing and reconciliation powered by predictive financial models.", step: "03", image: "/images/smart_settlement_centum.jpg" }
+              ].map((item, i) => (
+                <div key={i} className="relative overflow-hidden bg-slate-900 rounded-3xl p-10 flex flex-col items-center group transition-all duration-700 hover:shadow-[0_20px_50px_rgba(36,59,113,0.3)] hover:-translate-y-2 min-h-[360px] justify-center">
+                  <div 
+                    className="absolute inset-0 z-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" 
+                    style={{ backgroundImage: `url('${item.image}')` }}
+                  ></div>
+                  <div className="absolute inset-0 bg-[#0a192f]/60 group-hover:bg-[#0a192f]/40 transition-colors duration-500 z-0"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f]/80 via-[#0a192f]/30 to-transparent z-0"></div>
+                  
+                  <div className="relative z-10 w-12 h-12 rounded-full bg-white/20 backdrop-blur border border-white/30 flex items-center justify-center text-white font-bold mb-6 shadow-lg">
+                    {item.step}
                   </div>
-                ))}
-              </div>
+                  <h3 className="relative z-10 text-2xl font-bold mb-4 text-white group-hover:text-[#f0c96a] transition-colors text-center drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{item.title}</h3>
+                  <p className="relative z-10 text-white text-xl leading-relaxed text-center font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{item.desc}</p>
+                </div>
+              ))}
             </div>
+
           </div>
         </section>
+
+
 
         {/* Banner Case Study Section */}
         <section className="relative py-32 lg:py-48 flex items-center justify-center overflow-hidden">
@@ -305,18 +352,42 @@ export default function Home() {
               <h2 className="text-4xl lg:text-5xl mb-12 leading-tight text-slate-900 font-medium">
                 Ready to transform your healthcare revenue lifecycle?
               </h2>
-              <div className="relative aspect-video w-full rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-800 group mb-12">
-                <Image src="/images/hero_main.png" alt="Demo Video" fill className="object-cover opacity-75 grayscale group-hover:scale-105 transition-transform duration-1000" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <button className="w-24 h-24 rounded-full bg-white text-slate-900 flex items-center justify-center hover:scale-110 transition-transform shadow-2xl text-left">
-                    <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  </button>
-                </div>
+              <div className="relative aspect-video w-full rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-900 group mb-12">
+                <video 
+                  ref={ctaVideoRef}
+                  src="/videos/centumrcm_video.mp4" 
+                  className={`w-full h-full object-cover transition-all duration-300 ${!isPlayingCTA ? "opacity-75 grayscale" : "opacity-100 grayscale-0"}`} 
+                  controls={isPlayingCTA}
+                  controlsList="nodownload noremoteplayback"
+                  disablePictureInPicture
+                  playsInline
+                  poster="/images/hero_main.png"
+                  onPlay={() => setIsPlayingCTA(true)}
+                  onPause={() => setIsPlayingCTA(false)}
+                  onEnded={() => setIsPlayingCTA(false)}
+                />
+
+                {!isPlayingCTA && (
+                  <div 
+                    className="absolute inset-0 flex items-center justify-center cursor-pointer transition-opacity duration-300 z-10"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      if (ctaVideoRef.current) {
+                        ctaVideoRef.current.play();
+                      }
+                    }}
+                  >
+                    <div className="absolute inset-0 bg-transparent group-hover:bg-black/10 transition-colors"></div>
+                    <div className="w-24 h-24 rounded-full bg-white text-slate-900 flex items-center justify-center hover:scale-110 transition-transform shadow-2xl text-left relative z-20">
+                      <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mt-12">
-              <button className="bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold tracking-wide text-[16px] hover:bg-black transition-all shadow-xl">Get Started Today</button>
-              <button className="text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 font-medium">Talk to an expert <svg className="w-4 h-4 text-slate-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></button>
+              <Link href="/contact" className="bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold tracking-wide text-[16px] hover:bg-black transition-all shadow-xl">Get Started Today</Link>
+              <Link href="/contact" className="text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 font-medium">Talk to an expert <svg className="w-4 h-4 text-slate-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></Link>
             </div>
           </div>
         </section>

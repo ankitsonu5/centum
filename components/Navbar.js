@@ -34,12 +34,30 @@ const navItems = [
     ]
   },
   { name: "CAREER", dropdown: false, href: "/career" },
-  { name: "CONTACT US", dropdown: false, href: "#" }
+  { name: "CONTACT US", dropdown: false, href: "/contact" }
 ];
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isHome = window.location.pathname === "/";
+      const threshold = isHome 
+        ? window.innerHeight - 100 
+        : Math.max(450, window.innerHeight * 0.65) - 80;
+        
+      setIsScrolled(window.scrollY > threshold);
+    };
+    
+    // Initial check
+    handleScroll();
+    
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMobileDropdown = (e, name) => {
     e.preventDefault();
@@ -65,14 +83,13 @@ export default function Navbar() {
         />
       )}
 
-      {/* Header Section Gradient - Full Width */}
-      <div className="fixed top-0 left-0 w-full h-48 bg-gradient-to-b from-black/90 via-black/40 via-black/10 to-transparent z-[95] pointer-events-none" />
+      {/* Header Section Gradient removed as requested */}
 
       {/* Navbar Container */}
-      <div className="fixed top-4 lg:top-6 left-1/2 -translate-x-1/2 z-[100] w-full max-w-6xl px-4">
-        <nav className="bg-transparent px-2 lg:py-2.5 lg:px-6 flex items-center justify-between transition-all duration-300 relative">
+      <div className={`fixed left-1/2 -translate-x-1/2 z-[100] w-full max-w-7xl px-4 transition-all duration-500 ${isScrolled ? "top-2 lg:top-4" : "top-4 lg:top-6"}`}>
+        <nav className={`flex items-center justify-between transition-all duration-500 relative ${isScrolled ? "bg-[#243B72] shadow-2xl py-2 px-3 lg:px-4 rounded-full" : "bg-transparent px-2 lg:py-2.5 lg:px-6"}`}>
           {/* Logo - Left Side */}
-          <Link href="/" className="flex items-center bg-white px-8 py-2 rounded-md shadow-sm">
+          <Link href="/" className="flex items-center bg-white px-8 py-2 rounded-full shadow-sm">
             <Image 
               src="/images/centum_cm_logo.png" 
               alt="Centum Logo" 
@@ -89,9 +106,9 @@ export default function Navbar() {
               <div key={item.name} className="relative group">
                 <Link 
                   href={item.href}
-                  className={`flex items-center gap-2 text-[13px] font-medium tracking-[0.1em] transition-all ${
+                  className={`flex items-center gap-2 text-[13px] font-bold tracking-[0.1em] transition-all ${
                     item.name === "CONTACT US" 
-                    ? "bg-white text-black px-7 py-3 rounded-md hover:bg-gray-100 transition-colors" 
+                    ? "bg-[#B98C29] text-white px-7 py-3 rounded-md hover:bg-[#A67E25] transition-colors" 
                     : "text-white hover:text-white/80"
                   }`}
                 >
@@ -126,8 +143,7 @@ export default function Navbar() {
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white active:bg-white/20 transition-colors"
-              aria-label="Toggle menu"
-            >
+              aria-label="Toggle menu">
               {isMenuOpen ? (
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"/></svg>
               ) : (
@@ -150,9 +166,9 @@ export default function Navbar() {
                         setIsMenuOpen(false);
                       }
                     }}
-                    className={`text-lg font-extrabold tracking-widest transition-colors flex items-center justify-between group ${
+                    className={`text-lg font-bold tracking-widest transition-colors flex items-center justify-between group ${
                       item.name === "CONTACT US"
-                      ? "bg-white text-black px-6 py-4 rounded-xl shadow-md"
+                      ? "bg-[#B98C29] text-white px-6 py-4 rounded-xl shadow-md"
                       : "text-white/90 hover:text-white"
                     }`}
                   >
