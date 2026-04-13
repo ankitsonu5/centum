@@ -83,7 +83,7 @@ export default function Contact() {
               </div>
 
               {/* Right Column: Premium Contact Form */}
-              <div className="bg-[#f8f9fa] p-8 lg:p-12 rounded-[2rem] border border-slate-100 shadow-xl shadow-slate-200/50">
+              <div className="bg-[#f8f9fa] p-5 md:p-8 lg:p-12 rounded-[2rem] border border-slate-100 shadow-xl shadow-slate-200/50">
                 {isSubmitted ? (
                   <div className="h-full flex flex-col items-center justify-center text-center py-12 space-y-6 animate-in fade-in zoom-in duration-500">
                     <div className="w-20 h-20 rounded-full bg-green-50 flex items-center justify-center text-green-500">
