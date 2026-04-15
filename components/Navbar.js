@@ -7,7 +7,7 @@ const navItems = [
   { 
     name: "ABOUT US", 
     dropdown: true, 
-    href: "/about",
+    href: "#",
     subItems: [
       { name: "OVERVIEW", href: "/about/overview" },
       { name: "WHAT WE PRACTICE", href: "/about/practice" },
