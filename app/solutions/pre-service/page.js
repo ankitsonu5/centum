@@ -41,6 +41,14 @@ export default function PreServicePage() {
           {/* Overlay to ensure text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 to-transparent md:bg-blue-900/40"></div>
 
+          {/* Dots Effect - Left Side */}
+          <div className="absolute inset-0 z-0 opacity-15 pointer-events-none" style={{ 
+            backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', 
+            backgroundSize: '24px 24px',
+            WebkitMaskImage: 'linear-gradient(to right, black 0%, transparent 30%)',
+            maskImage: 'linear-gradient(to right, black 0%, transparent 30%)'
+          }}></div>
+
           <div className="relative z-10 text-center text-white px-6 w-full max-w-5xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-semibold tracking-tight md:tracking-wide drop-shadow-md">
               <span className="text-[#B98C29]">Pre-Service:</span> Patient Registration & Insurance Verification

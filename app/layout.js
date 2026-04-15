@@ -1,5 +1,6 @@
 import { League_Spartan, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import ScrollToTop from "../components/ScrollToTop";
 
 const leagueSpartan = League_Spartan({
   variable: "--font-spartan",
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         {children}
+        <ScrollToTop />
       </body>
     </html>
   );

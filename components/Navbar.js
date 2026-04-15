@@ -89,7 +89,7 @@ export default function Navbar() {
       <div className={`fixed left-1/2 -translate-x-1/2 z-[100] w-full max-w-7xl px-4 transition-all duration-500 ${isScrolled ? "top-2 lg:top-4" : "top-4 lg:top-6"}`}>
         <nav className={`flex items-center justify-between transition-all duration-500 relative ${isScrolled ? "bg-[#243B72] shadow-2xl py-2 px-3 lg:px-4 rounded-full" : "bg-transparent px-2 lg:py-2.5 lg:px-6"}`}>
           {/* Logo - Left Side */}
-          <Link href="/" className="flex items-center bg-white px-8 py-2 rounded-full shadow-sm">
+          <Link href="/" className="flex items-center bg-[#F2F4EC] px-8 py-2 rounded-full shadow-sm">
             <Image 
               src="/images/centum_cm_logo.png" 
               alt="Centum Logo" 
@@ -109,7 +109,7 @@ export default function Navbar() {
                   className={`flex items-center gap-2 text-[13px] font-bold tracking-[0.1em] transition-all ${
                     item.name === "CONTACT US" 
                     ? "bg-[#B98C29] text-white px-7 py-3 rounded-md hover:bg-[#A67E25] transition-colors" 
-                    : "text-white hover:text-white/80"
+                    : "text-white hover:text-[#F2F4EC]"
                   }`}
                 >
                   {item.name}
@@ -126,7 +126,7 @@ export default function Navbar() {
                         <Link 
                           key={sub.name} 
                           href={sub.href}
-                          className="block px-6 py-4 text-[12px] font-bold tracking-wider text-slate-700 hover:bg-slate-50 hover:text-blue-600 transition-colors border-b border-slate-50 last:border-0"
+                          className="block px-6 py-4 text-[12px] font-bold tracking-wider text-slate-700 hover:bg-slate-50 hover:text-[#243B6F] transition-colors border-b border-slate-50 last:border-0"
                         >
                           {sub.name}
                         </Link>
@@ -169,7 +169,7 @@ export default function Navbar() {
                     className={`text-lg font-bold tracking-widest transition-colors flex items-center justify-between group ${
                       item.name === "CONTACT US"
                       ? "bg-[#B98C29] text-white px-6 py-4 rounded-xl shadow-md"
-                      : "text-white/90 hover:text-white"
+                      : "text-white/90 hover:text-[#F2F4EC]"
                     }`}
                   >
                     {item.name}

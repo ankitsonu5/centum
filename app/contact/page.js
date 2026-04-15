@@ -38,6 +38,14 @@ export default function Contact() {
           {/* Light effect gradient overlay matching Career style */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-[#0f172a]/70 to-[#0f172a]/20"></div>
           
+          {/* Dots Effect - Left Side */}
+          <div className="absolute inset-0 z-0 opacity-15 pointer-events-none" style={{ 
+            backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', 
+            backgroundSize: '24px 24px',
+            WebkitMaskImage: 'linear-gradient(to right, black 0%, transparent 30%)',
+            maskImage: 'linear-gradient(to right, black 0%, transparent 30%)'
+          }}></div>
+          
           <div className="relative z-10 text-center text-white px-6">
             <span className="text-[#B98C29] text-sm md:text-base tracking-[0.2em] block font-bold mb-4 uppercase">Connect With Centum</span>
             <h1 className="text-5xl md:text-7xl font-semibold tracking-tight drop-shadow-2xl">Get In Touch</h1>

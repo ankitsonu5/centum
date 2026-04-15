@@ -10,11 +10,19 @@ export default function Career() {
       <main className="flex-1 w-full flex flex-col items-center pb-20">
         {/* Banner */}
         <div 
-          className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center"
+          className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center overflow-hidden"
           style={{ backgroundImage: "url('/images/career_centum_banner.jpg')" }}
         >
           {/* Overlay to ensure text readability and mimic uploaded image styling */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-[#0f172a]/70 to-[#0f172a]/20"></div>
+          
+          {/* Dots Effect - Left Side */}
+          <div className="absolute inset-0 z-0 opacity-15 pointer-events-none" style={{ 
+            backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', 
+            backgroundSize: '24px 24px',
+            WebkitMaskImage: 'linear-gradient(to right, black 0%, transparent 30%)',
+            maskImage: 'linear-gradient(to right, black 0%, transparent 30%)'
+          }}></div>
           
           {/* Content */}
           <div className="relative z-10 text-center text-white">
