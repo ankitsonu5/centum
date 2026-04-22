@@ -97,9 +97,9 @@ export default function Navbar() {
               <Image
                 src="/images/centum_cm_logo.png"
                 alt="Centum Logo"
-                width={160}
-                height={40}
-                className="h-8 lg:h-10 w-auto object-contain"
+                width={220}
+                height={56}
+                className="h-12 lg:h-14 w-auto object-contain"
                 priority
               />
             </Link>

@@ -62,7 +62,7 @@ export default function FAQ() {
         {/* Banner */}
         <div 
           className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center overflow-hidden"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1454165833767-027ffea9e778?w=1600&auto=format&fit=crop&q=80')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=2560&auto=format&fit=crop&q=100')" }}
         >
           <div className="absolute inset-0 bg-[#243B71]/80"></div>
           

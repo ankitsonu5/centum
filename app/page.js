@@ -28,7 +28,7 @@ export default function Home() {
           >
             <source src="/videos/centumrcm_video.mp4" type="video/mp4" />
           </video>
-          
+
           {/* Solid Color Filter Overlay */}
           <div className="absolute inset-0 bg-[#243B72]/40 z-10"></div>
           <div className="relative container mx-auto px-6 text-center max-w-6xl z-20 pt-40 md:pt-60 flex flex-col items-center">
@@ -132,16 +132,16 @@ export default function Home() {
         {/* Intelligent Automation at Scale: New Image Grid Section */}
         <section className="relative py-24 bg-[#0a192f] text-white overflow-hidden">
           {/* Left pattern: more at top, less at bottom */}
-          <div className="absolute inset-0 z-0 opacity-20 pointer-events-none" style={{ 
-            backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', 
+          <div className="absolute inset-0 z-0 opacity-20 pointer-events-none" style={{
+            backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)',
             backgroundSize: '24px 24px',
             WebkitMaskImage: 'linear-gradient(to bottom right, black 0%, transparent 50%)',
             maskImage: 'linear-gradient(to bottom right, black 0%, transparent 50%)'
           }}></div>
-          
+
           {/* Right pattern: less at top, more at bottom */}
-          <div className="absolute inset-0 z-0 opacity-20 pointer-events-none" style={{ 
-            backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', 
+          <div className="absolute inset-0 z-0 opacity-20 pointer-events-none" style={{
+            backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)',
             backgroundSize: '24px 24px',
             WebkitMaskImage: 'linear-gradient(to top left, black 0%, transparent 50%)',
             maskImage: 'linear-gradient(to top left, black 0%, transparent 50%)'
@@ -149,44 +149,44 @@ export default function Home() {
 
           <div className="relative z-10 container mx-auto px-6 max-w-7xl text-center">
             <h2 className="text-3xl lg:text-5xl font-bold mb-4">
-              Technology-Enabled Revenue Cycle Services<br/>
+              Technology-Enabled Revenue Cycle Services<br />
               for Healthcare Providers
             </h2>
             <p className="text-sm lg:text-base text-gray-300 max-w-4xl mx-auto mb-16">
-              Experience how Access Healthcare's team of experienced revenue cycle resources and next-generation technology<br/>
+              Experience how Access Healthcare's team of experienced revenue cycle resources and next-generation technology<br />
               can help you automate your revenue cycle and reduce your costs to collect.
             </p>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-4 lg:px-0">
               {[
-                { 
-                  title: "Front End Revenue Cycle", 
+                {
+                  title: "Front End Revenue Cycle",
                   image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVkaWNhbCUyMGJpbGxpbmd8ZW58MHx8MHx8fDA%3D",
                   href: "/solutions/pre-service"
                 },
-                { 
-                  title: "Mid Revenue Cycle", 
+                {
+                  title: "Mid Revenue Cycle",
                   image: "https://plus.unsplash.com/premium_photo-1726862767644-4b0f03d0fdf4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGluc3VyYW5jZSUyMGNsYWltc3xlbnwwfHwwfHx8MA%3D%3D",
                   href: "/solutions/mid-cycle"
                 },
-                { 
-                  title: "Back End Revenue Cycle", 
+                {
+                  title: "Back End Revenue Cycle",
                   image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGF0YSUyMGFuYWx5dGljc3xlbnwwfHwwfHx8MA%3D%3D",
                   href: "/solutions/back-end"
                 },
-                { 
-                  title: "Consultative Support", 
+                {
+                  title: "Consultative Support",
                   image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uc3VsdGluZ3xlbnwwfHwwfHx8MA%3D%3D",
                   href: "/solutions/credentialing-services"
                 }
               ].map((item, i) => (
                 <Link key={i} href={item.href} className="flex flex-col h-full bg-white rounded-lg overflow-hidden group cursor-pointer transition-all duration-300">
                   <div className="relative h-48 lg:h-56 w-full">
-                    <Image 
-                      src={item.image} 
-                      alt={item.title} 
-                      fill 
-                      className="object-cover transition-transform duration-500 group-hover:scale-105" 
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   <div className="bg-slate-800 p-4 mt-auto">
@@ -210,39 +210,39 @@ export default function Home() {
 
             <div className="relative flex flex-wrap lg:flex-nowrap justify-between items-start gap-y-12 lg:gap-x-2">
               {[
-                { 
-                  title: "Discovery & Assessment", 
-                  sub: "Needs Analysis & Strategy", 
+                {
+                  title: "Discovery & Assessment",
+                  sub: "Needs Analysis & Strategy",
                   image: "/images/how-it-works-1.png"
                 },
-                { 
-                  title: "Sign Up & Agreement", 
-                  sub: "Contract & Pricing", 
+                {
+                  title: "Sign Up & Agreement",
+                  sub: "Contract & Pricing",
                   image: "/images/how-it-works-2.png"
                 },
-                { 
-                  title: "SOW & SLA", 
-                  sub: "Scope & Service Levels", 
+                {
+                  title: "SOW & SLA",
+                  sub: "Scope & Service Levels",
                   image: "/images/how-it-works-3.png"
                 },
-                { 
-                  title: "Onboarding & KT", 
-                  sub: "System Setup & Training", 
+                {
+                  title: "Onboarding & KT",
+                  sub: "System Setup & Training",
                   image: "/images/how-it-works-4.png"
                 },
-                { 
-                  title: "Setup & Testing", 
-                  sub: "Workflow & Claims Testing", 
+                {
+                  title: "Setup & Testing",
+                  sub: "Workflow & Claims Testing",
                   image: "/images/how-it-works-5.png"
                 },
-                { 
-                  title: "Go Live", 
-                  sub: "Launch & Start Operations", 
+                {
+                  title: "Go Live",
+                  sub: "Launch & Start Operations",
                   image: "/images/how-it-works-6.png"
                 },
-                { 
-                  title: "Optimize & Grow", 
-                  sub: "Continuous Improvement", 
+                {
+                  title: "Optimize & Grow",
+                  sub: "Continuous Improvement",
                   image: "/images/how-it-works-7.png"
                 }
               ].map((step, i, arr) => (
@@ -250,24 +250,24 @@ export default function Home() {
                   {/* Icon Image Container - Fixed Size, No Shadow */}
                   <div className="w-24 h-24 flex items-center justify-center relative z-10 hover:scale-110 transition-transform duration-300">
                     <div className="relative w-full h-full">
-                      <Image 
-                        src={step.image} 
-                        alt={step.title} 
+                      <Image
+                        src={step.image}
+                        alt={step.title}
                         fill
                         className="object-contain"
                       />
                     </div>
                   </div>
-                  
+
                   {/* Text Content */}
                   <div className="mt-8 space-y-4 max-w-[150px] flex flex-col items-center">
                     <h4 className="text-[20px] font-bold text-[#243B71] leading-tight min-h-[60px] flex items-center justify-center text-center">
                       {step.title}
                     </h4>
-                    
+
                     {/* Decorative Line */}
                     <div className="w-full h-[1px] bg-slate-200"></div>
-                    
+
                     <p className="text-[15px] text-slate-500 italic leading-snug min-h-[40px] text-center">
                       {step.sub}
                     </p>
@@ -276,7 +276,7 @@ export default function Home() {
                   {/* Arrow for Desktop */}
                   {i < arr.length - 1 && (
                     <div className="hidden lg:block absolute top-12 left-[100%] -translate-x-1/2 z-0">
-                      <svg className="w-12 h-6 text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 48 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 12h32m0 0l-8-8m8 8l-8 8"/></svg>
+                      <svg className="w-12 h-6 text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 48 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 12h32m0 0l-8-8m8 8l-8 8" /></svg>
                     </div>
                   )}
                 </div>
@@ -302,19 +302,19 @@ export default function Home() {
         <section className="relative py-32 lg:py-48 flex items-center justify-center overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
-            <Image 
-              src="/images/case_study_banner.png" 
-              alt="Insights Team" 
-              fill 
-              className="object-cover object-center" 
+            <Image
+              src="/images/case_study_banner.png"
+              alt="Insights Team"
+              fill
+              className="object-cover object-center"
             />
           </div>
-          
+
           {/* Gradients Overlay */}
           <div className="absolute inset-0 bg-[#041d3d]/50 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-red-600/30 via-transparent to-[#041d3d]/80 z-10"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#041d3d] via-transparent to-transparent z-10"></div>
-          
+
           <div className="relative z-20 container mx-auto px-6 text-center max-w-4xl">
             <span className="text-white tracking-[0.2em] text-lg font-bold block mb-4 uppercase">
               Insights
@@ -336,21 +336,21 @@ export default function Home() {
             <Link href="/resources/insights-articles" className="bg-[#2a2a2a] text-white px-8 py-3 rounded-full font-bold text-sm hover:bg-black transition-colors mb-20 inline-block uppercase tracking-wider">
               Learn More
             </Link>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
               {[
-                { 
-                  img: "/images/insights-articles_centum.jpg", 
+                {
+                  img: "/images/insights-articles_centum.jpg",
                   title: "The Future of AI in Medical Coding & Charge Capture",
                   link: "/resources/insights-articles/future-of-ai-medical-coding"
                 },
-                { 
-                  img: "/images/compliance_and_auditing_centum.jpg", 
+                {
+                  img: "/images/compliance_and_auditing_centum.jpg",
                   title: "Navigating Payer Audits: Strategies for 100% Compliance",
                   link: "/resources/insights-articles/navigating-payer-audits-strategies-for-100-compliance"
                 },
-                { 
-                  img: "/images/patient_experience_centum.jpg", 
+                {
+                  img: "/images/patient_experience_centum.jpg",
                   title: "Maximizing Front-End Collections Without Compromising Patient Experience",
                   link: "/resources/insights-articles/maximizing-front-end-collections"
                 }
@@ -377,10 +377,10 @@ export default function Home() {
                 Ready to transform your healthcare revenue lifecycle?
               </h2>
               <div className="relative aspect-video w-full rounded-3xl overflow-hidden border border-slate-200 bg-slate-900 group mb-12">
-                <video 
+                <video
                   ref={ctaVideoRef}
-                  src="/videos/centumrcm_video.mp4" 
-                  className={`w-full h-full object-cover transition-all duration-300 ${!isPlayingCTA ? "opacity-75 grayscale" : "opacity-100 grayscale-0"}`} 
+                  src="/videos/centumrcm_video.mp4"
+                  className={`w-full h-full object-cover transition-all duration-300 ${!isPlayingCTA ? "opacity-75 grayscale" : "opacity-100 grayscale-0"}`}
                   controls={isPlayingCTA}
                   controlsList="nodownload noremoteplayback"
                   disablePictureInPicture
@@ -392,7 +392,7 @@ export default function Home() {
                 />
 
                 {!isPlayingCTA && (
-                  <div 
+                  <div
                     className="absolute inset-0 flex items-center justify-center cursor-pointer transition-opacity duration-300 z-10"
                     onClick={(e) => {
                       e.stopPropagation();
@@ -403,7 +403,7 @@ export default function Home() {
                   >
                     <div className="absolute inset-0 bg-transparent group-hover:bg-black/10 transition-colors"></div>
                     <div className="w-24 h-24 rounded-full bg-white text-slate-900 flex items-center justify-center hover:scale-110 transition-transform text-left relative z-20">
-                      <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
+                      <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" /></svg>
                     </div>
                   </div>
                 )}
@@ -411,7 +411,6 @@ export default function Home() {
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mt-12">
               <Link href="/contact" className="bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold tracking-wide text-[16px] hover:bg-black transition-all">Get Started Today</Link>
-              <Link href="/contact" className="text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 font-medium">Talk to an expert <svg className="w-4 h-4 text-slate-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></Link>
             </div>
           </div>
         </section>
