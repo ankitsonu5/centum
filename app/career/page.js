@@ -35,8 +35,8 @@ export default function Career() {
         <div className="w-full bg-[#f0ede8]">
           {/* Top block: Large heading + CTA button */}
           <div className="max-w-[1366px] mx-auto px-8 lg:px-16 pt-16 pb-12">
-            <h2 className="text-4xl lg:text-6xl font-serif font-normal text-[#1a1a1a] leading-tight mb-8">
-              Join Our Team
+            <h2 className="text-3xl lg:text-5xl font-serif font-normal text-[#1a1a1a] leading-tight mb-8 uppercase tracking-wide">
+              JOIN US AND CO-CREATE GLOBAL HEALING RCM ECOSYSTEM
             </h2>
             <a
               href="mailto:nithya@centumrcm.in"
@@ -53,11 +53,11 @@ export default function Career() {
 
           {/* Bottom block: Mission heading + description */}
           <div className="max-w-[1366px] mx-auto px-8 lg:px-16 pt-12 pb-20">
-            <h3 className="text-3xl lg:text-5xl font-serif font-normal text-[#1a1a1a] leading-snug mb-6">
+            <p className="text-lg lg:text-xl text-[#555555] leading-relaxed max-w-4xl mb-6">
               Our doors are always open to talent that wants to help co-create a robust and win-win RCM Ecosystem.
-            </h3>
+            </p>
             <p className="text-lg lg:text-xl text-[#555555] leading-relaxed max-w-4xl">
-              Join us on the next big ride and become important stakeholders. Key in your career goals and career path in a simple five liner and we would sure get in touch with you at{" "}
+              Key in your career goals and career path in a simple five liner and we would sure get in touch with you. Mail us at{" "}
               <a href="mailto:nithya@centumrcm.in" className="text-[#B98C29] font-bold underline hover:text-accent transition-colors">
                 nithya@centumrcm.in
               </a>

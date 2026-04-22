@@ -30,7 +30,7 @@ export default function WhyCentumPage() {
         {/* Banner - Original height restored */}
         <div
           className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center overflow-hidden"
-          style={{ backgroundImage: "url('/images/case_study_banner.png')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=2000&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uc3VsdGluZ3xlbnwwfHwwfHx8MA%3D%3D')" }}
         >
           {/* Overlay to ensure text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 to-transparent md:bg-blue-900/40"></div>
@@ -62,7 +62,7 @@ export default function WhyCentumPage() {
               <div className="w-12 h-1 bg-slate-900 rounded-full mx-auto mt-6"></div>
             </div>
             
-            <div className="max-w-4xl mx-auto md:mx-0 text-left">
+            <div className="w-full text-left">
               <h3 className="text-3xl md:text-4xl font-normal text-slate-900 mb-10 tracking-tight">
                 What makes Centum RCM different?
               </h3>
@@ -91,7 +91,7 @@ export default function WhyCentumPage() {
               </div>
             </div>
 
-            <hr className="my-24 border-slate-100" />
+            <hr className="mt-12 mb-16 border-slate-100" />
 
             {/* EHR List Section - Original Style */}
             <div className="space-y-16 text-left">

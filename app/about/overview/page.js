@@ -39,9 +39,8 @@ export default function OverviewPage() {
         <section className="py-16 md:py-20 bg-white border-b border-slate-100">
           <div className="container mx-auto px-6 max-w-[1366px]">
             <div className="flex flex-col items-center text-center space-y-6 md:space-y-8">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight md:tracking-wide leading-tight text-slate-900 max-w-4xl">
-                Centum RCM. <br className="md:hidden" />
-                <span className="italic text-[#B98C29]">Pure Efficiency.</span>
+              <h2 className="text-[1.6rem] sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight md:tracking-wide leading-tight text-slate-900 max-w-none whitespace-nowrap">
+                Optimizing Revenues. <span className="text-[#B98C29]">Empowering Care.</span>
               </h2>
               <div className="w-20 h-1 bg-[#B98C29] rounded-full mx-auto my-2"></div>
               <div className="space-y-6">
@@ -52,6 +51,38 @@ export default function OverviewPage() {
                   We strive to help healthcare providers surmount the complexities of medical billing.
                   Doing so will help us amplify the focus healthcare providers have on patient care.
                 </p>
+
+                {/* Vision & Mission Sections */}
+                <div className="max-w-3xl mx-auto text-left mt-12 space-y-10">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-xl bg-[#B98C29]/10 flex items-center justify-center text-[#B98C29]">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                      </div>
+                      <h3 className="text-xl font-bold text-slate-900 uppercase tracking-wider">Vision</h3>
+                    </div>
+                    <p className="text-slate-600 leading-relaxed text-base md:text-lg">
+                      Centum RCM aims to empower US healthcare providers with secure, compliant, and technology driven revenue cycle solutions. Our aim is to help you focus on exceptional patient care while we accelerate collections, reduce denials & shorten the accounts receivable days.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-xl bg-[#B98C29]/10 flex items-center justify-center text-[#B98C29]">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                      </div>
+                      <h3 className="text-xl font-bold text-slate-900 uppercase tracking-wider">Mission</h3>
+                    </div>
+                    <p className="text-slate-600 leading-relaxed text-base md:text-lg">
+                      To deliver predictable financial performance for U.S. healthcare providers by reducing revenue leakage & accelerating cash flow. We would constantly optimize the revenue cycle through precision, technology, and compliance.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

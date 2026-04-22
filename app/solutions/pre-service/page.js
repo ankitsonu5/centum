@@ -3,6 +3,7 @@
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import Image from "next/image";
+import OtherSolutions from "../../../components/OtherSolutions";
 
 export default function PreServicePage() {
   const steps = [
@@ -96,6 +97,7 @@ export default function PreServicePage() {
           </div>
         </section>
 
+        <OtherSolutions activePath="/solutions/pre-service" />
       </main>
 
       <Footer />

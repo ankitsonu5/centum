@@ -3,6 +3,7 @@
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import Image from "next/image";
+import OtherSolutions from "../../../components/OtherSolutions";
 
 export default function MidCyclePage() {
   return (
@@ -13,7 +14,7 @@ export default function MidCyclePage() {
         {/* Banner - Consistent with Pre-Service */}
         <div
           className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center overflow-hidden"
-          style={{ backgroundImage: "url('/images/solutions_centum_banner.jpg')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=2000&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGF0YSUyMGFuYWx5dGljc3xlbnwwfHwwfHx8MA%3D%3D')" }}
         >
           {/* Overlay to ensure text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 to-transparent md:bg-blue-900/40"></div>
@@ -66,9 +67,7 @@ export default function MidCyclePage() {
                 
                 {/* Content */}
                 <div className="relative z-10">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 mb-8 text-sm text-white/90 w-fit backdrop-blur-md bg-white/5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.8)] animate-pulse"></span> 01
-                  </div>
+                  <p className="text-6xl lg:text-7xl font-normal text-white/30 mb-8">01</p>
                   <h3 className="text-4xl lg:text-5xl font-normal tracking-tight mb-6 drop-shadow-lg">Precision Medical Coding</h3>
                   <p className="text-lg lg:text-xl text-white/90 leading-relaxed lg:max-w-4xl font-normal drop-shadow-md">
                     In addition to translating physician documentation into ICD-10 CM, CPT & HCPCS Level – 2, we also apply necessary modifiers to prevent automatic rejections by payers. We strive to achieve 95% or higher coding accuracy to achieve consistent cash flow. 
@@ -107,9 +106,7 @@ export default function MidCyclePage() {
                 
                 {/* Content */}
                 <div className="relative z-10">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 mb-8 text-sm text-white/90 w-fit backdrop-blur-md bg-white/5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.8)] animate-pulse"></span> 04
-                  </div>
+                  <p className="text-6xl lg:text-7xl font-normal text-white/30 mb-8">04</p>
                   <h3 className="text-4xl lg:text-5xl font-normal tracking-tight mb-6 drop-shadow-lg text-white">Compliance and Auditing</h3>
                   <p className="text-lg lg:text-xl text-white/90 leading-relaxed lg:max-w-4xl font-normal drop-shadow-md">
                     We also review a statistically valid sample (typically 6-8%) of coded cases to identify patterns of under coding (lost revenue) or over coding (compliance risk). On one hand, we help you identify services provided that are not fully billed, whereas we also help you identify payer audits that can be triggered by overcoding.
@@ -119,6 +116,7 @@ export default function MidCyclePage() {
             </div>
           </div>
         </section>
+        <OtherSolutions activePath="/solutions/mid-cycle" />
       </main>
 
       <Footer />

@@ -7,16 +7,16 @@ export default function Footer() {
   return (
     <footer className="relative bg-[#0a192f] text-slate-200 py-24 border-t border-white/5 font-primary selection:bg-white/10 uppercase overflow-hidden">
       {/* Left pattern: more at top, less at bottom */}
-      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none" style={{ 
-        backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', 
+      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none" style={{
+        backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)',
         backgroundSize: '24px 24px',
         WebkitMaskImage: 'linear-gradient(to bottom right, black 0%, transparent 50%)',
         maskImage: 'linear-gradient(to bottom right, black 0%, transparent 50%)',
       }}></div>
-      
+
       {/* Right pattern: less at top, more at bottom */}
-      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none" style={{ 
-        backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', 
+      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none" style={{
+        backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)',
         backgroundSize: '24px 24px',
         WebkitMaskImage: 'linear-gradient(to top left, black 0%, transparent 50%)',
         maskImage: 'linear-gradient(to top left, black 0%, transparent 50%)',
@@ -28,17 +28,17 @@ export default function Footer() {
           <div className="flex flex-col gap-12">
             <div className="flex flex-col gap-8">
               <Link href="/" className="flex items-center bg-[#F2F4EC] px-8 py-2 rounded-full shadow-sm self-start">
-                <Image 
-                  src="/images/centum_cm_logo.png" 
-                  alt="Centum Logo" 
-                  width={180} 
-                  height={50} 
-                  className="h-8 lg:h-10 w-auto object-contain" 
+                <Image
+                  src="/images/centum_cm_logo.png"
+                  alt="Centum Logo"
+                  width={180}
+                  height={50}
+                  className="h-8 lg:h-10 w-auto object-contain"
                   priority
                 />
               </Link>
               <p className="text-[13px] leading-relaxed max-w-xs font-medium tracking-wider uppercase">
-                Modernizing healthcare revenue operations through real-time adjudication and advanced automation.
+                UPSCALING FINANCIAL OUTCOMES THROUGH ACCURATE, COMPLIANT AND EFFICIENT REVENUE CYCLE MANAGEMENT SERVICES.
               </p>
             </div>
           </div>
@@ -51,6 +51,7 @@ export default function Footer() {
               <li><Link href="/solutions/mid-cycle" className="hover:text-[#F2F4EC] transition-colors">Mid-Cycle</Link></li>
               <li><Link href="/solutions/back-end" className="hover:text-[#F2F4EC] transition-colors">Back-End</Link></li>
               <li><Link href="/solutions/credentialing-services" className="hover:text-[#F2F4EC] transition-colors">Credentialing Services</Link></li>
+              <li><Link href="/solutions/standalone" className="hover:text-[#F2F4EC] transition-colors">Standalone Solutions</Link></li>
             </ul>
           </div>
 

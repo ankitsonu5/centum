@@ -28,7 +28,7 @@ export default function PracticePage() {
         {/* Banner - Original height restored */}
         <div
           className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center overflow-hidden"
-          style={{ backgroundImage: "url('/images/case_study_banner.png')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=2000&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVkaWNhbCUyMGJpbGxpbmd8ZW58MHx8MHx8fDA%3D')" }}
         >
           {/* Overlay to ensure text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 to-transparent md:bg-blue-900/40"></div>
@@ -77,14 +77,14 @@ export default function PracticePage() {
                       <h3 className="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">
                         {category.title}
                       </h3>
-                      <div className="w-10 h-1 bg-blue-600 rounded-full mt-4 transition-all duration-500 group-hover:w-20"></div>
+                      <div className="w-20 h-1 bg-blue-600 rounded-full mt-4"></div>
 
-                      {/* Revealed Content on Hover */}
-                      <div className="max-h-0 opacity-0 overflow-hidden transition-all duration-700 ease-in-out group-hover:max-h-[500px] group-hover:opacity-100 group-hover:mt-8">
+                      {/* Always Visible Content */}
+                      <div className="mt-8">
                         <ul className="space-y-4">
                           {category.items.map((item, i) => (
                             <li key={i} className="flex items-center gap-4 text-slate-700 text-lg md:text-xl font-medium">
-                              <span className="w-2 h-2 rounded-full bg-slate-900 scale-0 transition-transform duration-500 delay-[i*100ms] group-hover:scale-100"></span>
+                              <span className="w-2 h-2 rounded-full bg-slate-900 transition-transform duration-500"></span>
                               {item}
                             </li>
                           ))}

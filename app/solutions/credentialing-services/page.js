@@ -3,6 +3,7 @@
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import Image from "next/image";
+import OtherSolutions from "../../../components/OtherSolutions";
 
 export default function CredentialingPage() {
   const services = [
@@ -25,7 +26,7 @@ export default function CredentialingPage() {
         {/* Banner - Matching project style */}
         <div
           className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center overflow-hidden"
-          style={{ backgroundImage: "url('/images/solutions_centum_banner.jpg')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=2560&auto=format&fit=crop&q=100&ixlib=rb-4.1.0')" }}
         >
           {/* Overlay to ensure text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 to-transparent md:bg-blue-900/40"></div>
@@ -87,6 +88,7 @@ export default function CredentialingPage() {
             </div>
           </div>
         </section>
+        <OtherSolutions activePath="/solutions/credentialing-services" />
       </main>
 
       <Footer />
