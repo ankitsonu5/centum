@@ -4,43 +4,69 @@ import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import OtherSolutions from "../../../components/OtherSolutions";
 import Image from "next/image";
+import {
+  Database,
+  Activity,
+  Settings,
+  ShieldCheck,
+  Headphones,
+  Share2,
+  Globe,
+  ArrowRight
+} from "lucide-react";
 
 export default function StandalonePage() {
-  const steps = [
+  const services = [
     {
-      q: "A/R Recovery",
-      a: "Our team of experts can help you recover old accounts receivable that have been sitting on your books for too long. We use proven strategies to get you paid.",
-      step: "01"
+      title: "EHR / EMR Support",
+      desc: "System setup, configuration, troubleshooting, and workflow optimization.",
+      icon: <Database className="w-8 h-8" />
     },
     {
-      q: "Denial Management",
-      a: "We analyze your denials to find the root cause and implement changes to prevent them from happening again. We also appeal denied claims to get you every dollar you deserve.",
-      step: "02"
+      title: "Practice Management Support",
+      desc: "Scheduling, patient registration, and system performance support.",
+      icon: <Activity className="w-8 h-8" />
     },
     {
-      q: "Coding Audits",
-      a: "Ensure your coding is accurate and compliant with our regular coding audits. We identify areas for improvement and provide training for your staff.",
-      step: "03"
+      title: "RCM Software Support",
+      desc: "Billing system troubleshooting, claim submission support, and clearinghouse integration.",
+      icon: <Settings className="w-8 h-8" />
     },
     {
-      q: "Medical Records",
-      a: "Efficient management of medical records is crucial for a smooth revenue cycle. We help you stay organized and compliant with all regulations.",
-      step: "04"
+      title: "Eligibility & Clearinghouse Support",
+      desc: "Resolution of eligibility (270/271) issues and payer connectivity support.",
+      icon: <ShieldCheck className="w-8 h-8" />
+    },
+    {
+      title: "IT Helpdesk Support",
+      desc: "Daily technical support including login issues, access management, and system errors.",
+      icon: <Headphones className="w-8 h-8" />
+    },
+    {
+      title: "Integration & Data Support",
+      desc: "EHR-billing integration, API setup, and secure data synchronization.",
+      icon: <Share2 className="w-8 h-8" />
+    },
+    {
+      title: "Website Building & Digital Marketing",
+      desc: "Building Professional website, Developing Android / iOS Apps, Digital marketing strategies to enhance visibility & attract more patients.",
+      icon: <Globe className="w-10 h-10" />
     }
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#fcfcfc] selection:bg-accent/30 font-primary text-slate-800">
+    <div className="flex flex-col min-h-screen bg-[#f8fafc] selection:bg-[#B98C29]/30 font-primary text-slate-800">
       <Navbar />
 
-      <main className="flex-1 overflow-x-hidden">
+      <main className="flex-1">
+        {/* Original Style Banner */}
         <div
           className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center overflow-hidden"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=2560&auto=format&fit=crop&q=100')" }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 to-transparent md:bg-blue-900/40"></div>
-          <div className="absolute inset-0 z-0 opacity-15 pointer-events-none" style={{ 
-            backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', 
+          <div className="absolute inset-0 z-0 opacity-15 pointer-events-none" style={{
+            backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)',
             backgroundSize: '24px 24px',
             WebkitMaskImage: 'linear-gradient(to right, black 0%, transparent 30%)',
             maskImage: 'linear-gradient(to right, black 0%, transparent 30%)'
@@ -53,39 +79,44 @@ export default function StandalonePage() {
           </div>
         </div>
 
-        <section className="py-20 lg:py-28 bg-[#fcfcfc] overflow-hidden border-t border-slate-100">
-          <div className="container mx-auto px-6 max-w-7xl text-left">
-            
-            {/* Intro paragraph */}
-            <p className="text-lg lg:text-xl text-zinc-600 font-normal leading-relaxed mb-12 max-w-5xl">
+        {/* Original Intro Section */}
+        <section className="pt-20 pb-0 bg-[#f8fafc]">
+          <div className="container mx-auto px-6 max-w-7xl">
+            <p className="text-xl lg:text-2xl text-zinc-600 font-normal leading-relaxed">
               At Centum RCM, we extend beyond revenue cycle management by providing dependable healthcare technology support. Our services ensure smooth integration between EHR/EMR systems, practice management software, and billing workflows—helping providers maintain uninterrupted operations and improved financial performance.
             </p>
+          </div>
+        </section>
 
-            {/* Service List */}
-            <div className="flex flex-col gap-0 border-t border-slate-200 text-left">
-              {[
-                { title: "EHR / EMR Support", desc: "System setup, configuration, troubleshooting, and workflow optimization." },
-                { title: "Practice Management Support", desc: "Scheduling, patient registration, and system performance support." },
-                { title: "RCM Software Support", desc: "Billing system troubleshooting, claim submission support, and clearinghouse integration." },
-                { title: "Eligibility & Clearinghouse Support", desc: "Resolution of eligibility (270/271) issues and payer connectivity support." },
-                { title: "IT Helpdesk Support", desc: "Daily technical support including login issues, access management, and system errors." },
-                { title: "Integration & Data Support", desc: "EHR-billing integration, API setup, and secure data synchronization." },
-                { title: "Website Building & Digital Marketing", desc: "Building Professional website, Developing Android / iOS Apps, Digital marketing strategies to enhance visibility & attract more patients.", dash: true }
-              ].map((item, i) => (
-                <div key={i} className="group flex flex-col md:flex-row items-start py-8 lg:py-10 border-b border-slate-200 hover:bg-slate-50/50 transition-colors duration-300 px-6 lg:px-12 -mx-6 lg:-mx-12 gap-2 md:gap-8 lg:gap-12">
-                  <div className="w-full md:w-1/3 shrink-0">
-                    <h3 className="text-xl lg:text-2xl font-bold text-[#1e293b] group-hover:text-[#243B71] transition-colors underline underline-offset-4">
-                      {item.title}{item.dash ? " –" : ""}
-                    </h3>
+        {/* Services Grid */}
+        <section className="pt-16 pb-24 relative overflow-hidden">
+          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-100/50 rounded-full blur-[120px] -z-10"></div>
+          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-amber-100/30 rounded-full blur-[120px] -z-10"></div>
+
+          <div className="container mx-auto px-6 max-w-7xl">
+            <div className="mb-12 text-center">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Our Technical Expertise</h2>
+              <p className="text-slate-500 text-lg max-w-2xl mx-auto">Focused solutions designed to optimize every touchpoint of your healthcare technology stack.</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, i) => (
+                <div
+                  key={i}
+                  className="group relative p-8 rounded-[2.5rem] bg-white border border-slate-200 shadow-sm hover:shadow-2xl hover:border-blue-100 transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+                >
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-bl-[100px] -z-10 group-hover:bg-blue-100/50 transition-colors"></div>
+
+                  <div className="w-16 h-16 rounded-2xl bg-slate-900 text-[#B98C29] flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                    {service.icon}
                   </div>
-                  <div className="w-full md:flex-1">
-                    <p className="text-lg lg:text-xl text-zinc-500 leading-relaxed font-normal">
-                      {item.desc}
-                    </p>
-                  </div>
+
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-[#243B71] transition-colors">{service.title}</h3>
+                  <p className="text-slate-600 leading-relaxed">{service.desc}</p>
                 </div>
               ))}
             </div>
+
           </div>
         </section>
 
@@ -93,6 +124,26 @@ export default function StandalonePage() {
       </main>
 
       <Footer />
+
+      <style jsx global>{`
+        @keyframes slow-zoom {
+          0% { transform: scale(1.1); }
+          50% { transform: scale(1.15); }
+          100% { transform: scale(1.1); }
+        }
+        .animate-slow-zoom {
+          animation: slow-zoom 20s ease-in-out infinite;
+        }
+        @keyframes fade-in-up {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+          animation: fade-in-up 0.8s ease-out forwards;
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+      `}</style>
     </div>
   );
 }

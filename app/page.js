@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { ArrowRight, Phone, Mail } from "lucide-react";
 
 export default function Home() {
   const videoRef = useRef(null);
@@ -368,54 +369,90 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Final CTA / Video Section */}
-        <section className="py-24 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-500/5 blur-[120px] rounded-full translate-x-1/3 -translate-y-1/4"></div>
-          <div className="container mx-auto px-6 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl lg:text-5xl mb-12 leading-tight text-slate-900 font-medium">
-                Ready to transform your healthcare revenue lifecycle?
-              </h2>
-              <div className="relative aspect-video w-full rounded-3xl overflow-hidden border border-slate-200 bg-slate-900 group mb-12">
-                <video
-                  ref={ctaVideoRef}
-                  src="/videos/centumrcm_video.mp4"
-                  className={`w-full h-full object-cover transition-all duration-300 ${!isPlayingCTA ? "opacity-75 grayscale" : "opacity-100 grayscale-0"}`}
-                  controls={isPlayingCTA}
-                  controlsList="nodownload noremoteplayback"
-                  disablePictureInPicture
-                  playsInline
-                  poster="/images/hero_main.png"
-                  onPlay={() => setIsPlayingCTA(true)}
-                  onPause={() => setIsPlayingCTA(false)}
-                  onEnded={() => setIsPlayingCTA(false)}
-                />
+        {/* Contact Form Section (Replaced Final CTA Video) */}
+        <section className="py-24 bg-[#f4f5f7]">
+          <div className="container mx-auto px-6 max-w-6xl">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              
+              {/* Left Column: Text & Contact Info */}
+              <div className="max-w-md">
+                <span className="text-gray-500 font-bold uppercase tracking-widest text-xs mb-4 block">
+                  We're Here To Help You
+                </span>
+                <h2 className="text-4xl md:text-[2.75rem] font-medium text-[#1e293b] leading-tight mb-6">
+                  Discuss Your<br />Healthcare Revenue Needs
+                </h2>
+                <p className="text-gray-500 text-base leading-relaxed mb-12">
+                  Are you looking for top-quality revenue cycle solutions tailored to your needs? Reach out to us.
+                </p>
 
-                {!isPlayingCTA && (
-                  <div
-                    className="absolute inset-0 flex items-center justify-center cursor-pointer transition-opacity duration-300 z-10"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      if (ctaVideoRef.current) {
-                        ctaVideoRef.current.play();
-                      }
-                    }}
-                  >
-                    <div className="absolute inset-0 bg-transparent group-hover:bg-black/10 transition-colors"></div>
-                    <div className="w-24 h-24 rounded-full bg-white text-slate-900 flex items-center justify-center hover:scale-110 transition-transform text-left relative z-20">
-                      <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" /></svg>
+                <div className="space-y-8">
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-md bg-[#1D293D] flex items-center justify-center shrink-0">
+                      <Mail className="w-5 h-5 text-white" strokeWidth={2} />
+                    </div>
+                    <div>
+                      <p className="text-gray-400 text-sm mb-0.5">E-mail</p>
+                      <p className="text-gray-800 font-medium">nithya@centumrcm.in</p>
                     </div>
                   </div>
-                )}
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mt-12">
-              <Link href="/contact" className="bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold tracking-wide text-[16px] hover:bg-black transition-all">Get Started Today</Link>
+
+              {/* Right Column: Form */}
+              <div className="bg-white rounded-[2rem] p-8 md:p-10 w-full max-w-lg mx-auto lg:ml-auto">
+                <form className="space-y-6">
+                  <div>
+                    <label className="block text-sm text-gray-500 mb-2">Full Name</label>
+                    <input 
+                      type="text" 
+                      placeholder="Jane Smith" 
+                      className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm text-gray-500 mb-2">Email Address</label>
+                    <input 
+                      type="email" 
+                      placeholder="jane@example.com" 
+                      className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm text-gray-500 mb-2">Subject</label>
+                    <input 
+                      type="text" 
+                      placeholder="How can we help?" 
+                      className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm text-gray-500 mb-2">Message</label>
+                    <textarea 
+                      placeholder="Type your message" 
+                      rows={4}
+                      className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20 resize-none"
+                    ></textarea>
+                  </div>
+
+                  <div className="pt-2">
+                    <button type="button" className="group flex items-center gap-4 bg-[#1D293D] text-white rounded-full p-1.5 pr-8 hover:bg-[#2a3b57] transition-colors">
+                      <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#1D293D] group-hover:scale-95 transition-transform">
+                        <ArrowRight className="w-5 h-5" />
+                      </div>
+                      <span className="font-medium text-sm tracking-wide">Get a Solution</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+
             </div>
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
