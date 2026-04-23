@@ -40,7 +40,7 @@ export default function PreServicePage() {
           style={{ backgroundImage: "url('/images/solutions_centum_banner.jpg')" }}
         >
           {/* Overlay to ensure text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 to-transparent md:bg-blue-900/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#243B71]/80 via-[#243B71]/40 to-[#243B71]/80 z-10"></div>
 
           {/* Dots Effect - Left Side */}
           <div className="absolute inset-0 z-0 opacity-15 pointer-events-none" style={{ 

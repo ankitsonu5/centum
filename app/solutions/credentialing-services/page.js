@@ -29,7 +29,7 @@ export default function CredentialingPage() {
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=2560&auto=format&fit=crop&q=100&ixlib=rb-4.1.0')" }}
         >
           {/* Overlay to ensure text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 to-transparent md:bg-blue-900/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#243B71]/80 via-[#243B71]/40 to-[#243B71]/80 z-10"></div>
 
           {/* Dots Effect - Left Side */}
           <div className="absolute inset-0 z-0 opacity-15 pointer-events-none" style={{ 

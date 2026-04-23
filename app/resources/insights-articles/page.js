@@ -44,7 +44,7 @@ export default function InsightsArticlesPage() {
           style={{ backgroundImage: "url('/images/insights-articles_centum.jpg')" }}
         >
           {/* Overlay to ensure text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-[#0f172a]/70 to-[#0f172a]/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#243B71]/80 via-[#243B71]/40 to-[#243B71]/80 z-10"></div>
 
           {/* Dots Effect - Left Side */}
           <div className="absolute inset-0 z-0 opacity-15 pointer-events-none" style={{ 

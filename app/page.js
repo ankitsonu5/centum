@@ -30,8 +30,7 @@ export default function Home() {
             <source src="/videos/centumrcm_video.mp4" type="video/mp4" />
           </video>
 
-          {/* Solid Color Filter Overlay */}
-          <div className="absolute inset-0 bg-[#243B72]/40 z-10"></div>
+          {/* Solid Color Filter Overlay Removed */}
           <div className="relative container mx-auto px-6 text-center max-w-6xl z-20 pt-40 md:pt-60 flex flex-col items-center">
             {/* Main Header */}
             <h1 className="text-4xl sm:text-6xl lg:text-[3.5rem] xl:text-[4.2rem] 2xl:text-[5rem] text-white mb-6 leading-[1.2] uppercase flex flex-col items-center">
@@ -158,7 +157,7 @@ export default function Home() {
               can help you automate your revenue cycle and reduce your costs to collect.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-4 lg:px-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 px-4 lg:px-0">
               {[
                 {
                   title: "Front End Revenue Cycle",
@@ -179,6 +178,11 @@ export default function Home() {
                   title: "Consultative Support",
                   image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uc3VsdGluZ3xlbnwwfHwwfHx8MA%3D%3D",
                   href: "/solutions/credentialing-services"
+                },
+                {
+                  title: "Standalone Solutions",
+                  image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGRhdGElMjBhbmFseXRpY3N8ZW58MHx8MHx8fDA%3D",
+                  href: "/solutions/standalone"
                 }
               ].map((item, i) => (
                 <Link key={i} href={item.href} className="flex flex-col h-full bg-white rounded-lg overflow-hidden group cursor-pointer transition-all duration-300">
@@ -373,7 +377,7 @@ export default function Home() {
         <section className="py-24 bg-[#f4f5f7]">
           <div className="container mx-auto px-6 max-w-6xl">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              
+
               {/* Left Column: Text & Contact Info */}
               <div className="max-w-md">
                 <span className="text-gray-500 font-bold uppercase tracking-widest text-xs mb-4 block">
@@ -404,35 +408,35 @@ export default function Home() {
                 <form className="space-y-6">
                   <div>
                     <label className="block text-sm text-gray-500 mb-2">Full Name</label>
-                    <input 
-                      type="text" 
-                      placeholder="Jane Smith" 
+                    <input
+                      type="text"
+                      placeholder="Jane Smith"
                       className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm text-gray-500 mb-2">Email Address</label>
-                    <input 
-                      type="email" 
-                      placeholder="jane@example.com" 
+                    <input
+                      type="email"
+                      placeholder="jane@example.com"
                       className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20"
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm text-gray-500 mb-2">Subject</label>
-                    <input 
-                      type="text" 
-                      placeholder="How can we help?" 
+                    <input
+                      type="text"
+                      placeholder="How can we help?"
                       className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20"
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm text-gray-500 mb-2">Message</label>
-                    <textarea 
-                      placeholder="Type your message" 
+                    <textarea
+                      placeholder="Type your message"
                       rows={4}
                       className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20 resize-none"
                     ></textarea>

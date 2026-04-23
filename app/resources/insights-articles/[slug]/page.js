@@ -71,7 +71,7 @@ export default function ArticleDetailsPage({ params }) {
           style={{ backgroundImage: "url('/images/insights-articles_centum.jpg')" }}
         >
           {/* Overlay to ensure text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-[#0f172a]/70 to-[#0f172a]/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#243B71]/80 via-[#243B71]/40 to-[#243B71]/80 z-10"></div>
 
           {/* Content */}
           <div className="relative z-10 text-center text-white px-6 w-full max-w-5xl mx-auto">

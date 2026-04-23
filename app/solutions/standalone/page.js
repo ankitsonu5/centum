@@ -64,7 +64,7 @@ export default function StandalonePage() {
           className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center overflow-hidden"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=2560&auto=format&fit=crop&q=100')" }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 to-transparent md:bg-blue-900/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#243B71]/80 via-[#243B71]/40 to-[#243B71]/80 z-10"></div>
           <div className="absolute inset-0 z-0 opacity-15 pointer-events-none" style={{
             backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)',
             backgroundSize: '24px 24px',

@@ -89,7 +89,7 @@ export default function Navbar() {
       {/* Header Section Gradient removed as requested */}
 
       {/* Navbar Container */}
-      <div className={`fixed top-0 left-0 right-0 z-[100] w-full transition-all duration-500 ${isScrolled ? "bg-white/50 backdrop-blur-md border-b border-slate-100 shadow-sm" : "bg-gradient-to-b from-black/80 via-black/40 to-transparent"}`}>
+      <div className={`fixed top-0 left-0 right-0 z-[100] w-full transition-all duration-500 ${isScrolled ? "bg-white/50 backdrop-blur-md border-b border-slate-100 shadow-sm" : "bg-transparent"}`}>
         <div className="max-w-7xl mx-auto px-4">
           <nav className={`flex items-center justify-between transition-all duration-500 relative ${isScrolled ? "py-3" : "py-4 lg:py-6"}`}>
             {/* Logo - Left Side */}

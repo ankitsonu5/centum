@@ -15,7 +15,7 @@ export default function InsightsPage() {
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=2560&auto=format&fit=crop&q=100')" }}
         >
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-blue-900/50 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#243B71]/80 via-[#243B71]/40 to-[#243B71]/80 z-10"></div>
 
           {/* Dots Effect */}
           <div className="absolute inset-0 z-0 opacity-15 pointer-events-none" style={{ 
