@@ -28,15 +28,22 @@ export default function WhyCentumPage() {
 
       <main className="flex-1 overflow-x-hidden">
         {/* Banner - Original height restored */}
-        <div
-          className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center overflow-hidden"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=2000&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uc3VsdGluZ3xlbnwwfHwwfHx8MA%3D%3D')" }}
-        >
+        <div className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center overflow-hidden">
+          {/* Background Image */}
+          <Image
+            src="/images/why-centum-banner.jpeg"
+            alt="Why Centum Banner"
+            fill
+            unoptimized
+            style={{ objectFit: 'cover', objectPosition: 'center top' }}
+            priority
+          />
+
           {/* Overlay to ensure text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#243B71]/80 via-[#243B71]/40 to-[#243B71]/80 z-10"></div>
 
           {/* Dots Effect - Left Side */}
-          <div className="absolute inset-0 z-0 opacity-15 pointer-events-none" style={{ 
+          <div className="absolute inset-0 z-20 opacity-15 pointer-events-none" style={{ 
             backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', 
             backgroundSize: '24px 24px',
             WebkitMaskImage: 'linear-gradient(to right, black 0%, transparent 30%)',
@@ -44,7 +51,7 @@ export default function WhyCentumPage() {
           }}></div>
 
           {/* Banner Content */}
-          <div className="relative z-10 text-center text-white px-6 w-full max-w-5xl mx-auto">
+          <div className="relative z-30 text-center text-white px-6 w-full max-w-5xl mx-auto">
             <span className="text-[#B98C29] text-sm md:text-base tracking-[0.2em] block font-bold mb-4 uppercase">Why Centum</span>
             <h1 className="text-5xl md:text-6xl font-semibold tracking-wide drop-shadow-md">
               About Us

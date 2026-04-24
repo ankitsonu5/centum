@@ -2,6 +2,7 @@
 
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
+import Image from "next/image";
 import { useState } from "react";
 
 const faqs = [
@@ -60,10 +61,16 @@ export default function FAQ() {
 
       <main className="flex-1 w-full flex flex-col items-center">
         {/* Banner */}
-        <div 
-          className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center overflow-hidden"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=2560&auto=format&fit=crop&q=100')" }}
-        >
+        <div className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center overflow-hidden">
+          <Image
+            src="/images/faq_centum.jpeg"
+            alt="FAQ Banner"
+            fill
+            unoptimized
+            priority
+            style={{ objectFit: "cover", objectPosition: "center top" }}
+          />
+
           <div className="absolute inset-0 bg-gradient-to-r from-[#243B71]/80 via-[#243B71]/40 to-[#243B71]/80 z-10"></div>
           
           <div className="absolute inset-0 z-0 opacity-15 pointer-events-none" style={{ 

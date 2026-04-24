@@ -33,10 +33,16 @@ export default function BackEndPage() {
 
       <main className="flex-1 overflow-x-hidden">
         {/* Banner - Matching Solutions Style */}
-        <div
-          className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center overflow-hidden"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=2560&auto=format&fit=crop&q=100')" }}
-        >
+        <div className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center overflow-hidden">
+          <Image
+            src="/images/claim_submission_denial_management.jpeg"
+            alt="Claim Submission and Denial Management"
+            fill
+            unoptimized
+            priority
+            style={{ objectFit: "cover", objectPosition: "center top" }}
+          />
+
           <div className="absolute inset-0 bg-gradient-to-r from-[#243B71]/80 via-[#243B71]/40 to-[#243B71]/80 z-10"></div>
 
           {/* Dots Effect - Left Side */}

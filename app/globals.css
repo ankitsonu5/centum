@@ -15,8 +15,8 @@
   --color-accent: var(--accent);
   --color-border-subtle: var(--border);
   
-  --font-primary: var(--font-spartan), sans-serif;
-  --font-sans: var(--font-spartan), sans-serif;
+  --font-primary: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 body {

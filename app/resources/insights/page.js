@@ -2,6 +2,7 @@
 
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
+import Image from "next/image";
 
 export default function InsightsPage() {
   return (
@@ -10,10 +11,16 @@ export default function InsightsPage() {
 
       <main className="overflow-x-hidden">
         {/* Banner Section */}
-        <div
-          className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center overflow-hidden"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=2560&auto=format&fit=crop&q=100')" }}
-        >
+        <div className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center overflow-hidden">
+          <Image
+            src="/images/insights_centum.jpeg"
+            alt="Insights Banner"
+            fill
+            unoptimized
+            priority
+            style={{ objectFit: "cover", objectPosition: "center top" }}
+          />
+
           {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#243B71]/80 via-[#243B71]/40 to-[#243B71]/80 z-10"></div>
 
