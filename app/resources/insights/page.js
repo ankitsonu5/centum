@@ -13,7 +13,7 @@ export default function InsightsPage() {
         {/* Banner Section */}
         <div className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center overflow-hidden">
           <Image
-            src="/images/insights_centum.jpeg"
+            src="/images/insights_banner.jpeg"
             alt="Insights Banner"
             fill
             unoptimized
