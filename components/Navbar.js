@@ -53,13 +53,14 @@ export default function Navbar() {
         ? window.innerHeight - 100
         : Math.max(450, window.innerHeight * 0.65) - 80;
 
-      setIsScrolled(window.scrollY > threshold);
+      const nextIsScrolled = window.scrollY > threshold;
+      setIsScrolled((current) => (current === nextIsScrolled ? current : nextIsScrolled));
     };
 
     // Initial check
     handleScroll();
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -70,11 +71,10 @@ export default function Navbar() {
 
   // Lock scroll when mobile menu is open
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
+    document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
+    return () => {
       document.body.style.overflow = 'unset';
-    }
+    };
   }, [isMenuOpen]);
 
   useEffect(() => {

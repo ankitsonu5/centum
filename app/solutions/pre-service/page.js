@@ -2,7 +2,6 @@
 
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
-import Image from "next/image";
 import OtherSolutions from "../../../components/OtherSolutions";
 
 export default function PreServicePage() {

@@ -7,11 +7,8 @@ export default function ScrollToTop() {
 
   // Show button when page is scrolled down
   const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
+    const nextIsVisible = window.pageYOffset > 300;
+    setIsVisible((current) => (current === nextIsVisible ? current : nextIsVisible));
   };
 
   // Set the top coordinate to 0
@@ -24,7 +21,7 @@ export default function ScrollToTop() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility, { passive: true });
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 

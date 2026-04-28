@@ -34,6 +34,7 @@ export default function PracticePage() {
             fill
             style={{ objectFit: 'cover', objectPosition: 'center' }}
             priority
+            sizes="100vw"
           />
 
           {/* Overlay to ensure text readability */}

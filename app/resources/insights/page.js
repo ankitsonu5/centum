@@ -16,8 +16,8 @@ export default function InsightsPage() {
             src="/images/insights_banner.jpeg"
             alt="Insights Banner"
             fill
-            unoptimized
             priority
+            sizes="100vw"
             style={{ objectFit: "cover", objectPosition: "center top" }}
           />
 

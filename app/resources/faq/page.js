@@ -66,8 +66,8 @@ export default function FAQ() {
             src="/images/faq_centum.jpeg"
             alt="FAQ Banner"
             fill
-            unoptimized
             priority
+            sizes="100vw"
             style={{ objectFit: "cover", objectPosition: "center top" }}
           />
 

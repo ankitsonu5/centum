@@ -114,6 +114,7 @@ export default function ArticleDetailsPage({ params }) {
                   src={article.image} 
                   alt={article.title} 
                   fill 
+                  sizes="(min-width: 1280px) 1152px, 100vw"
                   className="object-cover"
                />
             </div>

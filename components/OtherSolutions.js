@@ -54,6 +54,7 @@ export default function OtherSolutions({ activePath }) {
                   src={item.image} 
                   alt={item.title} 
                   fill 
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                   className="object-cover object-center transition-transform duration-500 group-hover:scale-105" 
                 />
                 <div className="absolute inset-0 bg-[#243B71]/20 group-hover:bg-transparent transition-colors"></div>

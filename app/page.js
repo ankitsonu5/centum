@@ -1,17 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useState } from "react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { ArrowRight, Phone, Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 
 export default function Home() {
-  const videoRef = useRef(null);
-  const ctaVideoRef = useRef(null);
-  const [isPlayingCTA, setIsPlayingCTA] = useState(false);
-
   return (
     <div className="flex flex-col min-h-screen bg-background selection:bg-accent/30 font-primary">
       <Navbar />
@@ -20,7 +15,6 @@ export default function Home() {
         <section className="relative h-[100vh] flex items-end justify-center overflow-hidden bg-hero-bg pb-6 sm:pb-12">
           {/* Video Background */}
           <video
-            ref={videoRef}
             autoPlay
             muted
             loop
@@ -172,6 +166,7 @@ export default function Home() {
                       src={item.image}
                       alt={item.title}
                       fill
+                      sizes="(min-width: 1024px) 20vw, (min-width: 640px) 50vw, 100vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
@@ -240,6 +235,7 @@ export default function Home() {
                         src={step.image}
                         alt={step.title}
                         fill
+                        sizes="96px"
                         className="object-contain"
                       />
                     </div>

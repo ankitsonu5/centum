@@ -17,7 +17,6 @@ export default function Footer() {
                   width={180}
                   height={50}
                   className="h-8 lg:h-10 w-auto object-contain"
-                  priority
                 />
               </Link>
               <p className="text-[13px] leading-relaxed max-w-xs font-medium tracking-wider uppercase">

@@ -38,8 +38,8 @@ export default function BackEndPage() {
             src="/images/claim_submission_denial_management.jpeg"
             alt="Claim Submission and Denial Management"
             fill
-            unoptimized
             priority
+            sizes="100vw"
             style={{ objectFit: "cover", objectPosition: "center top" }}
           />
 

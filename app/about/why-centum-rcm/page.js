@@ -34,9 +34,9 @@ export default function WhyCentumRcmPage() {
             src="/images/why-centum-banner.jpeg"
             alt="Why Centum RCM Banner"
             fill
-            unoptimized
             style={{ objectFit: 'cover', objectPosition: 'center top' }}
             priority
+            sizes="100vw"
           />
 
           {/* Overlay to ensure text readability */}
