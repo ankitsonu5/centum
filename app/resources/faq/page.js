@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     q: "How is your pricing structured?",
-    a: "Pricing is usually based on either on a percentage of monthly collections or a flat fee per claim. We can also work on a custom-tailored hybrid model."
+    a: "Pricing is usually based either on a percentage of monthly collections or a flat fee per claim. We can also work on a custom-tailored hybrid model."
   }
 ];
 
@@ -73,15 +73,7 @@ export default function FAQ() {
 
           <div className="absolute inset-0 bg-gradient-to-r from-[#243B71]/80 via-[#243B71]/40 to-[#243B71]/80 z-10"></div>
           
-          <div className="absolute inset-0 z-0 opacity-15 pointer-events-none" style={{ 
-            backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', 
-            backgroundSize: '24px 24px',
-            WebkitMaskImage: 'linear-gradient(to right, black 0%, transparent 30%)',
-            maskImage: 'linear-gradient(to right, black 0%, transparent 30%)'
-          }}></div>
-          
           <div className="relative z-10 text-center text-white px-6">
-            <span className="text-[#B98C29] text-sm md:text-base tracking-[0.2em] block font-bold mb-4 uppercase">Support</span>
             <h1 className="text-4xl md:text-6xl font-semibold tracking-wide drop-shadow-md">FAQ's</h1>
           </div>
         </div>

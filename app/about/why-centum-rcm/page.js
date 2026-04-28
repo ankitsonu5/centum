@@ -4,9 +4,9 @@ import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import Image from "next/image";
 
-export default function WhyCentumPage() {
+export default function WhyCentumRcmPage() {
   const ehrList = [
-    "Athena", "eClinicalWorks", "Epic", "Karep / Tebra", "NextGen", 
+    "Athena", "eClinicalWorks", "Epic", "Karep / Tebra", "NextGen",
     "Allscripts", "MEDITECH", "AdvancedMD", "Greenway", "Cerner"
   ];
 
@@ -32,7 +32,7 @@ export default function WhyCentumPage() {
           {/* Background Image */}
           <Image
             src="/images/why-centum-banner.jpeg"
-            alt="Why Centum Banner"
+            alt="Why Centum RCM Banner"
             fill
             unoptimized
             style={{ objectFit: 'cover', objectPosition: 'center top' }}
@@ -42,44 +42,33 @@ export default function WhyCentumPage() {
           {/* Overlay to ensure text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#243B71]/80 via-[#243B71]/40 to-[#243B71]/80 z-10"></div>
 
-          {/* Dots Effect - Left Side */}
-          <div className="absolute inset-0 z-20 opacity-15 pointer-events-none" style={{ 
-            backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', 
-            backgroundSize: '24px 24px',
-            WebkitMaskImage: 'linear-gradient(to right, black 0%, transparent 30%)',
-            maskImage: 'linear-gradient(to right, black 0%, transparent 30%)'
-          }}></div>
-
           {/* Banner Content */}
           <div className="relative z-30 text-center text-white px-6 w-full max-w-5xl mx-auto">
-            <span className="text-[#B98C29] text-sm md:text-base tracking-[0.2em] block font-bold mb-4 uppercase">Why Centum</span>
-            <h1 className="text-5xl md:text-6xl font-semibold tracking-wide drop-shadow-md">
-              About Us
-            </h1>
+            <span className="text-[#B98C29] text-sm md:text-base tracking-[0.2em] block font-bold mb-4 uppercase">Why Centum RCM</span>
           </div>
         </div>
 
-        {/* Why Centum Content - EXACT styles from original About page */}
+        {/* Why Centum RCM Content - EXACT styles from original About page */}
         <section className="py-20 bg-[#fcfcfc] border-b border-slate-100">
           <div className="container mx-auto px-6 max-w-[1366px]">
             <div className="text-center mb-20">
-              <h2 className="text-3xl md:text-5xl font-normal text-slate-900 tracking-tight uppercase">
-                Why Centum
+              <h2 className="text-[1.6rem] sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight md:tracking-wide leading-tight text-slate-900 max-w-none whitespace-nowrap">
+                AI-first accuracy with <span className="text-[#B98C29]">Human insights.</span>
               </h2>
-              <div className="w-12 h-1 bg-slate-900 rounded-full mx-auto mt-6"></div>
+              <div className="w-20 h-1 bg-[#B98C29] rounded-full mx-auto my-2"></div>
             </div>
-            
+
             <div className="w-full text-left">
               <h3 className="text-3xl md:text-4xl font-normal text-slate-900 mb-10 tracking-tight">
                 What makes Centum RCM different?
               </h3>
-            
+
               <div className="space-y-8 text-lg md:text-xl text-slate-600 leading-relaxed font-normal">
                 <p>
-                  CENTUM specializes in working with a wide range of Electronic Health Record (EHR) and Practice Management (PM) systems used across the United States. Our expertise ensures faster onboarding, minimal disruption, and optimized revenue cycle performance
+                  CENTUM specializes in working with a wide range of Electronic Health Record (EHR) and Practice Management (PM) systems used across the United States. Our expertise ensures faster onboarding, minimal disruption, and optimized revenue cycle performance.
                 </p>
                 <p>
-                  We do not require you to switch systems. Our team integrates seamlessly with your existing EHR, ensuring continuity, compliance, and improved financial outcomes.
+                  We do not require you to switch systems as our team integrates seamlessly with your existing EHR. This ensures continuity while we keep improving your financial outcomes.
                 </p>
               </div>
 

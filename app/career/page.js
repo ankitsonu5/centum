@@ -36,7 +36,7 @@ export default function Career() {
           {/* Top block: Large heading + CTA button */}
           <div className="max-w-[1366px] mx-auto px-8 lg:px-16 pt-16 pb-12">
             <h2 className="text-3xl lg:text-5xl font-serif font-normal text-[#1a1a1a] leading-tight mb-8 uppercase tracking-wide">
-              JOIN US AND CO-CREATE GLOBAL HEALING RCM ECOSYSTEM
+              Join us and Co-create success stories
             </h2>
             <a
               href="mailto:nithya@centumrcm.in"

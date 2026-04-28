@@ -11,7 +11,7 @@ const navItems = [
     subItems: [
       { name: "OVERVIEW", href: "/about/overview" },
       { name: "WHAT WE PRACTICE", href: "/about/practice" },
-      { name: "WHY CENTUM", href: "/about/why-centum" }
+      { name: "WHY CENTUM RCM", href: "/about/why-centum-rcm" }
     ]
   },
   {
@@ -19,7 +19,7 @@ const navItems = [
     dropdown: true,
     href: "#",
     subItems: [
-      { name: "PRE-SERVICE", href: "/solutions/pre-service" },
+      { name: "FRONT END", href: "/solutions/pre-service" },
       { name: "MID-CYCLE", href: "/solutions/mid-cycle" },
       { name: "BACK-END", href: "/solutions/back-end" },
       { name: "CREDENTIALING SERVICES", href: "/solutions/credentialing-services" },
@@ -32,11 +32,10 @@ const navItems = [
     href: "#",
     subItems: [
       { name: "INSIGHTS", href: "/resources/insights" },
-      { name: "ARTICLES", href: "/resources/articles" },
       { name: "FAQ", href: "/resources/faq" }
     ]
   },
-  { name: "CAREER", dropdown: false, href: "/career" },
+  { name: "CAREERS", dropdown: false, href: "/career" },
   { name: "CONTACT US", dropdown: false, href: "/contact" }
 ];
 
@@ -111,13 +110,13 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4">
           <nav ref={navRef} className={`flex items-center justify-between transition-all duration-500 relative ${isScrolled ? "py-3" : "py-4 lg:py-6"}`}>
             {/* Logo - Left Side */}
-            <Link href="/" className="flex items-center px-8 py-2">
+            <Link href="/" className={`flex items-center px-8 py-2 transition-all duration-500 ${isScrolled ? "" : "bg-[#F2F4EC] rounded-full shadow-sm"}`}>
               <Image
                 src="/images/centum_cm_logo.png"
                 alt="Centum Logo"
-                width={220}
-                height={56}
-                className="h-12 lg:h-14 w-auto object-contain"
+                width={180}
+                height={50}
+                className="h-8 lg:h-10 w-auto object-contain"
                 priority
               />
             </Link>

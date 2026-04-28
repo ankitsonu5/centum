@@ -45,13 +45,6 @@ export default function BackEndPage() {
 
           <div className="absolute inset-0 bg-gradient-to-r from-[#243B71]/80 via-[#243B71]/40 to-[#243B71]/80 z-10"></div>
 
-          {/* Dots Effect - Left Side */}
-          <div className="absolute inset-0 z-0 opacity-15 pointer-events-none" style={{ 
-            backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', 
-            backgroundSize: '24px 24px',
-            WebkitMaskImage: 'linear-gradient(to right, black 0%, transparent 30%)',
-            maskImage: 'linear-gradient(to right, black 0%, transparent 30%)'
-          }}></div>
           <div className="relative z-10 text-center text-white px-6 w-full max-w-5xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-semibold tracking-tight md:tracking-wide drop-shadow-md">
               <span className="text-[#B98C29]">Back-End:</span> Claim Submission & Denial Management
@@ -85,7 +78,7 @@ export default function BackEndPage() {
                       style={{ backgroundImage: `url('${item.image}')` }}
                     ></div>
                     {/* Dark Overlay */}
-                    <div className="absolute inset-0 bg-[#0a192f]/75 group-hover:bg-[#0a192f]/65 transition-colors duration-500"></div>
+                    <div className="absolute inset-0 bg-[#0a192f]/80 group-hover:bg-[#0a192f]/70 transition-colors duration-500"></div>
                     {/* Content */}
                     <div className="relative z-10 p-8 lg:p-10">
                       <p className="text-5xl lg:text-6xl font-normal text-white/25 mb-4">{item.step}</p>

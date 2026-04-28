@@ -7,8 +7,9 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
-    message: ""
+    phone: "",
+    company: "",
+    assist: ""
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -17,7 +18,7 @@ export default function Contact() {
     // Simulate form submission
     console.log("Form submitted:", formData);
     setIsSubmitted(true);
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setFormData({ name: "", email: "", phone: "", company: "", assist: "" });
     setTimeout(() => setIsSubmitted(false), 5000);
   };
 
@@ -48,7 +49,6 @@ export default function Contact() {
           
           <div className="relative z-10 text-center text-white px-6">
             <span className="text-[#B98C29] text-sm md:text-base tracking-[0.2em] block font-bold mb-4 uppercase">Connect With Centum</span>
-            <h1 className="text-5xl md:text-7xl font-semibold tracking-tight drop-shadow-2xl">Get In Touch</h1>
           </div>
         </div>
 
@@ -61,18 +61,18 @@ export default function Contact() {
               <div className="space-y-12">
                 <div className="space-y-6">
                   <h2 className="text-4xl lg:text-6xl font-serif font-normal text-[#1a1a1a] leading-tight">
-                    Let's start a <br/>conversation.
+                    Let’s begin a new journey.
                   </h2>
                   <p className="text-lg lg:text-xl text-[#555555] leading-relaxed max-w-lg">
-                    Whether you have questions about our solutions or want to explore a partnership, our team is ready to help you optimize your revenue cycle.
+                    Need increased velocity in revenue flow? Seeking effective solutions on billing process? Reducing claim denials on your mind? We are here to help.
                   </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8">
                   <div className="space-y-4">
-                    <h4 className="text-xs font-bold tracking-[0.2em] uppercase text-[#B98C29]">Email Us</h4>
-                    <a href="mailto:nithya@centumrcm.in" className="text-xl font-medium text-[#1a1a1a] hover:text-[#B98C29] transition-colors break-words underline decoration-[#B98C29]/30 underline-offset-8">
-                      nithya@centumrcm.in
+                    <h4 className="text-xs font-bold tracking-[0.2em] uppercase text-[#B98C29]">Email at</h4>
+                    <a href="mailto:unni@centumrcm.com" className="text-xl font-medium text-[#1a1a1a] hover:text-[#B98C29] transition-colors break-words underline decoration-[#B98C29]/30 underline-offset-8">
+                      unni@centumrcm.com
                     </a>
                   </div>
                   <div className="space-y-4">
@@ -104,7 +104,7 @@ export default function Contact() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Full Name</label>
+                        <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Name :</label>
                         <input 
                           type="text" 
                           name="name"
@@ -112,11 +112,10 @@ export default function Contact() {
                           value={formData.name}
                           onChange={handleChange}
                           className="w-full px-6 py-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#B98C29]/20 focus:border-[#B98C29] outline-none transition-all placeholder:text-slate-300"
-                          placeholder="Your Name"
                         />
                       </div>
                       <div className="space-y-2">
-                        <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Email Address</label>
+                        <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Email :</label>
                         <input 
                           type="email" 
                           name="email"
@@ -124,32 +123,42 @@ export default function Contact() {
                           value={formData.email}
                           onChange={handleChange}
                           className="w-full px-6 py-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#B98C29]/20 focus:border-[#B98C29] outline-none transition-all placeholder:text-slate-300"
-                          placeholder="email@example.com"
+                        />
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Phone # :</label>
+                        <input
+                          type="tel"
+                          name="phone"
+                          required
+                          value={formData.phone}
+                          onChange={handleChange}
+                          className="w-full px-6 py-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#B98C29]/20 focus:border-[#B98C29] outline-none transition-all placeholder:text-slate-300"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Company :</label>
+                        <input
+                          type="text"
+                          name="company"
+                          required
+                          value={formData.company}
+                          onChange={handleChange}
+                          className="w-full px-6 py-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#B98C29]/20 focus:border-[#B98C29] outline-none transition-all placeholder:text-slate-300"
                         />
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Subject</label>
-                      <input 
-                        type="text" 
-                        name="subject"
-                        required
-                        value={formData.subject}
-                        onChange={handleChange}
-                        className="w-full px-6 py-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#B98C29]/20 focus:border-[#B98C29] outline-none transition-all placeholder:text-slate-300"
-                        placeholder="How can we help?"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Message</label>
+                      <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">How can we assist you :</label>
                       <textarea 
-                        name="message"
+                        name="assist"
                         required
                         rows="5"
-                        value={formData.message}
+                        value={formData.assist}
                         onChange={handleChange}
                         className="w-full px-6 py-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#B98C29]/20 focus:border-[#B98C29] outline-none transition-all placeholder:text-slate-300 resize-none"
-                        placeholder="Your message here..."
                       ></textarea>
                     </div>
                     <button 

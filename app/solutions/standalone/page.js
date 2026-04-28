@@ -65,16 +65,9 @@ export default function StandalonePage() {
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=2560&auto=format&fit=crop&q=100')" }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-[#243B71]/80 via-[#243B71]/40 to-[#243B71]/80 z-10"></div>
-          <div className="absolute inset-0 z-0 opacity-15 pointer-events-none" style={{
-            backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)',
-            backgroundSize: '24px 24px',
-            WebkitMaskImage: 'linear-gradient(to right, black 0%, transparent 30%)',
-            maskImage: 'linear-gradient(to right, black 0%, transparent 30%)'
-          }}></div>
-
           <div className="relative z-10 text-center text-white px-6 w-full max-w-5xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-semibold tracking-tight md:tracking-wide drop-shadow-md">
-              <span className="text-[#B98C29]">Standalone:</span> Targeted Solutions for Specific Needs
+              <span className="text-[#B98C29]">Standalone:</span> Custom services
             </h1>
           </div>
         </div>
@@ -95,7 +88,7 @@ export default function StandalonePage() {
 
           <div className="container mx-auto px-6 max-w-7xl">
             <div className="mb-12 text-center">
-              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Our Technical Expertise</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Targeted solutions</h2>
               <p className="text-slate-500 text-lg max-w-2xl mx-auto">Focused solutions designed to optimize every touchpoint of your healthcare technology stack.</p>
             </div>
 

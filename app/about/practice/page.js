@@ -39,20 +39,9 @@ export default function PracticePage() {
           {/* Overlay to ensure text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#243B71]/80 via-[#243B71]/40 to-[#243B71]/80 z-10"></div>
 
-          {/* Dots Effect - Left Side */}
-          <div className="absolute inset-0 z-20 opacity-15 pointer-events-none" style={{
-            backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)',
-            backgroundSize: '24px 24px',
-            WebkitMaskImage: 'linear-gradient(to right, black 0%, transparent 30%)',
-            maskImage: 'linear-gradient(to right, black 0%, transparent 30%)'
-          }}></div>
-
           {/* Banner Content */}
           <div className="relative z-30 text-center text-white px-6 w-full max-w-5xl mx-auto">
             <span className="text-[#B98C29] text-sm md:text-base tracking-[0.2em] block font-bold mb-4 uppercase">What We Practice</span>
-            <h1 className="text-5xl md:text-6xl font-semibold tracking-wide drop-shadow-md">
-              About Us
-            </h1>
           </div>
         </div>
 
@@ -60,10 +49,10 @@ export default function PracticePage() {
         <section className="py-16 md:py-20 bg-white border-b border-slate-100">
           <div className="container mx-auto px-6 max-w-[1366px]">
             <div className="text-center">
-              <h2 className="text-3xl md:text-5xl font-normal text-slate-900 tracking-tight uppercase">
-                What We Practice
+              <h2 className="text-[1.6rem] sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight md:tracking-wide leading-tight text-slate-900 max-w-none whitespace-nowrap">
+                Ensuring compliance. <span className="text-[#B98C29]">Accelerating cash flows.</span>
               </h2>
-              <div className="w-12 h-1 bg-slate-900 rounded-full mx-auto mt-6"></div>
+              <div className="w-20 h-1 bg-[#B98C29] rounded-full mx-auto my-2"></div>
 
               <div className="mt-12 max-w-3xl mx-auto text-center">
                 <p className="text-lg md:text-xl text-slate-600 leading-relaxed font-normal">

@@ -9,7 +9,7 @@ export default function PreServicePage() {
   const steps = [
     {
       q: "Accuracy of Data",
-      a: "We implement strict Data Integrity by collecting the patients full legal name and cross check this with their insurance ID, current address, and date of birth. We also scan the drivers licence & insurance card details into the Electronic Health Record system, as against manual tying. We can also enable a separate patient portal where patients can enter data on their own, pre-visit.",
+      a: "We ensure high data accuracy by following structured validation of patient data at every step. All details including patient's full legal name, date of birth, insurance ID, address etc are cross verified during the data entry phase. We can also create secure patient portals which can be used by patients to enter and confirm their information prior to visits. All these results in reduced claim denials and hence improved revenue cycle efficiency.",
       step: "01"
     },
     {
@@ -42,14 +42,6 @@ export default function PreServicePage() {
           {/* Overlay to ensure text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#243B71]/80 via-[#243B71]/40 to-[#243B71]/80 z-10"></div>
 
-          {/* Dots Effect - Left Side */}
-          <div className="absolute inset-0 z-0 opacity-15 pointer-events-none" style={{ 
-            backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', 
-            backgroundSize: '24px 24px',
-            WebkitMaskImage: 'linear-gradient(to right, black 0%, transparent 30%)',
-            maskImage: 'linear-gradient(to right, black 0%, transparent 30%)'
-          }}></div>
-
           <div className="relative z-10 text-center text-white px-6 w-full max-w-5xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-semibold tracking-tight md:tracking-wide drop-shadow-md">
               <span className="text-[#B98C29]">Pre-Service:</span> Patient Registration & Insurance Verification
@@ -58,16 +50,16 @@ export default function PreServicePage() {
         </div>
 
         {/* Detail Content Section */}
-        <section className="py-20 lg:py-28 bg-[#fcfcfc] overflow-hidden border-t border-slate-100">
-          <div className="container mx-auto px-6 max-w-7xl text-center">
-            <div className="flex flex-col md:flex-row items-start mb-20 gap-8 lg:gap-12 text-left">
-              <div className="md:w-[40%] space-y-6">
-                <div className="w-12 h-1 bg-[#1e293b] rounded-full"></div>
+        <section className="py-20 lg:py-28 bg-[#f8fafc] border-y border-slate-100">
+          <div className="container mx-auto px-6 max-w-7xl">
+            <div className="flex flex-col md:flex-row justify-start items-start mb-14 gap-8 lg:gap-16 text-left">
+              <div className="md:w-1/2 max-w-2xl space-y-6">
+                <div className="w-12 h-1 bg-[#1e293b] rounded-full mt-2"></div>
                 <h2 className="text-4xl lg:text-5xl font-normal text-[#1e293b] tracking-tight">
                   Front End: Pre-Service
                 </h2>
               </div>
-              <div className="md:w-[60%] space-y-4 text-left">
+              <div className="md:w-1/2 max-w-xl space-y-4 pt-2">
                 <p className="text-lg lg:text-xl text-zinc-600 font-normal leading-relaxed">
                   We genuinely believe that the most integral part of Revenue Cycle Management takes place before the patient physically steps into the Hospital.
                 </p>
@@ -77,22 +69,36 @@ export default function PreServicePage() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-0 border-t border-slate-200 mt-16 text-left">
-              {steps.map((item, i) => (
-                <div key={i} className="group flex flex-col md:flex-row items-start py-8 lg:py-16 border-b border-slate-200 hover:bg-slate-50/50 transition-colors duration-500 px-6 lg:px-12 -mx-6 lg:-mx-12 gap-2 md:gap-8 lg:gap-12">
-                  <div className="md:w-24 lg:w-32 shrink-0">
-                    <span className="text-5xl lg:text-7xl font-light text-slate-200 group-hover:text-[#B98C29] transition-colors duration-500">{item.step}</span>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 text-left">
+              {steps.map((item, i) => {
+                const isFeatureCard = i % 4 === 0 || i % 4 === 3;
+                const image = i % 4 === 3 ? "/images/patient_experience_centum.jpg" : "/images/front_end_cycle_centum.jpg";
+
+                return isFeatureCard ? (
+                  <div key={item.step} className="lg:col-span-2 relative text-white p-10 lg:p-14 rounded-[2.5rem] flex flex-col justify-center group overflow-hidden transition-transform duration-500 hover:-translate-y-1">
+                    <div
+                      className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                      style={{ backgroundImage: `url('${image}')` }}
+                    ></div>
+                    <div className="absolute inset-0 bg-[#0a192f]/70 transition-opacity duration-500 group-hover:bg-[#0a192f]/60"></div>
+                    <div className="relative z-10">
+                      <p className="text-6xl lg:text-7xl font-normal text-white/30 mb-8">{item.step}</p>
+                      <h3 className="text-4xl lg:text-5xl font-normal tracking-tight mb-6 drop-shadow-lg">{item.q}</h3>
+                      <p className="text-lg lg:text-xl text-white/90 leading-relaxed lg:max-w-4xl font-normal drop-shadow-md">
+                        {item.a}
+                      </p>
+                    </div>
                   </div>
-                  <div className="w-full md:w-1/3 shrink-0 md:pt-4">
-                    <h3 className="text-3xl lg:text-4xl font-normal text-[#1e293b] group-hover:text-[#0a192f] transition-colors">{item.q}</h3>
-                  </div>
-                  <div className="w-full md:flex-1 md:pt-4">
-                    <p className="text-lg lg:text-xl text-zinc-500 leading-relaxed font-normal">
+                ) : (
+                  <div key={item.step} className="bg-[#f0f0f0] p-10 lg:p-12 rounded-[2.5rem] flex flex-col group transition-transform duration-500 hover:-translate-y-1">
+                    <h3 className="text-6xl lg:text-7xl font-normal text-[#1a1a1a] mb-8">{item.step}</h3>
+                    <h4 className="text-2xl font-normal text-[#1a1a1a] mb-4">{item.q}</h4>
+                    <p className="text-lg lg:text-xl text-zinc-600 leading-relaxed mt-auto font-normal">
                       {item.a}
                     </p>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
