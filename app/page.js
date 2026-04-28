@@ -295,7 +295,7 @@ export default function Home() {
                   Connect With Centum
                 </span>
                 <h2 className="text-4xl md:text-[2.75rem] font-medium text-[#1e293b] leading-tight mb-6">
-                  Let’s begin a new journey.
+                  Let’s begin<br />a new journey.
                 </h2>
                 <p className="text-gray-500 text-base leading-relaxed mb-12">
                   Need increased velocity in revenue flow? Seeking effective solutions on billing process? Reducing claim denials on your mind? We are here to help.
@@ -315,13 +315,13 @@ export default function Home() {
               </div>
 
               {/* Right Column: Form */}
-              <div className="bg-white rounded-[2rem] p-8 md:p-10 w-full max-w-lg mx-auto lg:ml-auto">
-                <form className="space-y-6">
+              <div className="bg-white rounded-[2rem] p-6 md:p-8 w-full max-w-md mx-auto lg:ml-auto">
+                <form className="space-y-5">
                   <div>
                     <label className="block text-sm text-gray-500 mb-2">Name :</label>
                     <input
                       type="text"
-                      className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20"
+                      className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20"
                     />
                   </div>
 
@@ -329,15 +329,15 @@ export default function Home() {
                     <label className="block text-sm text-gray-500 mb-2">Email :</label>
                     <input
                       type="email"
-                      className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20"
+                      className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm text-gray-500 mb-2">Phone # :</label>
+                    <label className="block text-sm text-gray-500 mb-2">Phone :</label>
                     <input
                       type="tel"
-                      className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20"
+                      className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20"
                     />
                   </div>
 
@@ -345,15 +345,15 @@ export default function Home() {
                     <label className="block text-sm text-gray-500 mb-2">Company :</label>
                     <input
                       type="text"
-                      className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20"
+                      className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20"
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm text-gray-500 mb-2">How can we assist you :</label>
                     <textarea
-                      rows={4}
-                      className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20 resize-none"
+                      rows={3}
+                      className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20 resize-none"
                     ></textarea>
                   </div>
 

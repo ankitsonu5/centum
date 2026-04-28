@@ -20,7 +20,7 @@ export default function OverviewPage() {
 
           {/* Banner Content matched to About page text */}
           <div className="relative z-10 text-center text-white px-6 w-full max-w-5xl mx-auto">
-            <span className="text-[#B98C29] text-sm md:text-base tracking-[0.2em] block font-bold mb-4 uppercase">Overview</span>
+            <span className="text-white text-3xl md:text-4xl lg:text-5xl tracking-[0.16em] block font-bold mb-4 uppercase">Overview</span>
           </div>
         </div>
 

@@ -48,7 +48,7 @@ export default function Contact() {
           }}></div>
           
           <div className="relative z-10 text-center text-white px-6">
-            <span className="text-[#B98C29] text-sm md:text-base tracking-[0.2em] block font-bold mb-4 uppercase">Connect With Centum</span>
+            <span className="text-white text-3xl md:text-4xl lg:text-5xl tracking-[0.16em] block font-bold mb-4 uppercase">Connect With Centum</span>
           </div>
         </div>
 
@@ -61,7 +61,7 @@ export default function Contact() {
               <div className="space-y-12">
                 <div className="space-y-6">
                   <h2 className="text-4xl lg:text-6xl font-serif font-normal text-[#1a1a1a] leading-tight">
-                    Let’s begin a new journey.
+                    Let’s begin<br />a new journey.
                   </h2>
                   <p className="text-lg lg:text-xl text-[#555555] leading-relaxed max-w-lg">
                     Need increased velocity in revenue flow? Seeking effective solutions on billing process? Reducing claim denials on your mind? We are here to help.
@@ -91,7 +91,7 @@ export default function Contact() {
               </div>
 
               {/* Right Column: Premium Contact Form */}
-              <div className="bg-[#f8f9fa] p-5 md:p-8 lg:p-12 rounded-[2rem] border border-slate-100 shadow-xl shadow-slate-200/50">
+              <div className="bg-[#f8f9fa] p-5 md:p-8 lg:p-12 rounded-2xl border border-slate-100 shadow-sm shadow-slate-200/30">
                 {isSubmitted ? (
                   <div className="h-full flex flex-col items-center justify-center text-center py-12 space-y-6 animate-in fade-in zoom-in duration-500">
                     <div className="w-20 h-20 rounded-full bg-green-50 flex items-center justify-center text-green-500">
@@ -128,7 +128,7 @@ export default function Contact() {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Phone # :</label>
+                        <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Phone :</label>
                         <input
                           type="tel"
                           name="phone"
