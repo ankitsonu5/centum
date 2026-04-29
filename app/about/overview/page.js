@@ -11,7 +11,7 @@ export default function OverviewPage() {
       <main className="flex-1 overflow-x-hidden">
         {/* Banner - Original height restored */}
         <div
-          className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center overflow-hidden"
+          className="relative w-full h-[58vh] min-h-[360px] md:min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center overflow-hidden"
           style={{ backgroundImage: "url('/images/case_study_banner.png')" }}
         >
           {/* Overlay to ensure text readability */}
@@ -19,19 +19,19 @@ export default function OverviewPage() {
 
           {/* Banner Content matched to About page text */}
           <div className="relative z-10 text-center text-white px-6 w-full max-w-5xl mx-auto">
-            <span className="text-white text-3xl md:text-4xl lg:text-5xl tracking-[0.16em] block font-bold mb-4 uppercase">Overview</span>
+            <span className="text-white text-3xl md:text-4xl lg:text-5xl tracking-[0.12em] md:tracking-[0.16em] block font-bold mb-4 uppercase">Overview</span>
           </div>
         </div>
 
         {/* Overview Content - "Pure Efficiency" - EXACT styles from About page */}
-        <section className="py-16 md:py-20 bg-white border-b border-slate-100">
-          <div className="container mx-auto px-6 max-w-[1366px]">
+        <section className="py-14 md:py-20 bg-white border-b border-slate-100">
+          <div className="container mx-auto px-5 sm:px-6 max-w-[1366px]">
             <div className="flex flex-col items-center text-center space-y-6 md:space-y-8">
-              <h2 className="text-[1.6rem] sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight md:tracking-wide leading-tight text-slate-900 max-w-none whitespace-nowrap">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight md:tracking-wide leading-tight text-slate-900 max-w-5xl">
                 Optimizing Revenues. <span className="text-[#B98C29]">Empowering Care.</span>
               </h2>
               <div className="w-20 h-1 bg-[#B98C29] rounded-full mx-auto my-2"></div>
-              <div className="space-y-6">
+              <div className="space-y-6 w-full">
                 <p className="max-w-3xl mx-auto text-base md:text-lg leading-relaxed font-normal text-slate-600">
                   Centum RCM is your end-to-end partner in administering the Revenue Cycle Management process effectively.
                 </p>

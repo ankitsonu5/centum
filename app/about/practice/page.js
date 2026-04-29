@@ -26,7 +26,7 @@ export default function PracticePage() {
 
       <main className="flex-1 overflow-x-hidden">
         {/* Banner - Original height restored */}
-        <div className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center overflow-hidden">
+        <div className="relative w-full h-[58vh] min-h-[360px] md:min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center overflow-hidden">
           {/* Background Image */}
           <Image
             src="/images/what_we_practice.jpeg"
@@ -42,15 +42,15 @@ export default function PracticePage() {
 
           {/* Banner Content */}
           <div className="relative z-30 text-center text-white px-6 w-full max-w-5xl mx-auto">
-            <span className="text-white text-3xl md:text-4xl lg:text-5xl tracking-[0.16em] block font-bold mb-4 uppercase">What We Practice</span>
+            <span className="text-white text-3xl md:text-4xl lg:text-5xl tracking-[0.12em] md:tracking-[0.16em] block font-bold mb-4 uppercase">What We Practice</span>
           </div>
         </div>
 
         {/* WHAT WE PRACTICE section styled exactly like original About page */}
-        <section className="py-16 md:py-20 bg-white border-b border-slate-100">
-          <div className="container mx-auto px-6 max-w-[1366px]">
+        <section className="py-14 md:py-20 bg-white border-b border-slate-100">
+          <div className="container mx-auto px-5 sm:px-6 max-w-[1366px]">
             <div className="text-center">
-              <h2 className="text-[1.6rem] sm:text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight md:tracking-wide leading-tight text-slate-900 max-w-none whitespace-nowrap">
+              <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight md:tracking-wide leading-tight text-slate-900 max-w-5xl mx-auto">
                 Ensuring compliance. <span className="text-[#B98C29]">Accelerating cash flows.</span>
               </h2>
               <div className="w-20 h-1 bg-[#B98C29] rounded-full mx-auto my-2"></div>
