@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { ArrowRight, Mail } from "lucide-react";
 
 export default function Home() {
   return (
@@ -25,11 +24,11 @@ export default function Home() {
           </video>
 
           {/* Solid Color Filter Overlay Removed */}
-          <div className="relative container mx-auto px-6 text-center max-w-6xl z-20 pt-40 md:pt-60 flex flex-col items-center">
+          <div className="relative container mx-auto px-6 text-center max-w-7xl z-20 pt-40 md:pt-60 flex flex-col items-center">
             {/* Main Header */}
-            <h1 className="text-4xl sm:text-6xl lg:text-[3.5rem] xl:text-[4.2rem] 2xl:text-[5rem] text-white mb-6 leading-[1.2] uppercase flex flex-col items-start text-left">
-              <span className="font-bold">Precision Billing.</span>
-              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#f0da9b] via-[#e5ca78] to-[#B98C29] tracking-[0.08em] -mr-[0.08em]">Proven Results.</span>
+            <h1 className="w-full max-w-[1120px] text-4xl sm:text-6xl lg:text-[3.5rem] xl:text-[4.2rem] 2xl:text-[5rem] text-white mb-6 leading-[1.08] uppercase flex flex-col items-center text-center">
+              <span className="font-bold text-[0.81em]">Precision Billing.</span>
+              <span className="font-bold text-[0.84em] text-transparent bg-clip-text bg-gradient-to-r from-[#f0da9b] via-[#e5ca78] to-[#B98C29] tracking-[0.04em]">Proven Results.</span>
             </h1>
           </div>
         </section>
@@ -297,70 +296,78 @@ export default function Home() {
                   Need increased velocity in revenue flow? Seeking effective solutions on billing process? Reducing claim denials on your mind? We are here to help.
                 </p>
 
-                <div className="space-y-8">
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-md bg-[#1D293D] flex items-center justify-center shrink-0">
-                      <Mail className="w-5 h-5 text-white" strokeWidth={2} />
-                    </div>
-                    <div>
-                      <p className="text-gray-400 text-sm mb-0.5">Email at</p>
-                      <p className="text-gray-800 font-medium">unni@centumrcm.com</p>
-                    </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 pt-2">
+                  <div className="space-y-4">
+                    <h4 className="text-xs font-bold tracking-[0.2em] uppercase text-[#B98C29]">Email at</h4>
+                    <a href="mailto:team@centumrcm.com" className="text-lg font-medium text-[#1a1a1a] hover:text-[#B98C29] transition-colors break-words underline decoration-[#B98C29]/30 underline-offset-8">
+                      team@centumrcm.com
+                    </a>
+                  </div>
+                  <div className="space-y-4">
+                    <h4 className="text-xs font-bold tracking-[0.2em] uppercase text-[#B98C29]">Office</h4>
+                    <p className="text-base text-[#1a1a1a] leading-relaxed">
+                      Centum RCM<br />
+                      1430, Venus St,<br />
+                      Merritt Island,<br />
+                      Florida 32953
+                    </p>
                   </div>
                 </div>
               </div>
 
               {/* Right Column: Form */}
-              <div className="bg-white rounded-[2rem] p-6 md:p-8 w-full max-w-md mx-auto lg:ml-auto">
-                <form className="space-y-5">
-                  <div>
-                    <label className="block text-sm text-gray-500 mb-2">Name :</label>
-                    <input
-                      type="text"
-                      className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20"
-                    />
+              <div className="bg-[#f8f9fa] p-5 md:p-8 lg:p-12 rounded-2xl border border-slate-100 shadow-sm shadow-slate-200/30 w-full max-w-[520px] mx-auto lg:ml-auto">
+                <form className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Name :</label>
+                      <input
+                        type="text"
+                        className="w-full px-6 py-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#B98C29]/20 focus:border-[#B98C29] outline-none transition-all placeholder:text-slate-300"
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Email :</label>
+                      <input
+                        type="email"
+                        className="w-full px-6 py-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#B98C29]/20 focus:border-[#B98C29] outline-none transition-all placeholder:text-slate-300"
+                      />
+                    </div>
                   </div>
 
-                  <div>
-                    <label className="block text-sm text-gray-500 mb-2">Email :</label>
-                    <input
-                      type="email"
-                      className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20"
-                    />
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Phone :</label>
+                      <input
+                        type="tel"
+                        className="w-full px-6 py-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#B98C29]/20 focus:border-[#B98C29] outline-none transition-all placeholder:text-slate-300"
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Company :</label>
+                      <input
+                        type="text"
+                        className="w-full px-6 py-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#B98C29]/20 focus:border-[#B98C29] outline-none transition-all placeholder:text-slate-300"
+                      />
+                    </div>
                   </div>
 
-                  <div>
-                    <label className="block text-sm text-gray-500 mb-2">Phone :</label>
-                    <input
-                      type="tel"
-                      className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm text-gray-500 mb-2">Company :</label>
-                    <input
-                      type="text"
-                      className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm text-gray-500 mb-2">How can we assist you :</label>
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">How can we assist you :</label>
                     <textarea
-                      rows={3}
-                      className="w-full bg-[#f4f5f7] rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0258d4]/20 resize-none"
+                      rows={5}
+                      className="w-full px-6 py-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#B98C29]/20 focus:border-[#B98C29] outline-none transition-all placeholder:text-slate-300 resize-none"
                     ></textarea>
                   </div>
 
-                  <div className="pt-2">
-                    <button type="button" className="group flex items-center gap-4 bg-[#1D293D] text-white rounded-full p-1.5 pr-8 hover:bg-[#2a3b57] transition-colors">
-                      <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#1D293D] group-hover:scale-95 transition-transform">
-                        <ArrowRight className="w-5 h-5" />
-                      </div>
-                      <span className="font-medium text-sm tracking-wide">Send Message</span>
-                    </button>
-                  </div>
+                  <button
+                    type="button"
+                    className="w-full bg-[#111111] text-white font-bold py-5 rounded-xl hover:bg-[#B98C29] transition-all duration-300 transform active:scale-[0.98] shadow-lg hover:shadow-[#B98C29]/20 uppercase tracking-[0.2em] text-xs"
+                  >
+                    Send Message
+                  </button>
                 </form>
               </div>
 

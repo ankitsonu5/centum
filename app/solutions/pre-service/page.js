@@ -17,7 +17,7 @@ export default function PreServicePage() {
       step: "02"
     },
     {
-      q: "Obtain Prior Authorisations",
+      q: "Pre-Authorisation",
       a: "Specific procedures and specialists require permission from the insurer in advance. Failure can often lead to claim denial with no recourse for appeal. We obtain the Prior Authorisation number by invoking specific CPT codes against the patient’s insurance policy.",
       step: "03"
     },
@@ -63,7 +63,7 @@ export default function PreServicePage() {
                   We genuinely believe that the most integral part of Revenue Cycle Management takes place before the patient physically steps into the Hospital.
                 </p>
                 <p className="text-lg lg:text-xl text-zinc-600 font-normal leading-relaxed">
-                  Latest industry data reinforce the fact that majority of claim denials stem from errors made at the very beginning of the process. Our team helps you avoid such preventable failures.
+                  Latest industry data reinforces the fact that majority of claim denials stem from errors made at the very beginning of the process. Our team helps you avoid such preventable failures.
                 </p>
               </div>
             </div>

@@ -50,7 +50,7 @@ export default function PracticePage() {
         <section className="py-16 md:py-20 bg-white border-b border-slate-100">
           <div className="container mx-auto px-6 max-w-[1366px]">
             <div className="text-center">
-              <h2 className="text-[1.6rem] sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight md:tracking-wide leading-tight text-slate-900 max-w-none whitespace-nowrap">
+              <h2 className="text-[1.6rem] sm:text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight md:tracking-wide leading-tight text-slate-900 max-w-none whitespace-nowrap">
                 Ensuring compliance. <span className="text-[#B98C29]">Accelerating cash flows.</span>
               </h2>
               <div className="w-20 h-1 bg-[#B98C29] rounded-full mx-auto my-2"></div>

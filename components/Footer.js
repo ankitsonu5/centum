@@ -29,7 +29,7 @@ export default function Footer() {
           <div className="flex flex-col gap-8">
             <h4 className="text-white text-[13px] font-bold tracking-[0.3em] uppercase opacity-100">Solutions</h4>
             <ul className="flex flex-col gap-4 text-[13px] font-medium tracking-wider uppercase">
-              <li><Link href="/solutions/pre-service" className="hover:text-[#F2F4EC] transition-colors">Pre-Service</Link></li>
+              <li><Link href="/solutions/pre-service" className="hover:text-[#F2F4EC] transition-colors">Front-End</Link></li>
               <li><Link href="/solutions/mid-cycle" className="hover:text-[#F2F4EC] transition-colors">Mid-Cycle</Link></li>
               <li><Link href="/solutions/back-end" className="hover:text-[#F2F4EC] transition-colors">Back-End</Link></li>
               <li><Link href="/solutions/credentialing-services" className="hover:text-[#F2F4EC] transition-colors">Credentialing Services</Link></li>
@@ -41,11 +41,11 @@ export default function Footer() {
           <div className="flex flex-col gap-8">
             <h4 className="text-white text-[13px] font-bold tracking-[0.3em] uppercase opacity-100">Company</h4>
             <ul className="flex flex-col gap-4 text-[13px] font-medium tracking-wider uppercase">
+              <li><Link href="/about" className="hover:text-[#F2F4EC] transition-colors">About us</Link></li>
+              <li><Link href="/resources/insights" className="hover:text-[#F2F4EC] transition-colors">Resources</Link></li>
+              <li><Link href="/resources/faq" className="hover:text-[#F2F4EC] transition-colors">FAQs</Link></li>
               <li><Link href="/career" className="hover:text-[#F2F4EC] transition-colors">Careers</Link></li>
-              <li><Link href="/resources/insights-articles" className="hover:text-[#F2F4EC] transition-colors">INSIGHTS ARTICLES</Link></li>
-              <li><Link href="/contact" className="hover:text-[#F2F4EC] transition-colors">Contact</Link></li>
-              <li><Link href="/resources/articles" className="hover:text-[#F2F4EC] transition-colors">Articles</Link></li>
-              <li><Link href="/resources/faq" className="hover:text-[#F2F4EC] transition-colors">FAQ</Link></li>
+              <li><Link href="/contact" className="hover:text-[#F2F4EC] transition-colors">Contact us</Link></li>
             </ul>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function Footer() {
         {/* Lower Level: Copyright */}
         <div className="flex justify-center items-center">
           <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-white/40 text-center">
-            © 2026 CENTUM TECHNOLOGY GROUP. ALL RIGHTS RESERVED.
+            © 2026 Centum RCM. All rights reserved.
           </p>
         </div>
       </div>

@@ -32,7 +32,7 @@ const navItems = [
     href: "#",
     subItems: [
       { name: "INSIGHTS", href: "/resources/insights" },
-      { name: "FAQ", href: "/resources/faq" }
+      { name: "FAQs", href: "/resources/faq" }
     ]
   },
   { name: "CAREERS", dropdown: false, href: "/career" },
