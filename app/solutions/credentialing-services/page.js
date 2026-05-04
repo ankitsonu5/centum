@@ -14,7 +14,7 @@ export default function CredentialingPage() {
     "License & Certification Verification",
     "Re-Credentialing Management",
     "Application Tracking & Reporting",
-    "Issue Resolution & Appeals"
+    "Issue Resolution & Appeals",
   ];
 
   return (
@@ -25,14 +25,18 @@ export default function CredentialingPage() {
         {/* Banner - Matching project style */}
         <div
           className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center overflow-hidden"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=2560&auto=format&fit=crop&q=100&ixlib=rb-4.1.0')" }}
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=2560&auto=format&fit=crop&q=100&ixlib=rb-4.1.0')",
+          }}
         >
           {/* Overlay to ensure text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#243B71]/80 via-[#243B71]/40 to-[#243B71]/80 z-10"></div>
 
           <div className="relative z-10 text-center text-white px-6 w-full max-w-5xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-semibold tracking-tight md:tracking-wide drop-shadow-md">
-              <span className="text-[#B98C29]">Credentialing Services:</span> Provider Enrolment & CAQH Management
+              <span className="text-[#B98C29]">Credentialing Services:</span>{" "}
+              Provider Enrolment & CAQH Management
             </h1>
           </div>
         </div>
@@ -49,7 +53,10 @@ export default function CredentialingPage() {
               </div>
               <div className="md:flex-1 space-y-4 text-left md:pt-4">
                 <p className="text-lg lg:text-xl text-zinc-500 font-normal leading-relaxed">
-                  Credentialing is the foundation for a practice’s ability to collect revenue. Centum removes the administrative burden of enrolment and re-credentialing so your providers are payer-ready, claims are payable, and revenue is not delayed.
+                  Credentialing is the foundation for a practice’s ability to
+                  collect revenue. Centum removes the administrative burden of
+                  enrolment and re-credentialing so your providers are
+                  payer-ready, claims are payable, and revenue is not delayed.
                 </p>
               </div>
             </div>
@@ -57,17 +64,20 @@ export default function CredentialingPage() {
             {/* Services Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left mt-16">
               {services.map((service, i) => (
-                <div key={i} className="group relative flex flex-col justify-between bg-white p-6 lg:p-8 rounded-3xl border border-slate-100 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] overflow-hidden">
+                <div
+                  key={i}
+                  className="group relative flex flex-col justify-between bg-white p-6 lg:p-8 rounded-3xl border border-slate-100 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] overflow-hidden"
+                >
                   {/* Subtle Gradient Hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-slate-50/80 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
+
                   {/* Top: Indicator */}
                   <div className="relative z-10 flex items-center justify-between mb-8">
                     <span className="text-4xl font-light text-slate-200 group-hover:text-[#B98C29] transition-colors duration-500">
-                      {String(i + 1).padStart(2, '0')}
+                      {String(i + 1).padStart(2, "0")}
                     </span>
                   </div>
-                  
+
                   {/* Bottom: Text */}
                   <div className="relative z-10">
                     <h3 className="text-lg lg:text-xl font-normal tracking-tight text-[#1e293b] group-hover:text-[#0a192f] transition-colors duration-300">

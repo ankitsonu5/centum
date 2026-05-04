@@ -11,8 +11,8 @@ const navItems = [
     subItems: [
       { name: "OVERVIEW", href: "/about/overview" },
       { name: "WHAT WE PRACTICE", href: "/about/practice" },
-      { name: "WHY CENTUM RCM", href: "/about/why-centum-rcm" }
-    ]
+      { name: "WHY CENTUM RCM", href: "/about/why-centum-rcm" },
+    ],
   },
   {
     name: "SOLUTIONS",
@@ -22,9 +22,12 @@ const navItems = [
       { name: "FRONT END", href: "/solutions/pre-service" },
       { name: "MID-CYCLE", href: "/solutions/mid-cycle" },
       { name: "BACK-END", href: "/solutions/back-end" },
-      { name: "CREDENTIALING SERVICES", href: "/solutions/credentialing-services" },
-      { name: "STANDALONE SOLUTIONS", href: "/solutions/standalone" }
-    ]
+      {
+        name: "CREDENTIALING SERVICES",
+        href: "/solutions/credentialing-services",
+      },
+      { name: "STANDALONE SOLUTIONS", href: "/solutions/standalone" },
+    ],
   },
   {
     name: "RESOURCES",
@@ -32,11 +35,11 @@ const navItems = [
     href: "#",
     subItems: [
       { name: "INSIGHTS", href: "/resources/insights" },
-      { name: "FAQs", href: "/resources/faq" }
-    ]
+      { name: "FAQs", href: "/resources/faq" },
+    ],
   },
   { name: "CAREERS", dropdown: false, href: "/career" },
-  { name: "CONTACT US", dropdown: false, href: "/contact" }
+  { name: "CONTACT US", dropdown: false, href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -54,7 +57,9 @@ export default function Navbar() {
         : Math.max(450, window.innerHeight * 0.65) - 80;
 
       const nextIsScrolled = window.scrollY > threshold;
-      setIsScrolled((current) => (current === nextIsScrolled ? current : nextIsScrolled));
+      setIsScrolled((current) =>
+        current === nextIsScrolled ? current : nextIsScrolled,
+      );
     };
 
     // Initial check
@@ -71,9 +76,9 @@ export default function Navbar() {
 
   // Lock scroll when mobile menu is open
   useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
+    document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isMenuOpen]);
 
@@ -106,11 +111,19 @@ export default function Navbar() {
       {/* Header Section Gradient removed as requested */}
 
       {/* Navbar Container */}
-      <div className={`fixed top-0 left-0 right-0 z-[100] w-full transition-all duration-500 ${isScrolled ? "bg-white/50 backdrop-blur-md border-b border-slate-100 shadow-sm" : "bg-transparent"}`}>
+      <div
+        className={`fixed top-0 left-0 right-0 z-[100] w-full transition-all duration-500 ${isScrolled ? "bg-white/50 backdrop-blur-md border-b border-slate-100 shadow-sm" : "bg-transparent"}`}
+      >
         <div className="max-w-7xl mx-auto px-4">
-          <nav ref={navRef} className={`flex items-center justify-between transition-all duration-500 relative ${isScrolled ? "py-3" : "py-4 lg:py-6"}`}>
+          <nav
+            ref={navRef}
+            className={`flex items-center justify-between transition-all duration-500 relative ${isScrolled ? "py-3" : "py-4 lg:py-6"}`}
+          >
             {/* Logo - Left Side */}
-            <Link href="/" className={`flex items-center px-8 py-2 transition-all duration-500 ${isScrolled ? "" : "bg-[#F2F4EC] rounded-full shadow-sm"}`}>
+            <Link
+              href="/"
+              className={`flex items-center px-8 py-2 transition-all duration-500 ${isScrolled ? "" : "bg-[#F2F4EC] rounded-full shadow-sm"}`}
+            >
               <Image
                 src="/images/centum_cm_logo.png"
                 alt="Centum Logo"
@@ -134,24 +147,39 @@ export default function Navbar() {
                         setActiveDesktopDropdown(null);
                       }
                     }}
-                    className={`flex items-center gap-2 text-[13px] font-bold tracking-[0.1em] transition-all ${item.name === "CONTACT US"
-                      ? "bg-[#B98C29] text-white px-7 py-3 rounded-md hover:bg-[#A67E25] transition-colors"
-                      : `${isScrolled ? "text-slate-900 hover:text-[#B98C29]" : "text-white hover:text-[#F2F4EC]"}`
-                      }`}
+                    className={`flex items-center gap-2 text-[13px] font-bold tracking-[0.1em] transition-all ${
+                      item.name === "CONTACT US"
+                        ? "bg-[#B98C29] text-white px-7 py-3 rounded-md hover:bg-[#A67E25] transition-colors"
+                        : `${isScrolled ? "text-slate-900 hover:text-[#B98C29]" : "text-white hover:text-[#F2F4EC]"}`
+                    }`}
                   >
                     {item.name}
                     {item.dropdown && (
-                      <svg className={`w-4 h-4 transition-transform duration-300 ${activeDesktopDropdown === item.name ? "rotate-180" : ""} ${isScrolled ? "text-slate-900" : "text-white"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                      <svg
+                        className={`w-4 h-4 transition-transform duration-300 ${activeDesktopDropdown === item.name ? "rotate-180" : ""} ${isScrolled ? "text-slate-900" : "text-white"}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        strokeWidth="1.5"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
                     )}
                   </Link>
 
                   {/* Dropdown Menu */}
                   {item.subItems && (
-                    <div className={`absolute top-full left-0 mt-4 w-64 bg-white rounded-xl overflow-hidden transition-all duration-300 transform origin-top border border-slate-100 ${
-                      activeDesktopDropdown === item.name
-                        ? "opacity-100 visible translate-y-0"
-                        : "opacity-0 invisible translate-y-2 pointer-events-none"
-                    }`}>
+                    <div
+                      className={`absolute top-full left-0 mt-4 w-64 bg-white rounded-xl overflow-hidden transition-all duration-300 transform origin-top border border-slate-100 ${
+                        activeDesktopDropdown === item.name
+                          ? "opacity-100 visible translate-y-0"
+                          : "opacity-0 invisible translate-y-2 pointer-events-none"
+                      }`}
+                    >
                       <div className="py-2">
                         {item.subItems.map((sub) => (
                           <Link
@@ -175,17 +203,44 @@ export default function Navbar() {
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${isScrolled ? "bg-black/5 text-slate-900" : "bg-white/10 text-white"}`}
-                aria-label="Toggle menu">
+                aria-label="Toggle menu"
+              >
                 {isMenuOpen ? (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
                 ) : (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16m-7 6h7"
+                    />
+                  </svg>
                 )}
               </button>
             </div>
 
             {/* Mobile Menu Overlay */}
-            <div className={`absolute top-[calc(100%+0.75rem)] left-0 w-full bg-slate-900 border border-white/10 rounded-[2rem] p-8 transition-all duration-500 lg:hidden origin-top ${isMenuOpen ? 'scale-100 opacity-100 translate-y-0' : 'scale-95 opacity-0 -translate-y-4 pointer-events-none'}`}>
+            <div
+              className={`absolute top-[calc(100%+0.75rem)] left-0 w-full bg-slate-900 border border-white/10 rounded-[2rem] p-8 transition-all duration-500 lg:hidden origin-top ${isMenuOpen ? "scale-100 opacity-100 translate-y-0" : "scale-95 opacity-0 -translate-y-4 pointer-events-none"}`}
+            >
               <div className="flex flex-col gap-6">
                 {navItems.map((item) => (
                   <div key={item.name} className="flex flex-col gap-4">
@@ -198,14 +253,27 @@ export default function Navbar() {
                           setIsMenuOpen(false);
                         }
                       }}
-                      className={`text-lg font-bold tracking-widest transition-colors flex items-center justify-between group ${item.name === "CONTACT US"
-                        ? "bg-[#B98C29] text-white px-6 py-4 rounded-xl"
-                        : "text-white/90 hover:text-[#F2F4EC]"
-                        }`}
+                      className={`text-lg font-bold tracking-widest transition-colors flex items-center justify-between group ${
+                        item.name === "CONTACT US"
+                          ? "bg-[#B98C29] text-white px-6 py-4 rounded-xl"
+                          : "text-white/90 hover:text-[#F2F4EC]"
+                      }`}
                     >
                       {item.name}
                       {item.dropdown && (
-                        <svg className={`w-4 h-4 opacity-50 transition-transform duration-300 ${activeMobileDropdown === item.name ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        <svg
+                          className={`w-4 h-4 opacity-50 transition-transform duration-300 ${activeMobileDropdown === item.name ? "rotate-180" : ""}`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2.5"
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
                       )}
                     </Link>
 

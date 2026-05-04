@@ -8,7 +8,7 @@ export default function AboutUs() {
       <Navbar />
 
       <main className="flex-1 overflow-x-hidden min-h-[50vh] flex items-center justify-center">
-         {/* Content to be added */}
+        {/* Content to be added */}
       </main>
 
       <Footer />

@@ -14,7 +14,7 @@
   --color-hero-bg: var(--hero-bg);
   --color-accent: var(--accent);
   --color-border-subtle: var(--border);
-  
+
   --font-primary: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --font-sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
@@ -26,6 +26,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-primary);
 }

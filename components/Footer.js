@@ -10,7 +10,10 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="flex flex-col gap-12">
             <div className="flex flex-col gap-8">
-              <Link href="/" className="flex items-center bg-[#F2F4EC] px-8 py-2 rounded-full shadow-sm self-start">
+              <Link
+                href="/"
+                className="flex items-center bg-[#F2F4EC] px-8 py-2 rounded-full shadow-sm self-start"
+              >
                 <Image
                   src="/images/centum_cm_logo.png"
                   alt="Centum Logo"
@@ -20,32 +23,107 @@ export default function Footer() {
                 />
               </Link>
               <p className="text-[13px] leading-relaxed max-w-xs font-medium tracking-wider uppercase">
-                UPSCALING FINANCIAL OUTCOMES THROUGH ACCURATE, COMPLIANT AND EFFICIENT REVENUE CYCLE MANAGEMENT SERVICES.
+                UPSCALING FINANCIAL OUTCOMES THROUGH ACCURATE, COMPLIANT AND
+                EFFICIENT REVENUE CYCLE MANAGEMENT SERVICES.
               </p>
             </div>
           </div>
 
           {/* Solutions Column */}
           <div className="flex flex-col gap-8">
-            <h4 className="text-white text-[13px] font-bold tracking-[0.3em] uppercase opacity-100">Solutions</h4>
+            <h4 className="text-white text-[13px] font-bold tracking-[0.3em] uppercase opacity-100">
+              Solutions
+            </h4>
             <ul className="flex flex-col gap-4 text-[13px] font-medium tracking-wider uppercase">
-              <li><Link href="/solutions/pre-service" className="hover:text-[#F2F4EC] transition-colors">Front-End</Link></li>
-              <li><Link href="/solutions/mid-cycle" className="hover:text-[#F2F4EC] transition-colors">Mid-Cycle</Link></li>
-              <li><Link href="/solutions/back-end" className="hover:text-[#F2F4EC] transition-colors">Back-End</Link></li>
-              <li><Link href="/solutions/credentialing-services" className="hover:text-[#F2F4EC] transition-colors">Credentialing Services</Link></li>
-              <li><Link href="/solutions/standalone" className="hover:text-[#F2F4EC] transition-colors">Standalone Solutions</Link></li>
+              <li>
+                <Link
+                  href="/solutions/pre-service"
+                  className="hover:text-[#F2F4EC] transition-colors"
+                >
+                  Front-End
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/solutions/mid-cycle"
+                  className="hover:text-[#F2F4EC] transition-colors"
+                >
+                  Mid-Cycle
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/solutions/back-end"
+                  className="hover:text-[#F2F4EC] transition-colors"
+                >
+                  Back-End
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/solutions/credentialing-services"
+                  className="hover:text-[#F2F4EC] transition-colors"
+                >
+                  Credentialing Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/solutions/standalone"
+                  className="hover:text-[#F2F4EC] transition-colors"
+                >
+                  Standalone Solutions
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Company Column */}
           <div className="flex flex-col gap-8">
-            <h4 className="text-white text-[13px] font-bold tracking-[0.3em] uppercase opacity-100">Company</h4>
+            <h4 className="text-white text-[13px] font-bold tracking-[0.3em] uppercase opacity-100">
+              Company
+            </h4>
             <ul className="flex flex-col gap-4 text-[13px] font-medium tracking-wider uppercase">
-              <li><Link href="/about/overview" className="hover:text-[#F2F4EC] transition-colors">About us</Link></li>
-              <li><Link href="/resources/insights" className="hover:text-[#F2F4EC] transition-colors">Resources</Link></li>
-              <li><Link href="/resources/faq" className="hover:text-[#F2F4EC] transition-colors">FAQs</Link></li>
-              <li><Link href="/career" className="hover:text-[#F2F4EC] transition-colors">Careers</Link></li>
-              <li><Link href="/contact" className="hover:text-[#F2F4EC] transition-colors">Contact us</Link></li>
+              <li>
+                <Link
+                  href="/about/overview"
+                  className="hover:text-[#F2F4EC] transition-colors"
+                >
+                  About us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/resources/insights"
+                  className="hover:text-[#F2F4EC] transition-colors"
+                >
+                  Resources
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/resources/faq"
+                  className="hover:text-[#F2F4EC] transition-colors"
+                >
+                  FAQs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/career"
+                  className="hover:text-[#F2F4EC] transition-colors"
+                >
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="hover:text-[#F2F4EC] transition-colors"
+                >
+                  Contact us
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

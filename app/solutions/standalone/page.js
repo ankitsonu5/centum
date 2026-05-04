@@ -12,7 +12,7 @@ import {
   Headphones,
   Share2,
   Globe,
-  ArrowRight
+  ArrowRight,
 } from "lucide-react";
 
 export default function StandalonePage() {
@@ -20,38 +20,38 @@ export default function StandalonePage() {
     {
       title: "EHR / EMR Support",
       desc: "System setup, configuration, troubleshooting, and workflow optimization.",
-      icon: <Database className="w-8 h-8" />
+      icon: <Database className="w-8 h-8" />,
     },
     {
       title: "Practice Management Support",
       desc: "Scheduling, patient registration, and system performance support.",
-      icon: <Activity className="w-8 h-8" />
+      icon: <Activity className="w-8 h-8" />,
     },
     {
       title: "RCM Software Support",
       desc: "Billing system troubleshooting, claim submission support, and clearinghouse integration.",
-      icon: <Settings className="w-8 h-8" />
+      icon: <Settings className="w-8 h-8" />,
     },
     {
       title: "Eligibility & Clearinghouse Support",
       desc: "Resolution of eligibility (270/271) issues and payer connectivity support.",
-      icon: <ShieldCheck className="w-8 h-8" />
+      icon: <ShieldCheck className="w-8 h-8" />,
     },
     {
       title: "IT Helpdesk Support",
       desc: "Daily technical support including login issues, access management, and system errors.",
-      icon: <Headphones className="w-8 h-8" />
+      icon: <Headphones className="w-8 h-8" />,
     },
     {
       title: "Integration & Data Support",
       desc: "EHR-billing integration, API setup, and secure data synchronization.",
-      icon: <Share2 className="w-8 h-8" />
+      icon: <Share2 className="w-8 h-8" />,
     },
     {
       title: "Website Building & Digital Marketing",
       desc: "Building Professional website, Developing Android / iOS Apps, Digital marketing strategies to enhance visibility & attract more patients.",
-      icon: <Globe className="w-10 h-10" />
-    }
+      icon: <Globe className="w-10 h-10" />,
+    },
   ];
 
   return (
@@ -62,12 +62,16 @@ export default function StandalonePage() {
         {/* Original Style Banner */}
         <div
           className="relative w-full h-[60vh] min-h-[450px] lg:h-[65vh] flex flex-col justify-center items-center bg-cover bg-center overflow-hidden"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=2560&auto=format&fit=crop&q=100')" }}
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=2560&auto=format&fit=crop&q=100')",
+          }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-[#243B71]/80 via-[#243B71]/40 to-[#243B71]/80 z-10"></div>
           <div className="relative z-10 text-center text-white px-6 w-full max-w-5xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-semibold tracking-tight md:tracking-wide drop-shadow-md">
-              <span className="text-[#B98C29]">Standalone:</span> Custom services
+              <span className="text-[#B98C29]">Standalone:</span> Custom
+              services
             </h1>
           </div>
         </div>
@@ -76,7 +80,12 @@ export default function StandalonePage() {
         <section className="pt-20 pb-0 bg-[#f8fafc]">
           <div className="container mx-auto px-6 max-w-7xl">
             <p className="text-xl lg:text-2xl text-zinc-600 font-normal leading-relaxed">
-              At Centum RCM, we extend beyond revenue cycle management by providing dependable healthcare technology support. Our services ensure smooth integration between EHR/EMR systems, practice management software, and billing workflows—helping providers maintain uninterrupted operations and improved financial performance.
+              At Centum RCM, we extend beyond revenue cycle management by
+              providing dependable healthcare technology support. Our services
+              ensure smooth integration between EHR/EMR systems, practice
+              management software, and billing workflows—helping providers
+              maintain uninterrupted operations and improved financial
+              performance.
             </p>
           </div>
         </section>
@@ -88,8 +97,13 @@ export default function StandalonePage() {
 
           <div className="container mx-auto px-6 max-w-7xl">
             <div className="mb-12 text-center">
-              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Targeted solutions</h2>
-              <p className="text-slate-500 text-lg max-w-2xl mx-auto">Focused solutions designed to optimize every touchpoint of your healthcare technology stack.</p>
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
+                Targeted solutions
+              </h2>
+              <p className="text-slate-500 text-lg max-w-2xl mx-auto">
+                Focused solutions designed to optimize every touchpoint of your
+                healthcare technology stack.
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -104,12 +118,15 @@ export default function StandalonePage() {
                     {service.icon}
                   </div>
 
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-[#243B71] transition-colors">{service.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">{service.desc}</p>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-[#243B71] transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    {service.desc}
+                  </p>
                 </div>
               ))}
             </div>
-
           </div>
         </section>
 
@@ -120,22 +137,38 @@ export default function StandalonePage() {
 
       <style jsx global>{`
         @keyframes slow-zoom {
-          0% { transform: scale(1.1); }
-          50% { transform: scale(1.15); }
-          100% { transform: scale(1.1); }
+          0% {
+            transform: scale(1.1);
+          }
+          50% {
+            transform: scale(1.15);
+          }
+          100% {
+            transform: scale(1.1);
+          }
         }
         .animate-slow-zoom {
           animation: slow-zoom 20s ease-in-out infinite;
         }
         @keyframes fade-in-up {
-          from { opacity: 0; transform: translateY(30px); }
-          to { opacity: 1; transform: translateY(0); }
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
         .animate-fade-in-up {
           animation: fade-in-up 0.8s ease-out forwards;
         }
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
+        .delay-100 {
+          animation-delay: 0.1s;
+        }
+        .delay-200 {
+          animation-delay: 0.2s;
+        }
       `}</style>
     </div>
   );

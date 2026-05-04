@@ -8,16 +8,16 @@ export default function PracticePage() {
   const complianceCategories = [
     {
       title: "Legal Compliance",
-      items: ["HIPAA", "HITECH", "FCA", "AKS", "Stark Law"]
+      items: ["HIPAA", "HITECH", "FCA", "AKS", "Stark Law"],
     },
     {
       title: "Operational Compliance",
-      items: ["Coding standards", "CMS guidelines", "Payer rules"]
+      items: ["Coding standards", "CMS guidelines", "Payer rules"],
     },
     {
       title: "Security Compliance",
-      items: ["Data protection", "Access control", "Audit systems"]
-    }
+      items: ["Data protection", "Access control", "Audit systems"],
+    },
   ];
 
   return (
@@ -32,7 +32,7 @@ export default function PracticePage() {
             src="/images/what_we_practice.jpeg"
             alt="What We Practice Banner"
             fill
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            style={{ objectFit: "cover", objectPosition: "center" }}
             priority
             sizes="100vw"
           />
@@ -42,7 +42,9 @@ export default function PracticePage() {
 
           {/* Banner Content */}
           <div className="relative z-30 text-center text-white px-6 w-full max-w-5xl mx-auto">
-            <span className="text-white text-3xl md:text-4xl lg:text-5xl tracking-[0.12em] md:tracking-[0.16em] block font-bold mb-4 uppercase">What We Practice</span>
+            <span className="text-white text-3xl md:text-4xl lg:text-5xl tracking-[0.12em] md:tracking-[0.16em] block font-bold mb-4 uppercase">
+              What We Practice
+            </span>
           </div>
         </div>
 
@@ -51,14 +53,16 @@ export default function PracticePage() {
           <div className="container mx-auto px-5 sm:px-6 max-w-[1366px]">
             <div className="text-center">
               <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight md:tracking-wide leading-tight text-slate-900 max-w-5xl mx-auto">
-                Ensuring compliance. <span className="text-[#B98C29]">Accelerating cash flows.</span>
+                Ensuring compliance.{" "}
+                <span className="text-[#B98C29]">Accelerating cash flows.</span>
               </h2>
               <div className="w-20 h-1 bg-[#B98C29] rounded-full mx-auto my-2"></div>
 
               <div className="mt-12 max-w-3xl mx-auto text-center">
                 <p className="text-lg md:text-xl text-slate-600 leading-relaxed font-normal">
-                  We follow strict HIPAA-compliant processes, accurate coding standards, and payer guidelines.
-                  This ensures zero compliance risk and maximum reimbursements.
+                  We follow strict HIPAA-compliant processes, accurate coding
+                  standards, and payer guidelines. This ensures zero compliance
+                  risk and maximum reimbursements.
                 </p>
               </div>
 
@@ -79,7 +83,10 @@ export default function PracticePage() {
                       <div className="mt-8">
                         <ul className="space-y-4">
                           {category.items.map((item, i) => (
-                            <li key={i} className="flex items-center gap-4 text-slate-700 text-lg md:text-xl font-medium">
+                            <li
+                              key={i}
+                              className="flex items-center gap-4 text-slate-700 text-lg md:text-xl font-medium"
+                            >
                               <span className="w-2 h-2 rounded-full bg-slate-900 transition-transform duration-500"></span>
                               {item}
                             </li>

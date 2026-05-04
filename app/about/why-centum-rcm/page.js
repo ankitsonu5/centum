@@ -6,12 +6,24 @@ import Image from "next/image";
 
 export default function WhyCentumRcmPage() {
   const ehrList = [
-    "Athena", "eClinicalWorks", "Epic", "Karep / Tebra", "NextGen",
-    "Allscripts", "MEDITECH", "AdvancedMD", "Greenway", "Cerner"
+    "Athena",
+    "eClinicalWorks",
+    "Epic",
+    "Karep / Tebra",
+    "NextGen",
+    "Allscripts",
+    "MEDITECH",
+    "AdvancedMD",
+    "Greenway",
+    "Cerner",
   ];
 
   const ediList = [
-    "Waystar", "Availity", "Trizetto", "Change Healthcare", "OffieAlly"
+    "Waystar",
+    "Availity",
+    "Trizetto",
+    "Change Healthcare",
+    "OffieAlly",
   ];
 
   const valueProps = [
@@ -19,7 +31,7 @@ export default function WhyCentumRcmPage() {
     "Faster onboarding within 1–2 weeks",
     "AI-enabled claim validation within EHR workflows",
     "Dedicated team trained on your specific platform",
-    "Zero disruption to your front-desk and clinical operations"
+    "Zero disruption to your front-desk and clinical operations",
   ];
 
   return (
@@ -34,7 +46,7 @@ export default function WhyCentumRcmPage() {
             src="/images/why-centum-banner.jpeg"
             alt="Why Centum RCM Banner"
             fill
-            style={{ objectFit: 'cover', objectPosition: 'center top' }}
+            style={{ objectFit: "cover", objectPosition: "center top" }}
             priority
             sizes="100vw"
           />
@@ -44,7 +56,9 @@ export default function WhyCentumRcmPage() {
 
           {/* Banner Content */}
           <div className="relative z-30 text-center text-white px-6 w-full max-w-5xl mx-auto">
-            <span className="text-white text-3xl md:text-4xl lg:text-5xl tracking-[0.12em] md:tracking-[0.16em] block font-bold mb-4 uppercase">Why Centum RCM</span>
+            <span className="text-white text-3xl md:text-4xl lg:text-5xl tracking-[0.12em] md:tracking-[0.16em] block font-bold mb-4 uppercase">
+              Why Centum RCM
+            </span>
           </div>
         </div>
 
@@ -53,7 +67,8 @@ export default function WhyCentumRcmPage() {
           <div className="container mx-auto px-5 sm:px-6 max-w-[1366px]">
             <div className="text-center mb-12 md:mb-20">
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight md:tracking-wide leading-tight text-slate-900 max-w-5xl mx-auto">
-                AI-first accuracy with <span className="text-[#B98C29]">Human insights.</span>
+                AI-first accuracy with{" "}
+                <span className="text-[#B98C29]">Human insights.</span>
               </h2>
               <div className="w-20 h-1 bg-[#B98C29] rounded-full mx-auto my-2"></div>
             </div>
@@ -65,17 +80,26 @@ export default function WhyCentumRcmPage() {
 
               <div className="space-y-6 md:space-y-8 text-base md:text-xl text-slate-600 leading-relaxed font-normal">
                 <p>
-                  CENTUM specializes in working with a wide range of Electronic Health Record (EHR) and Practice Management (PM) systems used across the United States. Our expertise ensures faster onboarding, minimal disruption, and optimized revenue cycle performance.
+                  CENTUM specializes in working with a wide range of Electronic
+                  Health Record (EHR) and Practice Management (PM) systems used
+                  across the United States. Our expertise ensures faster
+                  onboarding, minimal disruption, and optimized revenue cycle
+                  performance.
                 </p>
                 <p>
-                  We do not require you to switch systems as our team integrates seamlessly with your existing EHR. This ensures continuity while we keep improving your financial outcomes.
+                  We do not require you to switch systems as our team integrates
+                  seamlessly with your existing EHR. This ensures continuity
+                  while we keep improving your financial outcomes.
                 </p>
               </div>
 
               {/* Value Proposition List - Original simplified style */}
               <div className="mt-12 md:mt-16 space-y-6">
                 {valueProps.map((prop, idx) => (
-                  <div key={idx} className="flex items-start gap-4 md:gap-6 group">
+                  <div
+                    key={idx}
+                    className="flex items-start gap-4 md:gap-6 group"
+                  >
                     <span className="flex-shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-base md:text-lg border border-blue-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
                       {idx + 1}
                     </span>
@@ -97,7 +121,10 @@ export default function WhyCentumRcmPage() {
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
                   {ehrList.map((ehr, idx) => (
-                    <div key={idx} className="bg-white border border-slate-100 p-5 md:p-8 rounded-2xl flex items-center justify-center text-center shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 group">
+                    <div
+                      key={idx}
+                      className="bg-white border border-slate-100 p-5 md:p-8 rounded-2xl flex items-center justify-center text-center shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 group"
+                    >
                       <span className="text-base md:text-lg font-bold text-slate-500 group-hover:text-blue-600 transition-colors">
                         {ehr}
                       </span>
@@ -113,7 +140,10 @@ export default function WhyCentumRcmPage() {
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
                   {ediList.map((edi, idx) => (
-                    <div key={idx} className="bg-white border border-slate-100 p-5 md:p-8 rounded-2xl flex items-center justify-center text-center shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 group">
+                    <div
+                      key={idx}
+                      className="bg-white border border-slate-100 p-5 md:p-8 rounded-2xl flex items-center justify-center text-center shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 group"
+                    >
                       <span className="text-base md:text-lg font-bold text-slate-500 group-hover:text-blue-600 transition-colors">
                         {edi}
                       </span>

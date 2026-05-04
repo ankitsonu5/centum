@@ -17,17 +17,25 @@ export default function Career() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#243B71]/80 via-[#243B71]/40 to-[#243B71]/80 z-10"></div>
 
           {/* Dots Effect - Left Side */}
-          <div className="absolute inset-0 z-0 opacity-15 pointer-events-none" style={{
-            backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)',
-            backgroundSize: '24px 24px',
-            WebkitMaskImage: 'linear-gradient(to right, black 0%, transparent 30%)',
-            maskImage: 'linear-gradient(to right, black 0%, transparent 30%)'
-          }}></div>
+          <div
+            className="absolute inset-0 z-0 opacity-15 pointer-events-none"
+            style={{
+              backgroundImage: "radial-gradient(#ffffff 2px, transparent 2px)",
+              backgroundSize: "24px 24px",
+              WebkitMaskImage:
+                "linear-gradient(to right, black 0%, transparent 30%)",
+              maskImage: "linear-gradient(to right, black 0%, transparent 30%)",
+            }}
+          ></div>
 
           {/* Content */}
           <div className="relative z-10 text-center text-white">
-            <span className="text-[#B98C29] text-sm md:text-base tracking-[0.2em] block font-bold mb-4 uppercase">Careers</span>
-            <h1 className="text-5xl md:text-6xl font-semibold tracking-wide drop-shadow-md">Overview</h1>
+            <span className="text-[#B98C29] text-sm md:text-base tracking-[0.2em] block font-bold mb-4 uppercase">
+              Careers
+            </span>
+            <h1 className="text-5xl md:text-6xl font-semibold tracking-wide drop-shadow-md">
+              Overview
+            </h1>
           </div>
         </div>
 
@@ -54,11 +62,16 @@ export default function Career() {
           {/* Bottom block: Mission heading + description */}
           <div className="max-w-[1366px] mx-auto px-8 lg:px-16 pt-12 pb-20">
             <p className="text-lg lg:text-xl text-[#555555] leading-relaxed max-w-4xl mb-6">
-              Our doors are always open to talent that wants to help co-create a robust and win-win RCM ecosystem.
+              Our doors are always open to talent that wants to help co-create a
+              robust and win-win RCM ecosystem.
             </p>
             <p className="text-lg lg:text-xl text-[#555555] leading-relaxed max-w-4xl">
-              Key in your career goals and career path in a simple five liner and we would sure get in touch with you. Mail us at{" "}
-              <a href="mailto:team@centumrcm.com" className="text-[#B98C29] font-bold underline hover:text-accent transition-colors">
+              Key in your career goals and career path in a simple five liner
+              and we would sure get in touch with you. Mail us at{" "}
+              <a
+                href="mailto:team@centumrcm.com"
+                className="text-[#B98C29] font-bold underline hover:text-accent transition-colors"
+              >
                 team@centumrcm.com
               </a>
             </p>

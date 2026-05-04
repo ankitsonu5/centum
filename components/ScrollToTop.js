@@ -8,7 +8,9 @@ export default function ScrollToTop() {
   // Show button when page is scrolled down
   const toggleVisibility = () => {
     const nextIsVisible = window.pageYOffset > 300;
-    setIsVisible((current) => (current === nextIsVisible ? current : nextIsVisible));
+    setIsVisible((current) =>
+      current === nextIsVisible ? current : nextIsVisible,
+    );
   };
 
   // Set the top coordinate to 0
@@ -16,7 +18,7 @@ export default function ScrollToTop() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 
