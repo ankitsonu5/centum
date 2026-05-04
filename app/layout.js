@@ -2,8 +2,8 @@ import "./globals.css";
 import ScrollToTop from "../components/ScrollToTop";
 
 export const metadata = {
-  title: "RCM Services to Reduce Denials & Accelerate Collections",
-  description: "Helping small clinics improve billing accuracy and reduce denials. Compliant RCM services that accelerate collections, enabled by AI",
+  title: "Centum RCM",
+  description: "Healthcare Revenue Cycle Management",
 };
 
 export default function RootLayout({ children }) {
