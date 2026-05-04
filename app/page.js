@@ -348,7 +348,7 @@ export default function Home() {
 
                   {/* Text Content */}
                   <div className="mt-4 min-[364px]:mt-8 space-y-4 w-full max-w-[150px] flex flex-col items-center">
-                    <h4 className="text-[20px] font-bold text-[#243B71] leading-tight h-[66px] flex items-center justify-center text-center w-full">
+                    <h4 className="text-[20px] font-bold text-[#243B71] leading-tight h-[66px] flex items-center lg:items-start justify-center text-center w-full">
                       {step.title}
                     </h4>
 
