@@ -29,13 +29,8 @@ export default function Career() {
           ></div>
 
           {/* Content */}
-          <div className="relative z-10 text-center text-white">
-            <span className="text-[#B98C29] text-sm md:text-base tracking-[0.2em] block font-bold mb-4 uppercase">
-              Careers
-            </span>
-            <h1 className="text-5xl md:text-6xl font-semibold tracking-wide drop-shadow-md">
-              Overview
-            </h1>
+          <div className="relative z-10 text-center text-white px-6 w-full max-w-5xl mx-auto">
+            <span className="text-white text-3xl md:text-4xl lg:text-5xl tracking-[0.12em] md:tracking-[0.16em] block font-bold mb-4 uppercase">Career</span>
           </div>
         </div>
 

@@ -2,9 +2,8 @@ import "./globals.css";
 import ScrollToTop from "../components/ScrollToTop";
 
 export const metadata = {
-  title: "Centum | The Healthcare Revenue OS",
-  description:
-    "Real-time adjudication for modern healthcare revenue management.",
+  title: "Centum RCM",
+  description: "Healthcare Revenue Cycle Management",
 };
 
 export default function RootLayout({ children }) {
