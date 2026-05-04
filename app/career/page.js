@@ -30,7 +30,7 @@ export default function Career() {
 
           {/* Content */}
           <div className="relative z-10 text-center text-white px-6 w-full max-w-5xl mx-auto">
-            <span className="text-white text-3xl md:text-4xl lg:text-5xl tracking-[0.12em] md:tracking-[0.16em] block font-bold mb-4 uppercase">Career</span>
+            <span className="text-white text-3xl md:text-4xl lg:text-5xl tracking-[0.12em] md:tracking-[0.16em] block font-bold mb-4 uppercase">Careers</span>
           </div>
         </div>
 
