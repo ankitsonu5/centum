@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Centum RCM | Healthcare Revenue Cycle Management",
-  description: "Centum RCM is your end-to-end partner in Revenue Cycle Management — precision billing, proven results for U.S. healthcare providers.",
+  title: "RCM Services to Reduce Denials & Accelerate Collections",
+  description: "Helping small clinics improve billing accuracy and reduce denials. Compliant RCM services that accelerate collections, enabled by AI",
 };
 
 import Image from "next/image";
