@@ -30,13 +30,9 @@ export default function Home() {
           {/* Solid Color Filter Overlay Removed */}
           <div className="relative container mx-auto px-6 text-center max-w-7xl z-20 pt-40 md:pt-60 flex flex-col items-center">
             {/* Main Header */}
-            <h1 className="w-full max-w-[1120px] text-[2.45rem] sm:text-6xl lg:text-[3.5rem] xl:text-[4.2rem] 2xl:text-[5rem] text-white mb-6 leading-[1.08] uppercase flex flex-col items-center text-center">
-              <span className="font-bold text-[0.81em]">
-                Precision Billing.
-              </span>
-              <span className="font-bold text-[0.84em] text-transparent bg-clip-text bg-gradient-to-r from-[#f0da9b] via-[#e5ca78] to-[#B98C29] tracking-[0.04em]">
-                Proven Results.
-              </span>
+            <h1 className="w-full max-w-[1120px] text-[2rem] min-[365px]:text-[2.45rem] sm:text-6xl lg:text-[3.5rem] xl:text-[4.2rem] 2xl:text-[5rem] text-white mb-6 leading-[1.08] uppercase flex flex-col items-center text-center">
+              <span className="font-bold text-[0.81em] whitespace-nowrap">Precision Billing.</span>
+              <span className="font-bold text-[0.84em] whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-[#f0da9b] via-[#e5ca78] to-[#B98C29] tracking-[0.04em]">Proven Results.</span>
             </h1>
           </div>
         </section>
@@ -337,10 +333,7 @@ export default function Home() {
                   image: "/images/how-it-works-7.png",
                 },
               ].map((step, i, arr) => (
-                <div
-                  key={i}
-                  className="flex flex-col items-center w-full min-[364px]:w-1/2 lg:w-auto relative px-2"
-                >
+                <div key={i} className="flex flex-col items-center w-full min-[364px]:w-1/2 lg:w-auto relative px-2">
                   {/* Icon Image Container - Fixed Size, No Shadow */}
                   <div className="w-24 h-24 flex items-center justify-center relative z-10 hover:scale-110 transition-transform duration-300">
                     <div className="relative w-full h-full">
@@ -356,7 +349,7 @@ export default function Home() {
 
                   {/* Text Content */}
                   <div className="mt-4 min-[364px]:mt-8 space-y-4 w-full max-w-[150px] flex flex-col items-center">
-                    <h4 className="text-[20px] font-bold text-[#243B71] leading-tight h-[66px] flex items-center justify-center text-center w-full">
+                    <h4 className="text-[20px] font-bold text-[#243B71] leading-tight h-[66px] flex items-center lg:items-start justify-center text-center w-full">
                       {step.title}
                     </h4>
 
