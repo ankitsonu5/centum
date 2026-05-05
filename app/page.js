@@ -339,7 +339,7 @@ export default function Home() {
               ].map((step, i, arr) => (
                 <div
                   key={i}
-                  className="flex flex-col items-center w-full min-[364px]:w-1/2 lg:w-auto relative px-2"
+                  className="flex flex-col items-center w-1/2 lg:w-auto relative px-2"
                 >
                   {/* Icon Image Container - Fixed Size, No Shadow */}
                   <div className="w-24 h-24 flex items-center justify-center relative z-10 hover:scale-110 transition-transform duration-300">
@@ -393,8 +393,8 @@ export default function Home() {
             {/* Bottom Banner */}
             <div className="mt-24 relative">
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#243B71] to-transparent opacity-10 blur-xl"></div>
-              <div className="relative bg-gradient-to-r from-white via-[#243B71] to-white py-4">
-                <p className="text-white italic text-lg lg:text-xl font-medium tracking-wide">
+              <div className="relative bg-[#243B71] sm:bg-gradient-to-r sm:from-white sm:via-[#243B71] sm:to-white px-4 py-4">
+                <p className="mx-auto max-w-[28rem] text-white italic text-[15px] leading-relaxed sm:text-lg lg:text-xl font-medium tracking-normal sm:tracking-wide">
                   From Onboarding to Optimization, We've Got You Covered
                 </p>
               </div>
