@@ -70,7 +70,7 @@ export default function BackEndPage() {
                 <p className="text-lg lg:text-xl text-zinc-600 font-normal leading-relaxed">
                   Efficient management of claims & denials helps minimise
                   revenue leakage and improves cash flow. We identify root
-                  causes and prevent repeat occurrences. All these leads to the
+                  causes and prevent repeat occurrences. All these lead to the
                   strengthening of your financial performance.
                 </p>
               </div>

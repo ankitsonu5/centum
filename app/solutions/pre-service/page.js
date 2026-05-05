@@ -8,7 +8,7 @@ export default function PreServicePage() {
   const steps = [
     {
       q: "Accuracy of Data",
-      a: "We ensure high data accuracy by following structured validation of patient data at every step. All details including patient's full legal name, date of birth, insurance ID, address etc are cross verified during the data entry phase. We can also create secure patient portals which can be used by patients to enter and confirm their information prior to visits. All these results in reduced claim denials and hence improved revenue cycle efficiency.",
+      a: "We ensure high data accuracy by following structured validation of patient data at every step. All details including patient's full legal name, date of birth, insurance ID, address etc are cross verified during the data entry phase. We can also create secure patient portals which can be used by patients to enter and confirm their information prior to visits. All these result in reduced claim denials and hence improved revenue cycle efficiency.",
       step: "01",
     },
     {
