@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import HomeContactForm from "../components/HomeContactForm";
 
 export default function Home() {
   return (
@@ -452,68 +453,7 @@ export default function Home() {
 
               {/* Right Column: Form */}
               <div className="bg-[#f8f9fa] p-5 md:p-8 lg:p-12 rounded-2xl border border-slate-100 shadow-sm shadow-slate-200/30 w-full max-w-[520px] mx-auto lg:ml-auto">
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">
-                        Name :
-                      </label>
-                      <input
-                        type="text"
-                        className="w-full px-6 py-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#B98C29]/20 focus:border-[#B98C29] outline-none transition-all placeholder:text-slate-300"
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">
-                        Email :
-                      </label>
-                      <input
-                        type="email"
-                        className="w-full px-6 py-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#B98C29]/20 focus:border-[#B98C29] outline-none transition-all placeholder:text-slate-300"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">
-                        Phone :
-                      </label>
-                      <input
-                        type="tel"
-                        className="w-full px-6 py-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#B98C29]/20 focus:border-[#B98C29] outline-none transition-all placeholder:text-slate-300"
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">
-                        Company :
-                      </label>
-                      <input
-                        type="text"
-                        className="w-full px-6 py-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#B98C29]/20 focus:border-[#B98C29] outline-none transition-all placeholder:text-slate-300"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">
-                      How can we assist you :
-                    </label>
-                    <textarea
-                      rows={5}
-                      className="w-full px-6 py-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#B98C29]/20 focus:border-[#B98C29] outline-none transition-all placeholder:text-slate-300 resize-none"
-                    ></textarea>
-                  </div>
-
-                  <button
-                    type="button"
-                    className="w-full bg-[#111111] text-white font-bold py-5 rounded-xl hover:bg-[#B98C29] transition-all duration-300 transform active:scale-[0.98] shadow-lg hover:shadow-[#B98C29]/20 uppercase tracking-[0.2em] text-xs"
-                  >
-                    Send Message
-                  </button>
-                </form>
+                <HomeContactForm />
               </div>
             </div>
           </div>
