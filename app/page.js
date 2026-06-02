@@ -434,20 +434,6 @@ export default function Home() {
                       team@centumrcm.com
                     </a>
                   </div>
-                  <div className="space-y-4">
-                    <h4 className="text-xs font-bold tracking-[0.2em] uppercase text-[#B98C29]">
-                      Office
-                    </h4>
-                    <p className="text-base text-[#1a1a1a] leading-relaxed">
-                      Centum RCM
-                      <br />
-                      1430, Venus St,
-                      <br />
-                      Merritt Island,
-                      <br />
-                      Florida 32953
-                    </p>
-                  </div>
                 </div>
               </div>
 

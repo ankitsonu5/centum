@@ -108,19 +108,6 @@ export default function Contact() {
                       team@centumrcm.com
                     </a>
                   </div>
-                  <div className="space-y-4">
-                    <h4 className="text-xs font-bold tracking-[0.2em] uppercase text-[#B98C29]">
-                      Office
-                    </h4>
-                    <p className="text-lg text-[#1a1a1a] leading-relaxed">
-                      Centum RCM
-                      <br />
-                      1430, VENUS ST,
-                      <br />
-                      MERRITT ISLAND, <br />
-                      FLORIDA 32953
-                    </p>
-                  </div>
                 </div>
 
                 <div className="pt-8">
