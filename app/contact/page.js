@@ -110,9 +110,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="pt-8">
-                  <div className="w-16 h-1 bg-[#B98C29] rounded-full"></div>
-                </div>
+
               </div>
 
               {/* Right Column: Premium Contact Form */}
