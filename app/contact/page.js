@@ -13,17 +13,35 @@ export default function Contact() {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simulate form submission
-    console.log("Form submitted:", formData);
-    setIsSubmitted(true);
-    setFormData({ name: "", email: "", phone: "", company: "", assist: "" });
-    setTimeout(() => setIsSubmitted(false), 5000);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: "", email: "", phone: "", company: "", assist: "" });
+        setTimeout(() => setIsSubmitted(false), 5000);
+      } else {
+        alert("Failed to send message. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("An error occurred. Please try again.");
+    }
   };
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    let { name, value } = e.target;
+    if (name === "phone") {
+      // Remove all non-digit characters
+      value = value.replace(/\D/g, "");
+    }
+    setFormData({ ...formData, [name]: value });
   };
 
   return (
@@ -90,24 +108,9 @@ export default function Contact() {
                       team@centumrcm.com
                     </a>
                   </div>
-                  <div className="space-y-4">
-                    <h4 className="text-xs font-bold tracking-[0.2em] uppercase text-[#B98C29]">
-                      Office
-                    </h4>
-                    <p className="text-lg text-[#1a1a1a] leading-relaxed">
-                      Centum RCM
-                      <br />
-                      1430, VENUS ST,
-                      <br />
-                      MERRITT ISLAND, <br />
-                      FLORIDA 32953
-                    </p>
-                  </div>
                 </div>
 
-                <div className="pt-8">
-                  <div className="w-16 h-1 bg-[#B98C29] rounded-full"></div>
-                </div>
+
               </div>
 
               {/* Right Column: Premium Contact Form */}
