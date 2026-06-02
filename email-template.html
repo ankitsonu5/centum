@@ -1,162 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Contact Request - Centum RCM</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #f4f5f7;
-            color: #1e293b;
-        }
-        .container {
-            max-width: 600px;
-            margin: 40px auto;
-            background-color: #ffffff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-        .header {
-            background-color: #0a192f;
-            padding: 40px 30px;
-            text-align: center;
-        }
-        .header h1 {
-            color: #ffffff;
-            margin: 0;
-            font-size: 24px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-        .header p {
-            color: #B98C29;
-            margin: 10px 0 0;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: bold;
-        }
-        .content {
-            padding: 40px 30px;
-        }
-        .content p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin: 0 0 20px;
-            color: #475569;
-        }
-        .details-box {
-            background-color: #f8f9fa;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 24px;
-            margin-bottom: 30px;
-        }
-        .detail-item {
-            margin-bottom: 16px;
-        }
-        .detail-item:last-child {
-            margin-bottom: 0;
-        }
-        .detail-label {
-            display: block;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #94a3b8;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-        .detail-value {
-            font-size: 16px;
-            color: #0f172a;
-            font-weight: 500;
-        }
-        .message-box {
-            background-color: #ffffff;
-            border-left: 4px solid #B98C29;
-            padding: 16px 20px;
-            font-style: italic;
-            color: #334155;
-            margin-top: 8px;
-            border-radius: 0 8px 8px 0;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-        .footer {
-            background-color: #f8f9fa;
-            padding: 24px 30px;
-            text-align: center;
-            border-top: 1px solid #e2e8f0;
-        }
-        .footer p {
-            margin: 0;
-            font-size: 13px;
-            color: #64748b;
-        }
-        .footer a {
-            color: #B98C29;
-            text-decoration: none;
-            font-weight: 600;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background-color: #f4f5f7;
+        color: #1e293b;
+      }
+      .container {
+        max-width: 600px;
+        margin: 40px auto;
+        background-color: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow:
+          0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+      .header {
+        background-color: #0a192f;
+        padding: 40px 30px;
+        text-align: center;
+      }
+      .header h1 {
+        color: #ffffff;
+        margin: 0;
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+      .header p {
+        color: #b98c29;
+        margin: 10px 0 0;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+      }
+      .content {
+        padding: 40px 30px;
+      }
+      .content p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0 0 20px;
+        color: #475569;
+      }
+      .details-box {
+        background-color: #f8f9fa;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 24px;
+        margin-bottom: 30px;
+      }
+      .detail-item {
+        margin-bottom: 16px;
+      }
+      .detail-item:last-child {
+        margin-bottom: 0;
+      }
+      .detail-label {
+        display: block;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #94a3b8;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+      .detail-value {
+        font-size: 16px;
+        color: #0f172a;
+        font-weight: 500;
+      }
+      .message-box {
+        background-color: #ffffff;
+        border-left: 4px solid #b98c29;
+        padding: 16px 20px;
+        font-style: italic;
+        color: #334155;
+        margin-top: 8px;
+        border-radius: 0 8px 8px 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+      .footer {
+        background-color: #f8f9fa;
+        padding: 24px 30px;
+        text-align: center;
+        border-top: 1px solid #e2e8f0;
+      }
+      .footer p {
+        margin: 0;
+        font-size: 13px;
+        color: #64748b;
+      }
+      .footer a {
+        color: #b98c29;
+        text-decoration: none;
+        font-weight: 600;
+      }
     </style>
-</head>
-<body>
-    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #f4f5f7; padding: 20px 0;">
-        <tr>
-            <td align="center">
-                <div class="container">
-                    <!-- Header -->
-                    <div class="header">
-                        <h1>New Contact Inquiry</h1>
-                        <p>Centum RCM</p>
-                    </div>
+  </head>
+  <body>
+    <table
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="background-color: #f4f5f7; padding: 20px 0"
+    >
+      <tr>
+        <td align="center">
+          <div class="container">
+            <!-- Header -->
+            <div class="header">
+              <h1>New Contact Inquiry</h1>
+              <p>Centum RCM</p>
+            </div>
 
-                    <!-- Content -->
-                    <div class="content">
-                        <p>Hello Team,</p>
-                        <p>You have received a new message from the contact form on your website. Here are the details:</p>
+            <!-- Content -->
+            <div class="content">
+              <p>Hello Team,</p>
+              <p>
+                You have received a new message from the contact form on your
+                website. Here are the details:
+              </p>
 
-                        <div class="details-box">
-                            <div class="detail-item">
-                                <span class="detail-label">Name</span>
-                                <span class="detail-value">{{name}}</span>
-                            </div>
-                            
-                            <div class="detail-item">
-                                <span class="detail-label">Email Address</span>
-                                <span class="detail-value"><a href="mailto:{{email}}" style="color: #243B71; text-decoration: none;">{{email}}</a></span>
-                            </div>
-                            
-                            <div class="detail-item">
-                                <span class="detail-label">Phone Number</span>
-                                <span class="detail-value">{{phone}}</span>
-                            </div>
-                            
-                            <div class="detail-item">
-                                <span class="detail-label">Company</span>
-                                <span class="detail-value">{{company}}</span>
-                            </div>
-                        </div>
-
-                        <div class="detail-item">
-                            <span class="detail-label" style="margin-left: 4px;">Message / How can we assist</span>
-                            <div class="message-box">
-                                {{assist}}
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Footer -->
-                    <div class="footer">
-                        <p>&copy; 2026 Centum RCM. All rights reserved.</p>
-                    </div>
+              <div class="details-box">
+                <div class="detail-item">
+                  <span class="detail-label">Name</span>
+                  <span class="detail-value">{{name}}</span>
                 </div>
-            </td>
-        </tr>
+
+                <div class="detail-item">
+                  <span class="detail-label">Email Address</span>
+                  <span class="detail-value"
+                    ><a
+                      href="mailto:{{email}}"
+                      style="color: #243b71; text-decoration: none"
+                      >{{email}}</a
+                    ></span
+                  >
+                </div>
+
+                <div class="detail-item">
+                  <span class="detail-label">Phone Number</span>
+                  <span class="detail-value">{{phone}}</span>
+                </div>
+
+                <div class="detail-item">
+                  <span class="detail-label">Company</span>
+                  <span class="detail-value">{{company}}</span>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <span class="detail-label" style="margin-left: 4px"
+                  >Message / How can we assist</span
+                >
+                <div class="message-box">{{assist}}</div>
+              </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+              <p>&copy; 2026 Centum RCM. All rights reserved.</p>
+            </div>
+          </div>
+        </td>
+      </tr>
     </table>
-</body>
+  </body>
 </html>

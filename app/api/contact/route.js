@@ -1,11 +1,11 @@
-import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
-import { connectDB } from '@/lib/mongodb';
-import Submission from '@/lib/models/Submission';
+import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
+import { connectDB } from "@/lib/mongodb";
+import Submission from "@/lib/models/Submission";
 
 const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST || 'smtp.gmail.com',
-  port: parseInt(process.env.SMTP_PORT || '465'),
+  host: process.env.SMTP_HOST || "smtp.gmail.com",
+  port: parseInt(process.env.SMTP_PORT || "465"),
   secure: true,
   auth: {
     user: process.env.SMTP_USER,
@@ -18,7 +18,10 @@ export async function POST(request) {
     const { name, email, phone, company, assist } = await request.json();
 
     if (!name || !email || !phone) {
-      return NextResponse.json({ success: false, message: 'Required fields missing' }, { status: 400 });
+      return NextResponse.json(
+        { success: false, message: "Required fields missing" },
+        { status: 400 },
+      );
     }
 
     // 1. Save to MongoDB
@@ -28,7 +31,7 @@ export async function POST(request) {
     // 2. Send mail
     await transporter.sendMail({
       from: `"Centum RCM Form" <${process.env.SMTP_USER}>`,
-      to: 'team@centumrcm.com',
+      to: "team@centumrcm.com",
       replyTo: email,
       subject: `New Contact Request from ${name} - Centum RCM`,
       html: `
@@ -41,12 +44,16 @@ export async function POST(request) {
             <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
             <p><strong>Phone:</strong> ${phone}</p>
-            ${company ? `<p><strong>Company:</strong> ${company}</p>` : ''}
-            ${assist ? `
+            ${company ? `<p><strong>Company:</strong> ${company}</p>` : ""}
+            ${
+              assist
+                ? `
             <div style="margin-top:20px;padding:15px;background:#f8f9fa;border-left:4px solid #B98C29;border-radius:4px;">
               <p style="margin:0;color:#555;"><strong>Message:</strong></p>
               <p style="margin:10px 0 0;font-style:italic;">${assist}</p>
-            </div>` : ''}
+            </div>`
+                : ""
+            }
           </div>
           <div style="background:#f4f5f7;padding:15px;text-align:center;border-top:1px solid #ddd;">
             <p style="font-size:12px;color:#777;margin:0;">© 2026 Centum RCM. All rights reserved.</p>
@@ -55,9 +62,19 @@ export async function POST(request) {
       `,
     });
 
-    return NextResponse.json({ success: true, message: 'Message sent successfully' });
+    return NextResponse.json({
+      success: true,
+      message: "Message sent successfully",
+    });
   } catch (error) {
-    console.error('Contact form error:', error);
-    return NextResponse.json({ success: false, message: 'Failed to send message', error: error.message }, { status: 500 });
+    console.error("Contact form error:", error);
+    return NextResponse.json(
+      {
+        success: false,
+        message: "Failed to send message",
+        error: error.message,
+      },
+      { status: 500 },
+    );
   }
 }

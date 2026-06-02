@@ -1,31 +1,31 @@
-'use client';
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+"use client";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function AdminLogin() {
   const router = useRouter();
-  const [form, setForm] = useState({ email: '', password: '' });
-  const [error, setError] = useState('');
+  const [form, setForm] = useState({ email: "", password: "" });
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setError('');
+    setError("");
     try {
-      const res = await fetch('/api/admin/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const res = await fetch("/api/admin/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
       const data = await res.json();
       if (data.success) {
-        router.push('/admin/dashboard');
+        router.push("/admin/dashboard");
       } else {
-        setError(data.message || 'Invalid credentials');
+        setError(data.message || "Invalid credentials");
       }
     } catch {
-      setError('Something went wrong. Try again.');
+      setError("Something went wrong. Try again.");
     } finally {
       setLoading(false);
     }
@@ -36,8 +36,12 @@ export default function AdminLogin() {
       <div className="w-full max-w-md">
         {/* Logo / Brand */}
         <div className="text-center mb-10">
-          <p className="text-[#B98C29] text-xs font-bold uppercase tracking-[0.3em] mb-2">Centum RCM</p>
-          <h1 className="text-white text-3xl font-serif font-normal">Admin Panel</h1>
+          <p className="text-[#B98C29] text-xs font-bold uppercase tracking-[0.3em] mb-2">
+            Centum RCM
+          </p>
+          <h1 className="text-white text-3xl font-serif font-normal">
+            Admin Panel
+          </h1>
         </div>
 
         <form
@@ -52,7 +56,9 @@ export default function AdminLogin() {
               type="email"
               required
               value={form.email}
-              onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
+              onChange={(e) =>
+                setForm((f) => ({ ...f, email: e.target.value }))
+              }
               className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white text-sm placeholder-white/30 focus:outline-none focus:border-[#B98C29] transition"
             />
           </div>
@@ -64,7 +70,9 @@ export default function AdminLogin() {
               type="password"
               required
               value={form.password}
-              onChange={e => setForm(f => ({ ...f, password: e.target.value }))}
+              onChange={(e) =>
+                setForm((f) => ({ ...f, password: e.target.value }))
+              }
               className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white text-sm placeholder-white/30 focus:outline-none focus:border-[#B98C29] transition"
             />
           </div>
@@ -80,7 +88,7 @@ export default function AdminLogin() {
             disabled={loading}
             className="w-full bg-[#B98C29] hover:bg-[#a07820] disabled:opacity-60 text-white text-xs font-bold uppercase tracking-widest py-4 rounded-xl transition-colors duration-200"
           >
-            {loading ? 'Signing in...' : 'Sign In'}
+            {loading ? "Signing in..." : "Sign In"}
           </button>
         </form>
       </div>

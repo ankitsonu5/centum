@@ -24,7 +24,13 @@ export default function Contact() {
 
       if (response.ok) {
         setIsSubmitted(true);
-        setFormData({ name: "", email: "", phone: "", company: "", assist: "" });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          assist: "",
+        });
         setTimeout(() => setIsSubmitted(false), 5000);
       } else {
         alert("Failed to send message. Please try again later.");
@@ -109,8 +115,6 @@ export default function Contact() {
                     </a>
                   </div>
                 </div>
-
-
               </div>
 
               {/* Right Column: Premium Contact Form */}

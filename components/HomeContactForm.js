@@ -22,7 +22,13 @@ export default function HomeContactForm() {
 
       if (response.ok) {
         setIsSubmitted(true);
-        setFormData({ name: "", email: "", phone: "", company: "", assist: "" });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          assist: "",
+        });
         setTimeout(() => setIsSubmitted(false), 5000);
       } else {
         alert("Failed to send message. Please try again later.");
@@ -46,12 +52,24 @@ export default function HomeContactForm() {
     return (
       <div className="h-full flex flex-col items-center justify-center text-center py-12 space-y-6 animate-in fade-in zoom-in duration-500">
         <div className="w-20 h-20 rounded-full bg-green-50 flex items-center justify-center text-green-500">
-          <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+          <svg
+            className="w-10 h-10"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="3"
+              d="M5 13l4 4L19 7"
+            />
           </svg>
         </div>
         <h3 className="text-2xl font-bold text-[#1a1a1a]">Message Sent</h3>
-        <p className="text-slate-600">Thank you for reaching out. We will get back to you shortly.</p>
+        <p className="text-slate-600">
+          Thank you for reaching out. We will get back to you shortly.
+        </p>
       </div>
     );
   }
@@ -60,7 +78,9 @@ export default function HomeContactForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Name :</label>
+          <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">
+            Name :
+          </label>
           <input
             type="text"
             name="name"
@@ -72,7 +92,9 @@ export default function HomeContactForm() {
         </div>
 
         <div className="space-y-2">
-          <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Email :</label>
+          <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">
+            Email :
+          </label>
           <input
             type="email"
             name="email"
@@ -86,7 +108,9 @@ export default function HomeContactForm() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Phone :</label>
+          <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">
+            Phone :
+          </label>
           <input
             type="tel"
             name="phone"
@@ -98,7 +122,9 @@ export default function HomeContactForm() {
         </div>
 
         <div className="space-y-2">
-          <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Company :</label>
+          <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">
+            Company :
+          </label>
           <input
             type="text"
             name="company"
@@ -111,7 +137,9 @@ export default function HomeContactForm() {
       </div>
 
       <div className="space-y-2">
-        <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">How can we assist you :</label>
+        <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">
+          How can we assist you :
+        </label>
         <textarea
           name="assist"
           required
